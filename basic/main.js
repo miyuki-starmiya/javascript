@@ -1,14 +1,12 @@
 
 'use strict';
+let scores = [60, 70, 80];
+let other = [10, 20, 30];
+const print = console.log;
 
-const score = 75;
+function sum(a,b,c) {
+    return a+b+c;
+}
 
-// if (score > 80) {
-//     console.log('great !!');
-// } else if (score > 60) {
-//     console.log('normal');
-// } else {
-//     console.log('low...');
-// }
-
-score >= 80 ? console.log('great') : console.log('normal');
+let s = sum(...scores);
+print(s);
