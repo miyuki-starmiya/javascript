@@ -1,0 +1,46 @@
+
+/* tag */
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+}
+
+/* class */
+.container {
+    width: 300px;
+    margin: auto;
+}
+
+/* id */
+#app h1 {
+    font-size: 32px;
+    border-bottom: 1px solid gray;
+    padding: 16px 0;
+}
+
+#app li {
+    line-height: 1.5;
+    /* padding: 10px 10px 10px 10px; */
+}
+
+#app input[type="text"] {
+    padding: 2px;
+}
+
+.command {
+    font-size: 12px;
+    cursor: pointer;
+    color: blue;
+}
+
+#app ul {
+    padding: 0;
+    list-style: none;
+}
+
+#app li > span.done {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+
