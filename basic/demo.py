@@ -4,27 +4,9 @@ import math
 from datetime import datetime
 import time
 
-d = datetime.now()
+li = [1,2,3]
 
-print(d.strftime('%Y%m%d'))
+li = li[1:3]
 
-class C:
-    def __init__(self, name):
-        self.name = name
-
-    @staticmethod
-    def static():
-        print('static')
-
-    @classmethod
-    def cl(cls):
-        print('class')
-
-    def ins(self):
-        print('ins')
-
-C.static()
-C.cl()
-c = C('hoge')
-c.ins()
+print(li)
 
