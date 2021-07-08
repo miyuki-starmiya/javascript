@@ -3,15 +3,30 @@
 <html lang="ja" ng-app="myapp">
 <head>
     <meta charset="utf-8">
-    <title>AngularJS</title>
+    <title>Angular-ToDo</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 <body>
-    <form type="text">
-        <input type="text" name="input" placeholder="data">
-        <input type="submit" value="Submit">
-    </form>
+    <h1><span id="main-title">Angular ToDo App</span></h1>
+    <div ng-controller="mainCtrl">
+        <!-- mainCtrl scope -->
+        <p>Finished Task: {{getDoneCount()}} / {{tasks.length}}</p>
+        <button ng-click="deleteDone()">Delete task</button>
+        <ul>
+            <li ng-repeat="task in tasks">
+                <input type="checkbox" ng-model="task.done">
+                <span class="done-{{task.done}}">{{task.body}}</span>
+                <a href ng-click="tasks.splice($index,1)">[x]</a>
+            </li>
+        </ul>
+        <form ng-submit="addNew()">
+            <!-- ng-modelとしてVM間で変数の受け渡し -->
+            <input type="text" ng-model="newTaskBody">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+
 
     <script src="main.js"></script>
 </body>
