@@ -1,0 +1,25 @@
+
+.container {
+    display: flex;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    flex: 1;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+}
+
+
