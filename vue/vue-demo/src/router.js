@@ -4,14 +4,17 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue"
 import Users from "./views/Users.vue"
+import Umamusume from "./views/Umamusume.vue"
 
 Vue.use(Router);
 
 export default
 new Router({
+    mode: "history", // defaultはhash
     routes: [
         {path: '/', component: Home},
-        {path: '/users', component: Users},
+        {path: '/users/:chara', component: Users},
+        {path: '/uma', component: Umamusume},
     ]
 });
 
