@@ -1,0 +1,47 @@
+
+/* flex-container */
+.container {
+    /* 子要素をflex-itemとする */
+    display: flex;
+    /* containerの方向 */
+    flex-direction: row-reverse;
+    /* containerの配置間隔 */
+    justify-content: center;
+    justify-content: space-between;
+    /* 交差軸方向の設定 */
+    align-items: center;
+    /* はみ出した要素の設定 */
+    flex-wrap: wrap;
+    /* はみ出したものの配置設定 */
+    align-content: center;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    /* 交差軸方向の設定 */
+    align-self: center;
+    /* 1はじまりの順序 */
+    order: 2;
+    /* 主軸方向のlength */
+    flex-basis: 200px;
+    /* 主軸全体の割合 */
+    flex-grow: 1;
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    flex-grow: 2;
+}
+
+.box3 {
+    width: 100px;
+    height: 100px;
+    background-color: tomato;
+    flex-grow: 3;
+}
+
+

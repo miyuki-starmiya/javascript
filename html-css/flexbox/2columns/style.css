@@ -1,0 +1,46 @@
+
+.container {
+    display: flex;
+    margin: 50px 0;
+    height: 100px;
+}
+
+header {
+    background: pink;
+}
+
+main {
+    background: skyblue;
+    flex-grow: 1;
+    order: 1;
+}
+
+nav {
+    background: tomato;
+    width: 100px;
+    order: 0;
+}
+
+aside {
+    background: orange;
+    width: 100px;
+    order: 2;
+}
+
+footer {
+    background: silver;
+}
+
+.justify-container {
+    height: 500px;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    height: 100px;
+    width: 100px;
+    background: greenyellow;
+}
