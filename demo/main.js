@@ -1,6 +1,6 @@
 
-hoge = 1;
-let fuga = 2;
+'use strict';
 
-console.log(hoge, fuga);
+let x = 3;
+console.log(parseFloat(x))
 
