@@ -1,6 +1,7 @@
 
-'use strict';
 
-let x = 3;
-console.log(parseFloat(x))
+console.log(Math.exp(3))
+console.log(Math.log(Math.E))
+
+
 
