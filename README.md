@@ -96,11 +96,11 @@ console.log(`${x}`)
 let height = 162
 
 if (height > 160) {
-    console.log("good !")
+  console.log("good !")
 } else if (height > 170) {
-    console.log("great !!")
+  console.log("great !!")
 } else {
-    console.log("soso ...")
+  console.log("soso ...")
 }
 
 // 条件演算子
@@ -113,18 +113,18 @@ height > 160 ? console.log("good !") : console.log("bad");
 let signal = "yellow";
 
 switch (signal) {
-    case "red":
-        console.log("stop");
-        break; // defaultにいくのを防止
-    case "blue":
-        console.log("go");
-        break;
-    case "yellow":
-        console.log("caution");
-        break;
-    default: // = else
-        console.log("no signal");
-        break;
+  case "red":
+    console.log("stop");
+    break; // defaultにいくのを防止
+  case "blue":
+    console.log("go");
+    break;
+  case "yellow":
+    console.log("caution");
+    break;
+  default: // = else
+    console.log("no signal");
+    break;
 }
 ```
 
@@ -158,17 +158,17 @@ array.forEach((e, index) => console.log(e, index));
 let i = 0
 
 while (i < 10) {
-    if (i === 3) {
-        i++;
-        continue;
-    }
-    console.log(i);
+  if (i === 3) {
     i++;
+    continue;
+  }
+  console.log(i);
+  i++;
 }
 
 // 初回は必ず実施
 do {
-    console.log(i);
+  console.log(i);
 } while (i < 10)
 ```
 
@@ -178,16 +178,16 @@ do {
 let a = ['a', true, 0];
 
 for (let i in a) {
-    try {
-        if (a[i] === 0) {
-            throw new Error("0で割らないで")
-        }
-        console.log(3 / a[i]);
-    } catch (e) {
-        console.log(e.message);
-    } finally {
-        console.log("常に出力")
+  try {
+    if (a[i] === 0) {
+      throw new Error("0で割らないで") // raise
     }
+    console.log(3 / a[i]);
+  } catch (e) {
+    console.log(e.message);
+  } finally {
+    console.log("常に出力")
+  }
 }
 ```
 
@@ -196,13 +196,13 @@ for (let i in a) {
 
 ```js
 function hello(name) {
-    console.log(`hello ${name}`);
-    return name;
+  console.log(`hello ${name}`);
+  return name;
 }
 
 // 関数式
 let add = function(a, b) {
-    return a + b;
+  return a + b;
 }
 
 // アロー関数 = function + returnの省略
