@@ -327,3 +327,14 @@ doAsync('hoge').then(val => {
 });
 ```
 
+
+
+
+# DOM(DocumentObjectModel)
+
+```js
+document.getElementById('#id');
+document.querySelectorAll('.class');
+
+
+```
