@@ -282,8 +282,9 @@ console.log('end');
 // start -> end -> async
 ```
 
+resolve, reject両方の処理を記述
+
 ```js
-// resolve, reject両方の処理を記述
 const promise = new Promise((resolve, reject) => {
     // 非同期でresolveする
     setTimeout(() => {
@@ -300,17 +301,35 @@ promise.then(() => {
 
 ```
 
+### Promiseチェーン
+
+コールバックで返した値を次のコールバックへ引数として渡す
+
+```js
+Promise.resolve(1).then((value) => {
+    console.log(value); // => 1
+    return value * 2;
+}).then(value => {
+    console.log(value); // => 2
+    return value * 2;
+}).then(value => {
+    console.log(value); // => 4
+    // 値を返さない場合は undefined を返すのと同じ
+}).then(value => {
+    console.log(value); // => undefined
+});
+```
+
 ## async/await (ES2017)
 
 async functionという常にPromiseインスタンスを返す関数。resolve, rejectのstateの記載を省ける。非同期処理を同期処理のように記述可能
-
-awaitはコールバック関数の省略記法
 
 ```js
 async function doAsync(what) {
     return what;
 };
 
+// コールバック関数
 doAsync('hoge').then(val => {
     console.log(val);
 });
@@ -327,7 +346,24 @@ doAsync('hoge').then(val => {
 });
 ```
 
+awaitはコールバック関数の省略記法
 
+```js
+async function asyncMain() {
+    const value = await Promise.resolve(42);
+    // コールバック関数
+    console.log(value); // => 42
+}
+asyncMain(); // Promiseインスタンスを返す
+
+// 以下のthenを用いたコールバック関数と同義
+function asyncMain() {
+    return Promise.resolve(42).then(value => {
+        console.log(value); // => 42
+    });
+}
+asyncMain(); // Promiseインスタンスを返す
+```
 
 
 # DOM(DocumentObjectModel)
