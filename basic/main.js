@@ -1,11 +1,18 @@
 
-'use strict';
-let scores = [60, 70, 80];
-let i = 0;
+async function doAsync(what) {
+    return what;
+};
 
-document.querySelector('form').addEventListener('submit', e => {
-    e.preventDefault();
-    console.log('submit');
-})
+doAsync('hoge').then(val => {
+    console.log(val);
+});
 
+function doAsync(what) {
+    return new Promise((resolve) => {
+        resolve(what);
+    });
+};
 
+doAsync('hoge').then(val => {
+    console.log(val);
+});

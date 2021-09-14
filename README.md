@@ -242,3 +242,88 @@ Math.E // 2.7...
 ### Array
 
 
+
+# 非同期処理(asynchronous)
+
+順次実行の構造型プログラミングの法則を壊すサーバサイドメインの処理。**Promise**という後で実オブジェクトを渡すための仮のオブジェクトを発行することによって実現する。サーバの**メインスレッド**領域を中断させないように考案された仕組み。
+
+JSはfsなど標準で非同期処理となる非同期型関数を多く保有している。
+
+## Promise (ES2015)
+
+PromiseのState
+- resolve: 成功
+- reject: 失敗
+- pending: 初期状態
+
+Promiseで処理の状態を保持し、**コールバック関数**でresolve, rejectそれぞれの状態になった時の処理を記述できる
+
+```js
+// resolveのみの処理
+
+console.log('start');
+
+function puts(str) {
+    // promiseオブジェクトを返す. callback関数のresolve()は後で定義
+    return new Promise(function(resolve) {
+        return setTimeout(function() {
+            return resolve(str);
+        }, 1000);
+    });
+}
+
+// callback関数. thenの引数は非同期関数の戻り値
+puts('async').then(function(result) {
+    // resolve(str)の内容. str = result
+    return console.log(result);
+});
+
+console.log('end');
+// start -> end -> async
+```
+
+```js
+// resolve, reject両方の処理を記述
+const promise = new Promise((resolve, reject) => {
+    // 非同期でresolveする
+    setTimeout(() => {
+        resolve();
+        // すでにresolveされているため無視される
+        reject(new Error("エラー"));
+    }, 16);
+});
+promise.then(() => {
+    console.log("Fulfilledとなった");
+}, (error) => {
+    // この行は呼び出されない
+});
+
+```
+
+## async/await (ES2017)
+
+async functionという常にPromiseインスタンスを返す関数。resolve, rejectのstateの記載を省ける。非同期処理を同期処理のように記述可能
+
+awaitはコールバック関数の省略記法
+
+```js
+async function doAsync(what) {
+    return what;
+};
+
+doAsync('hoge').then(val => {
+    console.log(val);
+});
+
+// 以下のPromise記法と同義
+function doAsync(what) {
+    return new Promise((resolve) => {
+        resolve(what);
+    });
+};
+
+doAsync('hoge').then(val => {
+    console.log(val);
+});
+```
+
