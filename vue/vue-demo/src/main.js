@@ -1,13 +1,7 @@
-import Vue from "vue"
-import App from "./App.vue"
-import Router from "./router"
-import Like from "./components/LikeNumber.vue"
+import { createApp } from 'vue'
+import App from './App.vue'
 
-Vue.config.productionTip = false
-// componentのglobal登録 (directive, component)
-Vue.component('LikeNumber', Like)
+createApp(App).mount('#app')
 
-new Vue({
-    router: Router,
-    render: h => h(App),
-}).$mount('#app')
+console.log(Stripe);
+
