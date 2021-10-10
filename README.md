@@ -49,6 +49,8 @@ console.log(a2); // ["a",2,3]
 
 ### 変数
 
+※関数内でvarやletを使わずに変数宣言するとグローバル変数になるので注意
+
 ```js
 // 再宣言あり変数
 var x = null;
@@ -88,8 +90,10 @@ console.log(`${x}`)
 ### Operand
 
 ```js
-等号: === // 値とデータ型も同じ
-不等号: !==
+型付き等号: === // 値とデータ型も同じ
+型付き不等号: !== // 値とデータ型も同じ
+等号: == // 値のみ評価
+不等号: != // 値のみ評価
 論理積: && // and
 論理和: || // or
 否定： ! // not
@@ -235,7 +239,7 @@ let add = (a, b) => (a+b);
 ```js
 let s = 'susi,zume,geki,dai'
 
-s.split(','); // , でsplit to array
+s.split(',') // , でsplit to array
 s.slice(3, 7) // start endでslice
 s.search('s') // 文字位置検索
 s.replace('s', 't') // replace
@@ -246,6 +250,7 @@ s.toUpperCase()
 ### Math
 
 ```js
+Math.random() // 0 <= x < 1
 Math.abs(-7) // 7
 Math.pow(2, 4) // 16
 Math.ceil(3.4) // 4
@@ -277,6 +282,13 @@ arr.unshift(0) // [0, 1, 2, 3]
 arr.shift() // [1, 2, 3]
 ```
 
+### Object
+
+```js
+obj = {1: 'a', 2: 'b', 3: 'c'}
+
+obj.hasOwnProperty(1) // true
+```
 
 
 # 非同期処理(asynchronous)
