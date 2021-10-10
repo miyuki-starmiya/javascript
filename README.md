@@ -1,21 +1,25 @@
 
+# Glossary
+
+ES6(ES2015): ECMAScript6. JSのver6. ES5は2009年公開
+
 # Syntax
 
 'use strict'はコードの安全性を確保するためにES5から実装された機能である。
 
-## データ型
+## Data Type
 
 ```js
-文字列: string // 'str' or "str"
-数値: number
+number: 12
+string: 'foo' // 'str' or "str"
 undefined: undefined
 null: null
-真偽値: boolean // true or false
-配列: [1, 2]
-オブジェクト: {key: "value"}
+boolean: true, false
+array: [1, 2]
+object: {key: "value"}
 ```
 
-## 予約語
+### 予約語
 
 ```js
 break       case    catch   continue    default
@@ -26,7 +30,7 @@ typeof      var     void    while       with
 const       let
 ```
 
-## コピー
+### 変数のコピー
 ```js
 // 値渡し
 let x = 3;
@@ -35,7 +39,7 @@ y = x;
 x = 1;
 console.log(y); // 3
 
-// 参照渡し = [x,y], {k:"value"}
+// 参照渡し(ポインタ渡し) = [x,y], {k:"value"}
 let a1 = [1,2,3];
 let a2;
 a2 = a1;
@@ -43,7 +47,7 @@ a1[0] = "a";
 console.log(a2); // ["a",2,3]
 ```
 
-## 変数
+### 変数
 
 ```js
 // 再宣言あり変数
@@ -56,14 +60,11 @@ let x = null;
 const x = null;
 ```
 
-### 型変換
+### 型変換(cast)
 
 ```js
-// 型調査
-typeof x
-
-// to string
-String(x)
+// check
+typeof(x)
 
 // to int
 parseInt(x)
@@ -71,14 +72,20 @@ parseInt(x)
 // to float
 parseFloat(x)
 
+// to string
+String(x)
+
 // to boolean
 Boolean(x)
+
+// to array
+Array(1,2) // [1, 2]
 
 // 文字列フォーマット
 console.log(`${x}`)
 ```
 
-### 演算子
+### Operand
 
 ```js
 等号: === // 値とデータ型も同じ
@@ -109,6 +116,8 @@ height > 160 ? console.log("good !") : console.log("bad");
 
 ### switch case 条件分岐
 
+※breakを入れないと他の条件も実行するので注意
+
 ```js
 let signal = "yellow";
 
@@ -137,25 +146,31 @@ for (let i=0; i < 10; i++) {
 
 // for i in
 array = ['a', 'b', 'c']
-
-for (let i in array) {
-    console.log(array[i]); // indexが返される
+for (let i in array) { // indexが返される
+    console.log(array[i]);
 }
 
 obj = {k1: "value1", k2: "value2"}
-
 for (let k in obj) {
     console.log(obj[k]);
 }
 
 // forEach
-array.forEach((e, index) => console.log(e, index));
+array.forEach((e, index) => 
+  console.log(e, index) // callback func
+);
+
+// for of
+array = ['a', 'b', 'c']
+for (let e of array) { // elementsが返される
+    console.log(e); // 'a', 'b', 'c'
+}
 ```
 
 ### while 繰り返し
 
 ```js
-let i = 0
+let i = 0 // counter
 
 while (i < 10) {
   if (i === 3) {
@@ -166,8 +181,8 @@ while (i < 10) {
   i++;
 }
 
-// 初回は必ず実施
-do {
+// do while
+do { // 初回は必ず実行
   console.log(i);
 } while (i < 10)
 ```
@@ -191,16 +206,16 @@ for (let i in a) {
 }
 ```
 
-
 ## 関数
 
 ```js
+// 関数リテラル型
 function hello(name) {
   console.log(`hello ${name}`);
   return name;
 }
 
-// 関数式
+// 関数式 変数代入型
 let add = function(a, b) {
   return a + b;
 }
@@ -210,6 +225,8 @@ let add = (a, b) => (a+b);
 ```
 
 ## クラス
+
+
 
 ## オブジェクトメソッド
 
@@ -230,7 +247,7 @@ s.toUpperCase()
 
 ```js
 Math.abs(-7) // 7
-Math.pow(2, 4) //16
+Math.pow(2, 4) // 16
 Math.ceil(3.4) // 4
 Math.floor(7.7) // 7
 Math.round(3.1) // 3
@@ -240,6 +257,25 @@ Math.E // 2.7...
 ```
 
 ### Array
+
+```js
+let arr = [1, 2, 3]
+
+arr.map(e => (e*2)) // [1, 4, 6]
+arr.filter(e => (e === 2 || e === 3)) // [2, 3]
+arr.concat(arr) // [1, 2, 3, 1, 2, 3]
+arr.every(e => e < 5) // true
+arr.some(e => e === 1) //true
+arr.includes(1) // true
+arr.join('') // '123'
+arr.find(e => e >= 2) // 2. only return first element
+arr.slice(1,3) // [2, 3]
+arr.reverse() // [3, 2, 1]
+arr.push(4) // [1, 2, 3, 4]
+arr.pop() // [1, 2, 3]
+arr.unshift(0) // [0, 1, 2, 3]
+arr.shift() // [1, 2, 3]
+```
 
 
 
@@ -367,6 +403,8 @@ asyncMain(); // Promiseインスタンスを返す
 
 
 # DOM(DocumentObjectModel)
+
+クライアントサイド(ブラウザ)で利用する
 
 ```js
 document.getElementById('#id');
