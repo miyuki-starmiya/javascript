@@ -1,7 +1,14 @@
 
+JSはもともとprototype型のOOPであったが、2015年のES6でclassが導入された
+
 # Glossary
 
 ES6(ES2015): ECMAScript6. JSのver6. ES5は2009年公開
+  - let, const
+  - arrow function
+  - class
+  - promise, async/await(ES2017)
+  - module(CommonJS -> ES modules)
 
 # Syntax
 
@@ -49,17 +56,18 @@ console.log(a2); // ["a",2,3]
 
 ### 変数
 
-※関数内でvarやletを使わずに変数宣言するとグローバル変数になるので注意
+※関数内でvarやletを使わずに変数宣言するとglobal scopeになるので注意
+また、letはblock scope内ではglobal scopeに影響を与えない
 
 ```js
 // 再宣言あり変数
-var x = null;
+var foo = null;
 
 // 再宣言なし変数
-let x = null;
+let bar = null;
 
 // 再代入なし変数 = 定数
-const x = null;
+const HOGE = null;
 ```
 
 ### 型変換(cast)
@@ -226,11 +234,71 @@ let add = function(a, b) {
 
 // アロー関数 = function + returnの省略
 let add = (a, b) => (a+b);
+
+// spread operator
+let func = (...args) => {
+  console.log(args) // argsArray
+}
 ```
 
 ## クラス
 
+従来はprototypeで関数として実装していた。ES6からclassが登場。
 
+```js
+class Human { // 先頭は大文字
+  classProp = 'This is class prop'; // クラス変数
+
+  constructor(name, age) { // インスタンス変数
+    this.name = name; // this = インスタンス
+    this.age = age;
+  }
+
+  static sayHello() { // クラスメソッド
+    console.log('say hello');
+  }
+
+  sayPokemon(pokemon) { // インスタンスメソッド
+    console.log(`say ${pokemon}`);
+  }
+}
+
+taro = new Human('taro', 7); // newでインスタンス生成
+```
+
+### 継承
+
+```js
+class PokemonMaster extends Human {
+  breedPokemon() {
+    console.log('ポケモンを育てるよ')
+  }
+}
+```
+
+### アクセサ
+
+クラスオブジェクトにおいて、プロパティの様に振る舞うメソッド
+
+```js
+class Triangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  get calc() {
+    return this.width * this.height / 2;
+  }
+
+  set props(obj) {
+    this.width = obj.width;
+    this.height = obj.height;
+  }
+}
+
+
+```
 
 ## オブジェクトメソッド
 
@@ -275,11 +343,15 @@ arr.includes(1) // true
 arr.join('') // '123'
 arr.find(e => e >= 2) // 2. only return first element
 arr.slice(1,3) // [2, 3]
+arr.splice(0,2) // [1, 2]
+arr.reduce((total, current) => total + current) // 6 = sum()
 arr.reverse() // [3, 2, 1]
 arr.push(4) // [1, 2, 3, 4]
 arr.pop() // [1, 2, 3]
 arr.unshift(0) // [0, 1, 2, 3]
 arr.shift() // [1, 2, 3]
+
+let [a, b, ...arr] = [1,2,3,4,5] // a = 1, b = 2, arr = [3,4,5]
 ```
 
 ### Object
@@ -288,6 +360,25 @@ arr.shift() // [1, 2, 3]
 obj = {1: 'a', 2: 'b', 3: 'c'}
 
 obj.hasOwnProperty(1) // true
+Object.freeze(obj) // objのconst化
+```
+
+### Date
+
+```js
+
+```
+
+## module
+
+ES moduleでは、exportする時もimportする時も{}で囲う
+exportの方法は[named export, export default]があり、export defaultは１つの値を出力する
+
+```js
+const a = 1;
+const b = 2;
+
+export { a, b }
 ```
 
 
