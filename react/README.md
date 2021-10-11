@@ -1,61 +1,76 @@
 
 コンポーネント指向のJSフレームワーク。
+コンポーネントはexportして、モジュール間で再利用する
 
-## JSX記法
+## Install
 
+- CDN
+  - JSX: <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  - development: 
+    - <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    - <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  - prod: 
+    - <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    - <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+※HTMLからJSを読み込む時<script type="text/babel">とすること
+
+- npm
+  - npm init -y
+  - npm install babel-cli@6 babel-preset-react-app@3
+  - npx babel --watch src --out-dir . --presets react-app/prod
+
+## JSX(JS extension)記法
+
+- JSXはReactObjectのメソッドである
 - render()の第一引数は単一タグで記載する必要がある(divタグで囲う)
-- class= は className=
+- class属性はclassName属性に置換(classが予約語のため)
 - 閉じタグ無しはスラッシュ要 ex: <hr />
 - 変数や関数は{}で囲う
-- html/cssはcamelCaseで記述
+- JSXはcamelCaseで記述
+- ReactDOM.render(JSX)で任意のHTMLidに挿入
+- HTML内に挿入する場所をcontainerと呼ぶ
+
+以下は等価であり、Babelでトランスコンパイルしている
 
 ```js
-  const name = 'hitoe';
-  function showMessage() {
-    alert.('Message');
-  }
+// JSX
+const element = (
+  <h1 className="greeting">
+    Hello, world!
+  </h1>
+);
 
-  ReactDOM.render(
-    <div className="box" onClick={showMessage}>
-      <h1>Hello, {name.toUpperCase()}!</h1>
-      <p>hoge</p>
-
-      <hr />
-    </div>,
-    document.getElementById('root')
-  );
+// React Object
+const element = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, world!'
+);
 ```
 
-## React Component
+## 組み込みObject
 
-- Componentは再利用可能部品
-- 親Componentから子Componentへの引数授与は**props**を使う
+- React: {
+    props: {
+      Component,
+      PureComponent,
+    },
+    methods: {
+      createElement(),
+      createFactory(),
+    }
+}
+- ReactDOM: {
+    methods: {
+      render(),
+      hydrate(),
+      unmountComponentAtNode(),
+      findDOMNode(),
+      createPortal(),
+    }
+}
 
-```js
-      function incr(color) {
-        alert(color);
-      }
 
-      function Counter(props) {
-        return (
-          <div style={{backgroundColor:props.color}} onClick={() => 
-            incr(props.color)}>
-            0
-          </div>
-        );
-      }
-
-      ReactDOM.render(
-        <div className="container">
-          <ul>
-            <li><Counter color="tomato" /></li>
-            <li><Counter color="skyblue" /></li>
-            <li><Counter color="limegreen" /></li>
-          </ul>
-        </div>,
-        document.getElementById('root')
-      );
-```
 
 ## State = Vuex store
 
@@ -66,86 +81,86 @@
 - render()メソッドによって、レンダリングしたいHTML要素を定義
 
 ```js
-      class Counter extends React.Component {
-        constructor(props) {
-          super(props);
-          this.state = {
-            count: 0,
-          };
-          // bind
-          this.incr = this.incr.bind(this);
-        }
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    };
+    // bind
+    this.incr = this.incr.bind(this);
+  }
 
-        incr() {
-          // constructor外部ではsetStateで変数格納
-          // 変数を取得する際はprevStateを使う
-          this.setState(prevState => {
-            return {
-              count: prevState.count + 1
-            };
-          });
-        }
+  incr() {
+    // constructor外部ではsetStateで変数格納
+    // 変数を取得する際はprevStateを使う
+    this.setState(prevState => {
+      return {
+        count: prevState.count + 1
+      };
+    });
+  }
 
-        render() {
-          return (
-            <div style={{backgroundColor:this.props.color}} onClick={this.incr}>
-              {this.state.count}
-            </div>
-          );
-        }
-      }
+  render() {
+    return (
+      <div style={{backgroundColor:this.props.color}} onClick={this.incr}>
+        {this.state.count}
+      </div>
+    );
+  }
+}
 
-      ReactDOM.render(
-        <div className="container">
-          <ul>
-            <li><Counter color="tomato" /></li>
-            <li><Counter color="skyblue" /></li>
-            <li><Counter color="limegreen" /></li>
-          </ul>
-          <div className="total">TOTAL INVENTORY: 3</div>
-        </div>,
-        document.getElementById('root')
-      );
+ReactDOM.render(
+  <div className="container">
+    <ul>
+      <li><Counter color="tomato" /></li>
+      <li><Counter color="skyblue" /></li>
+      <li><Counter color="limegreen" /></li>
+    </ul>
+    <div className="total">TOTAL INVENTORY: 3</div>
+  </div>,
+  document.getElementById('root')
+);
 ```
 
 ```js
-      function Counter(props) {
-        return (
-          <div style={{backgroundColor: props.counter.color}}>
-            {props.counter.id}: {props.counter.count}
-          </div>
-        )
-      }
+function Counter(props) {
+  return (
+    <div style={{backgroundColor: props.counter.color}}>
+      {props.counter.id}: {props.counter.count}
+    </div>
+  )
+}
 
-      class App extends React.Component {
-        constructor() {
-          super();
-          this.state = {
-            counters: [
-            {id: 'A', count: 0, color: 'tomato'},
-            {id: 'B', count: 0, color: 'skyblue'},
-            {id: 'C', count: 0, color: 'limegreen'},
-            ]
-          }
-        }
-        render() {
-          return (
-          <div className="container">
-            <ul>
-              <li><Counter counter={this.state.counters[0]} /></li>
-              <li><Counter counter={this.state.counters[1]} /></li>
-              <li><Counter counter={this.state.counters[2]} /></li>
-            </ul>
-            <div className="total">TOTAL INVENTORY: 3</div>
-          </div>
-          );
-        }
-      }
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      counters: [
+      {id: 'A', count: 0, color: 'tomato'},
+      {id: 'B', count: 0, color: 'skyblue'},
+      {id: 'C', count: 0, color: 'limegreen'},
+      ]
+    }
+  }
+  render() {
+    return (
+    <div className="container">
+      <ul>
+        <li><Counter counter={this.state.counters[0]} /></li>
+        <li><Counter counter={this.state.counters[1]} /></li>
+        <li><Counter counter={this.state.counters[2]} /></li>
+      </ul>
+      <div className="total">TOTAL INVENTORY: 3</div>
+    </div>
+    );
+  }
+}
 
-      ReactDOM.render(
-        <App />,
-        document.getElementById('root')
-      );
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
 ```
 
 

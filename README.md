@@ -504,8 +504,10 @@ function asyncMain() {
 asyncMain(); // Promiseインスタンスを返す
 ```
 
+# ブラウザObject
 
-# DOM(DocumentObjectModel)
+
+## DOM(DocumentObjectModel)
 
 クライアントサイド(ブラウザ)で利用する
 
