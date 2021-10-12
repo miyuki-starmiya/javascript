@@ -16,44 +16,41 @@
   
   <!-- component -->
   <script type="text/babel">
-    class Clock extends React.Component {
+    class NameForm extends React.Component {
       constructor(props) {
         super(props);
-        this.state = {date: new Date()}; // 初期化
+        this.state = {value: ''};
+    
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
       }
     
-      componentDidMount() { // mount
-        this.timerID = setInterval(
-          () => this.tick(),
-          1000
-        );
+      handleChange(event) {
+        this.setState({value: event.target.value});
       }
     
-      componentWillUnmount() { // unmount
-        clearInterval(this.timerID);
-      }
-    
-      tick() {
-        this.setState({ // this.stateを変えて再度render()
-          date: new Date()
-        });
+      handleSubmit(event) {
+        alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
       }
     
       render() {
         return (
-          <div>
-            <h1>Hello, world!</h1>
-            <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-          </div>
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Name:
+              <input type="text" value={this.state.value} onChange={this.handleChange} />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
         );
       }
     }
-    
-    ReactDOM.render(
-      <Clock />,
-      document.getElementById('root')
-    );
 
+    ReactDOM.render(
+      <NameForm />,
+      document.getElementById('root')
+    )
   </script>
 </body>
 
