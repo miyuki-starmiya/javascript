@@ -448,7 +448,7 @@ const todoItems = todos.map((todo, index) =>
 
 ## Form(controlled Component)
 
-<form>内のinput要素をすべてstateにbindさせる. stateとinputをbindさせるために全てにイベントハンドラを記述する必要がある
+<form>内のinput要素をすべてstateにbindさせる. stateとinputをbindさせるために全てにイベントハンドラを記述する必要がある. formに関しては[Formik](https://formik.org/)という依存ライブラリも選択肢の一つである
 
 - inputのvalueは.target.valueで参照可能
 
@@ -492,28 +492,55 @@ ReactDOM.render(
 
 ### <textarea>
 
+```js
+class EssayForm extends React.Component {
+  ...
 
-# 2021/10/12
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Essay:
+          <textarea value={this.state.value} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+```
 
-## Term1 7:30 - 9:00
-  Goal: 6 - 8 List + Key
-  Result: 6 - 7
-  Source: https://ja.reactjs.org/docs/handling-events.html
+### <select>
 
-## Term2 11:30 - 13:00
-  Goal: 8 - 9
-  Result: 8 - 9.5
-  Source: https://ja.reactjs.org/docs/handling-events.html
+```js
+class EssayForm extends React.Component {
+  ...
 
-## Term3
-  Goal: 10 - 11
-  Result: 
-  Source: https://ja.reactjs.org/docs/handling-events.html
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Pick your favorite flavor:
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value="grapefruit">Grapefruit</option>
+            <option value="lime">Lime</option>
+            <option value="coconut">Coconut</option>
+            <option value="mango">Mango</option>
+          </select>
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+    );
+  }
+}
+```
+
+## stateの祖先共有(lift up)
+
+親子コンポーネントの親にstateを設定し、stateを子の兄弟間で共有する. 子の変数はpropsとし親からstateを受け取れるようにする
 
 
-Rule
-- 時間内はSNS等、余計なものは見てはいけない
-
+## Composition
 
 
 
