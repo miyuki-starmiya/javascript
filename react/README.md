@@ -490,7 +490,7 @@ ReactDOM.render(
 )
 ```
 
-### <textarea>
+### textarea
 
 ```js
 class EssayForm extends React.Component {
@@ -510,7 +510,7 @@ class EssayForm extends React.Component {
 }
 ```
 
-### <select>
+### select
 
 ```js
 class EssayForm extends React.Component {
