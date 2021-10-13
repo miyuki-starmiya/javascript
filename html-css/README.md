@@ -4,30 +4,32 @@
 - HTML5は○○年にリリースされた
 - 言語というよりはWeb上のドキュメントに課した仕様と言える
 
-## <h1>
-## <p>
+## h1
+## p
 
-## <a>
+## a
 
-## <div>
-## <span>
+## div
+## span
 
-## <ol>, <ul>
+## ol, ul
 
-## <table>
-## <form>
+## table
+## form
 
 - attrs: 
   - name: 
   - 
 
-### <input>
-### <label>
-### <text>
-### <textarea>
-### <select>
-### <radio>
+### input
+### label
+### text
+### textarea
+### select
+### radio
 
+### link
+### script
 
 
 # CSS(StyleSheet)
@@ -35,7 +37,7 @@
 ## import
 
 ```html: index.html
-<link rel="index.css">
+link rel="index.css"
 ```
 
 ## query-selector
