@@ -506,6 +506,48 @@ asyncMain(); // Promiseインスタンスを返す
 
 # ブラウザObject
 
+windowObjectから以下のような階層構造を持つ
+
+- window(global)
+  - screen
+  - location(URL)
+  - navigation
+  - history
+  - document(HTML source)
+    - anchors
+    - images
+    - forms
+      - elements
+        - Button
+        - CheckBox
+        - FileUpload
+        - Password
+        - Radio
+        - Reset
+        - Submit
+        - Text
+        - Textarea
+        - Select
+          - options
+
+### window
+
+- methods: popup系のobject. renderする前に呼び出される
+  - alert(): popupの表示
+  - confirm(): y/nの確認, y = true, n = falseを返す
+  - prompt(): user input popup
+
+### location
+
+- methods: 
+  - reload(): 再読み込み = f5
+  - replace(URL): ページ遷移 = aタグ
+- props: 
+  - pathname: URLのpath
+  - port
+  - protocol: https://みたいな
+  - href: location.href = URL = location.replace(URL)
+
 
 ## DOM(DocumentObjectModel)
 
