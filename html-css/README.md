@@ -30,6 +30,9 @@
 
 ### link
 ### script
+### meta
+
+<meta />内でHTML以外の言語が利用可能
 
 
 # CSS(StyleSheet)
