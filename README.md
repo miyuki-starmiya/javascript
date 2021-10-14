@@ -551,11 +551,29 @@ windowObjectから以下のような階層構造を持つ
 
 ## DOM(DocumentObjectModel)
 
-クライアントサイド(ブラウザ)で利用する
+クライアントサイド(ブラウザ)で利用する要素をツリー構造で表現した仕様. W3C(World Wide Web Consortium)によって標準化されている. 要素をnodeと表現する
+
+- node: nodeの種類
+  - element node
+  - attribute node
+  - text node
+
+- node tree
+  - parent node
+    - older brother node
+    - current node
+    - younger brother node
+      - first child node
+      ...
+      - last child node
+
+### nodeの取得(get)
+
+- .textContentでnode内の
 
 ```js
-document.getElementById('#id');
-document.querySelectorAll('.class');
+document.getElementById('id');
+document.querySelectorAll('class');
 
 
 ```

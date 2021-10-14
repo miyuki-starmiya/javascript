@@ -6,23 +6,11 @@
 
 <body>
   <h1>demo page</h1>
-  <p>form below</p>
-  <form name="form1" onsubmit="show()">
-    <input name="input1" placeholder="default value" required />
-    <input type="radio">hoge
-    <input type="submit" value="send" />
-  </form>
-  <button onclick="jump()">jump to google</button>
+  <p id="target">hoge</p>
 
   <script type="text/javascript">
-    function show() {
-      const userInput = document.form1.input1.value
-      window.alert(userInput);
-    }
-    function jump() {
-      // location.replace('https://google.com');
-      console.log(location.protocol);
-    }
+    const target = document.getElementById('target');
+    console.log(target.textContent);
   </script>
 </body>
 </html>
