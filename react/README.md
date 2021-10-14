@@ -123,13 +123,9 @@ ReactDOM.render(
 
 function Componentで良い場合と, class Componentにしなければならない場合を分析する
 
-- function: propsを引数に取るだけの場合
-- class: constructorから以下を設定する場合
-  - stateをインスタンス引数にして引数を共有する場合
-  - HTMLに関数をbindする場合
-  - lifeCycleMethodを設定する場合
-
-function Componentにstateを付与して, class Componentにすることで変数を永続化させる
+function Component = props + render()
+class Component = 
+  function Component + state + bind() + lifeCycleMethod()
 
 1. React.Componentクラスを継承したClassを作成する
 2. render()メソッドを挟む
@@ -553,7 +549,11 @@ class EssayForm extends React.Component {
 - 子から親: 
   - 親子両方のコンポーネントにイベントハンドラをbind
   - 親のイベントハンドラをpropsで子に渡す
+    - 親のイベントハンドラprops名はonHandlerという風にする
+    - 親のイベントハンドラ名はhandleEventという風にする
   - 子のイベントハンドラで親のイベントハンドラを発火させる
+
+
 
 ## Composition
 
