@@ -506,14 +506,74 @@ asyncMain(); // Promiseインスタンスを返す
 
 # ブラウザObject
 
+windowObjectから以下のような階層構造を持つ
+
+- window(global)
+  - screen
+  - location(URL)
+  - navigation
+  - history
+  - document(HTML source)
+    - anchors
+    - images
+    - forms
+      - elements
+        - Button
+        - CheckBox
+        - FileUpload
+        - Password
+        - Radio
+        - Reset
+        - Submit
+        - Text
+        - Textarea
+        - Select
+          - options
+
+### window
+
+- methods: popup系のobject. renderする前に呼び出される
+  - alert(): popupの表示
+  - confirm(): y/nの確認, y = true, n = falseを返す
+  - prompt(): user input popup
+
+### location
+
+- methods: 
+  - reload(): 再読み込み = f5
+  - replace(URL): ページ遷移 = aタグ
+- props: 
+  - pathname: URLのpath
+  - port
+  - protocol: https://みたいな
+  - href: location.href = URL = location.replace(URL)
+
 
 ## DOM(DocumentObjectModel)
 
-クライアントサイド(ブラウザ)で利用する
+クライアントサイド(ブラウザ)で利用する要素をツリー構造で表現した仕様. W3C(World Wide Web Consortium)によって標準化されている. 要素をnodeと表現する
+
+- node: nodeの種類
+  - element node
+  - attribute node
+  - text node
+
+- node tree
+  - parent node
+    - older brother node
+    - current node
+    - younger brother node
+      - first child node
+      ...
+      - last child node
+
+### nodeの取得(get)
+
+- .textContentでnode内の
 
 ```js
-document.getElementById('#id');
-document.querySelectorAll('.class');
+document.getElementById('id');
+document.querySelectorAll('class');
 
 
 ```

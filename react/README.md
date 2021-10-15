@@ -2,8 +2,8 @@
 # React.js
 
 コンポーネント指向のJSフレームワーク.
-コンポーネントはexportして、モジュール間で再利用する.
-Vueに比べてテンプレート性がない代わりに、カスタマイズ性に優れている
+コンポーネントはexportして, モジュール間で再利用する.
+Vueに比べてテンプレート性がない代わりに, カスタマイズ性に優れている
 
 ## Install
 
@@ -33,7 +33,7 @@ Vueに比べてテンプレート性がない代わりに、カスタマイズ�
 - ReactDOM.render(JSX)で任意のHTMLidに挿入
 - HTML内に挿入する場所をcontainerと呼ぶ
 
-以下は等価であり、Babelでトランスコンパイルしている
+以下は等価であり, Babelでトランスコンパイルしている
 
 ```js
 // JSX
@@ -79,8 +79,8 @@ ReactDOM内で再利用可能な部品群。function Componentとclass Component
 ※先頭は大文字にする必要がある
 
 - Componentは分割せよ
-- Component(props)において、propsの戻り値を変えてはいけない(pure)
-- return ()で戻り値を設定しないと、undefinedになるので注意
+- Component(props)において, propsの戻り値を変えてはいけない(pure)
+- return ()で戻り値を設定しないと, undefinedになるので注意
 
 ```js
 // function Component
@@ -96,7 +96,7 @@ class Welcome extends React.Component {
 }
 ```
 
-以下のようにして、いくらでも再利用可能
+以下のようにして, いくらでも再利用可能
 
 ```js
 function Welcome(props) {
@@ -119,10 +119,13 @@ ReactDOM.render(
 );
 ```
 
-
 ### Component state(Class Component)
 
-function Componentにstateを付与して、class Componentにすることで変数を永続化させる
+function Componentで良い場合と, class Componentにしなければならない場合を分析する
+
+function Component = props + render()
+class Component = 
+  function Component + state + bind() + lifeCycleMethod()
 
 1. React.Componentクラスを継承したClassを作成する
 2. render()メソッドを挟む
@@ -133,7 +136,10 @@ function Componentにstateを付与して、class Componentにすることで変
 7. <Component />のプロパティを削除する
 
 - this.stateはComponent(Instance)内のlocal変数である
-- propsやstateは単方向バインディングだから、子コンポーネントにしか影響を与えない
+- propsやstateは単方向バインディングだから, 子コンポーネントにしか影響を与えない
+
+また、propsもstateも同じ変数でありstateをpropsのように扱うことも可能だが、stateは動的(user inputが存在する)な場合にのみ使うのが良いとされている
+つまり、stateは[動的, 独立, 祖先(top Component)]なものしか必要がない
 
 以下ではまだclass Componentは完成しません
 
@@ -196,7 +202,7 @@ ReactDOM.render(
 
 Componentがmountあるいはunmountされた時に呼び出すメソッド. Componentのメモリリークに影響する
 
-※setState()を利用せず、直接this.stateを変更すると再度render()されない
+※setState()を利用せず, 直接this.stateを変更すると再度render()されない
 
 ```js
 class Clock extends React.Component {
@@ -310,7 +316,7 @@ class Toggle extends React.Component {
 
 ### if, else
 
-vueでいう<v-if>, <v-else>のようなdirectiveはなく、JavaScriptの仕様を極力活用した実装方法を取る
+vueでいう<v-if>, <v-else>のようなdirectiveはなく, JavaScriptの仕様を極力活用した実装方法を取る
 
 Componentをcondition(true / false)によって使い分けるもっとも基本的な方法, すなわち親コンポーネントでラップする方法を以下に記す
 
@@ -427,7 +433,7 @@ ReactDOM.render(
 
 ### list key
 
-list要素を識別するために用いられる. 識別用途なので、keyは一意に決まるIDが良いとされる. 一意なIDが無い場合はindexを用いることもあるが非推奨である. list作成時にkeyを設定しないとWarningがでる
+list要素を識別するために用いられる. 識別用途なので, keyは一意に決まるIDが良いとされる. 一意なIDが無い場合はindexを用いることもあるが非推奨である. list作成時にkeyを設定しないとWarningがでる
 
 - keyはmapのアロー関数の戻り値に設定する
 
@@ -537,10 +543,41 @@ class EssayForm extends React.Component {
 
 ## stateの祖先共有(lift up)
 
-親子コンポーネントの親にstateを設定し、stateを子の兄弟間で共有する. 子の変数はpropsとし親からstateを受け取れるようにする
+親子コンポーネントの親にstateを設定し, stateを子の兄弟間で共有する. 子の変数はpropsとし親からstateを受け取れるようにする
+
+- 親から子: <Component props={} />のようにpropsを渡すだけ
+- 子から親: 
+  - 親子両方のコンポーネントにイベントハンドラをbind
+  - 親のイベントハンドラをpropsで子に渡す
+    - 親のイベントハンドラprops名はonHandlerという風にする
+    - 親のイベントハンドラ名はhandleEventという風にする
+  - 子のイベントハンドラで親のイベントハンドラを発火させる
+
 
 
 ## Composition
 
+親コンポーネントから子コンポーネントにJSXを渡す箱として{props.children}を設定できる
+
+```js
+function Children(props) {
+  return (
+    <div>
+      // 親のJSXを出力する場所
+      {props.children}
+    </div>
+  );
+}
+
+function Parent() {
+  return (
+    <Children>
+      // as {props.children}
+      <h1>まったくもってぇ！</h1>
+      <p>なんでもいいよぉ！！！</p>
+    </Children>
+  );
+}
+```
 
 

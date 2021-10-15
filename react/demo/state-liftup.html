@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="utf-8">
+  <title>demo</title>
+</head>
+
+<body>
+  <h1>React demo page</h1>
+  <div id="root"></div>
+
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <!-- JSX -->
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  
+  <!-- component -->
+  <script type="text/babel">
+    // 沸騰判定関数
+    function BoilingVerdict(props) {
+      if (props.celsius >= 100) {
+        return <p>boiled !</p>;
+      } else {
+        return <p>not boiled.</p>;
+      }
+    }
+
+    // 摂氏 or 華氏のスケール
+    const scaleNames = {
+      c: '摂氏温度',
+      f: '華氏温度'
+    };
+
+    // userがtemperatureをinputする関数. props = (temperature)
+    class TemperatureInput extends React.Component {
+      constructor(props) {
+        super(props);
+        // 自関数をbind
+        this.handleChange = this.handleChange.bind(this);
+      }
+
+      handleChange(event) {
+        // 親コンポーネント関数を発火
+        this.props.onTemperatureChange(event.target.value);
+      }
+
+      render() {
+        const temperature = this.props.temperature;
+        const scale = this.props.scale;
+        
+        return (
+          <fieldset>
+            <legend>{scaleNames[scale]}を入力してね♪</legend>
+            <input value={temperature} onChange={this.handleChange} />
+          </fieldset>
+        );
+      }
+    }
+
+    // state = (temperature, scale)
+    class Calculator extends React.Component {
+      constructor(props) {
+        super(props);
+        // 摂氏・華氏の両方をbind
+        this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+        this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+        // 子コンポーネントを渡すインスタンス変数 = 共有情報源
+        this.state = {temperature: '', scale: 'c'};
+      }
+
+      handleCelsiusChange(temperature) {
+        this.setState({scale: 'c', temperature: temperature})
+      }
+
+      handleFahrenheitChange(temperature) {
+        this.setState({scale: 'f', temperature: temperature})
+      }
+
+      render() {
+        const scale = this.state.scale;
+        const temperature = this.state.temperature;
+        const celsius = scale === 'f' ? convertToString(temperature, toCelsius) : temperature;
+        const fahrenheit = scale === 'c' ? convertToString(temperature, toFahrenheit) : temperature;
+
+        return (
+          <div>
+            <TemperatureInput 
+              scale="c" 
+              temperature={celsius} 
+              onTemperatureChange={this.handleCelsiusChange} 
+            />
+            <TemperatureInput scale="f" 
+              scale="f" 
+              temperature={fahrenheit} 
+              onTemperatureChange={this.handleFahrenheitChange}
+            />
+            <BoilingVerdict
+              celsius={parseFloat(celsius)}
+            />
+          </div>
+        );
+      }
+    }
+
+    // 変換関数
+    function toCelsius(fahrenheit) {
+      return (fahrenheit - 32) * 5 / 9;
+    }
+
+    function toFahrenheit(celsius) {
+      return (celsius * 9 / 5) + 32;
+    }
+
+    // temperature: Number, convert: function
+    function convertToString(temperature, convert) {
+      const input = parseFloat(temperature);
+      if (Number.isNaN(input)) {
+        return '';
+      }
+      const output = convert(input);
+      const rounded = Math.round(output * 1000) / 1000;
+      return rounded.toString();
+    }
+
+    ReactDOM.render(
+      <Calculator />,
+      document.getElementById('root')
+    )
+  </script>
+</body>
+
+</html>
+
+
