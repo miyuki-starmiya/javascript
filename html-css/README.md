@@ -1,8 +1,11 @@
 
 # HTML5(HyperTextMarkupLanguage)
 
-- 言語というよりはWeb上のドキュメントに課した仕様と言える
-- HTTPとURLによってWeb上のあらゆるドキュメントと繋がれる
+- 言語というよりはWeb上のドキュメントに課した仕様
+- W3Cが仕様策定している
+- HTTPとURLによってWeb上のあらゆるドキュメントと繋がることが可能
+
+WorldWideWeb = HTML + HTTP + URL
 
 ## history
 
@@ -14,6 +17,7 @@ Web1.0の基となるHyperTextSystemは1980年にTim Berners-LeeによってCERN
 - HTML5: Oct 28, 2014
   - HTML5.1: Nov 1, 2016
   - HTML5.2: Dec 14, 2017
+
 
 ## tags
 
@@ -121,56 +125,159 @@ This is user input part
     - option: value
 
 - textarea: user input free
+
 ## attributes
 
-tag内の設定変数
+config values in tag
 
 ex: attribute(tag1, tag2, ...): description
 
-- alt(img, input): alternative text in case contents can't be displayed
-- autoplay(audio, video): auto play contents
+## meta
+
 - charset(meta, script): declare the character encoding
 - class: to apply with CSS, JavaScript
 - id: it is unique value to apply with CSS, JavaScript
+- alt(img, input): alternative text in case contents can't be displayed
+- autoplay(audio, video): auto play contents
 
 ### hyper text link
 
 - href(a, link): the URL of a linked resource
-
+- rel(a, link): specify relationship. ex, stylesheet
+- src(iframe, img, script, video): URL of the embeddable content
+- target(a,form): _blank = by new tab
 
 ### form
 
 - action(form): URL submitted user input data to
+- method(form): specify HTTP method GET or POST
 - for(label): to id(input)
 - form(input, button, fieldset, keygen, select, label): specify form
-
+- name(input, button, fieldset, keygen, select, label): used by the server to identify the field in form submits
+- placeholder(input, textarea): provide hint value on loading
+- maxlength(input, textarea): define the maximum number of characters
+- minlength(input, textarea): define the minimum number of characters
+- value: define default value to send server
+- type: [button, checkbox, color, date, email, file, hidden, image, number, password, radio, range, reset, submit, tel, text] => (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
 ### embed
 
 - height(iframe, img, input): contents height
 - width(iframe, img, input): contents width
 
-
 ### value state
 
-- checked(input, command): turn on check on page load
+- checked(input, command): turn on checked on page load
 - disabled(input, button, fieldset, keygen, select): disable to operate data
 - hidden: hidden
+- required: validate if there is no value
+- selected(option): turn on selected on page load
 
 ### textarea
 
 - cols(textarea): cols
 - rows(textarea): rows
 
-## global attributes
+### meter
 
-onclickとかのevent
+- max(input, meter): max number
+- min(input, meter): min number
 
-# HTTP
+
+## global event attributes
+
+event attribute fire JavaScript when user make event
+attribute名の接頭辞にonが付く
+
+### form events
+
+- onblur: fire the moment that the element loses focus
+- onfocus: fire the moment that the element gets focus
+- onchange: fire the moment that the element is changed
+- oninput: 
+- oninvalid: 
+- onselect: 
+- onsubmit: 
+
+### keyboard events
+
+- keydown: fire every keydown
+- keyup: fire every keyup
+
+### mouse
+
+- onclick: 
+- ondblclick: 
+- onmouseover: 
+- onmousedown: like click
+- ondrag: 
+
+### clipboard
+
+- oncopy: 
+- oncut: 
+- onpaste: 
 
 
-# URL
+# HTTP(HyperTextTransferProtocol)
 
+- L7 protocol
+- client request, then server response
+
+## HTTP request
+
+request contains below
+
+- HTTP version type
+- URL
+- HTTP method
+- request headers
+- HTTP body(optional)
+
+### HTTP version
+
+- HTTP/0.9: 1991
+- HTTP/1.0: 1996
+- HTTP/1.1(main): 1997
+- HTTP/2: 2015
+- HTTP/3(draft): 2020
+
+## HTTP response
+
+response contains below
+
+- HTTP status code
+- response headers
+- HTTP body(optional)
+
+### HTTP status code
+
+- 1xx information
+- 2xx success
+- 3xx redirection
+- 4xx client error
+- 5xx server error
+
+### response headers
+
+data type is key-value
+
+- version, status code
+- content-type
+- date
+- server
+- expires
+- set-cookie
+- x-xss-protection
+
+
+# URL(UniformResourceLocator)
+
+URL is unique resource on the Web
+
+URL = Scheme(Protocol) + Domain Name + Port + Path + Params + Anchor
+
+ex: http://www.example.com:80/path/src/index.html?key=value#somewhere
 
 
 

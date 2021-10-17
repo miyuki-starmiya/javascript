@@ -10,18 +10,19 @@
   <div id="app"></div>
   <h1>This is memo app !</h1>
   
-  <select>
-    <option id="a">a</option>
-    <option id="a">a</option>
-    <option id="a" hidden>a</option>
-  </select>
+  <form method="get">
+    <label for="t">text data</label>
+    <input type="text" id="t" name="user-input">
+    <input type="button" onclick="hoge()">;
+  </form>
 
 
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script type="text/javascript">
     const hoge = () => {
-      alert('hoge');
+      const target = document.getElementById('t').value;
+      console.log(target);
     }
   </script>
 </body>
