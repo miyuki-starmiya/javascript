@@ -1,76 +1,94 @@
 
-# HTML(MarkupLanguage)
+# HTML(HyperTextMarkupLanguage)
 
 - HTML5は○○年にリリースされた
 - 言語というよりはWeb上のドキュメントに課した仕様と言える
+- HTTPとURLによってWeb上のあらゆるドキュメントと繋がれる
 
-## h1
-## p
+# tags
 
-## a
+## metadata
 
-## div
-## span
+HTMLのメタ情報を記述するもの
 
-## ol, ul
+- head: contain title, scripts, link to CSS
+- link: make link to CSS, favicon
+- meta: specify charset, viewport, theme-color, description
+- style: write CSS to HTML directly
+- title: title
+- body: part to write contents
 
-## table
-## form
+## content section
 
-- attrs: 
-  - name: formやinputを識別するID. これを元にvalueを参照する
-  - action: valueの送信先URLを指定
-  - method: GET / POSTでHTTPメソッドを指定
+- article: independent part
+- aside: sidebar, call-out boxes
+- header: header
+- footer: footer
+- h1: six levels of section headings. 1 to 6.
+- main: main part
+- nav: navbar, menu
+- section: generic standalone part
 
-### input
+## text content
 
-- attrs:
-  - name: formやinputを識別するID. これを元にvalueを参照する
-  - placeholder: 未入力の状態で表示される値
-  - required: 未入力であればvalidateする
-  - value: valueを指定. checkbox, radio, hiddenの時に指定
-  - type: input fieldの種類
-    - checkbox
-    - date: UIが古臭い笑
-    - disabled: 入力不能にする. JSと組み合わせて入力順序を規定したりする
-    - email
-    - file: ファイルのアップロード
-    - hidden: 暗黙的に送信する. valueを指定する必要あり
-    - number
-    - password
-    - radio
-    - reset: formタグ内の入力をすべてresetする
-    - submit: valueがブラウザから表示される値になる
-    - text: default
+identify text content
 
-### label
+- div: separate part and add class attr
+- hr: horizon
+- p: paragraph. include br tag
+- math: math formula
 
-- attrs: 
-  - for: inputタグのidとbindされる
-  - form: formタグのidとbindされる
+## list content
 
-### textarea
-### select
-### option
+- ol: order list
+  - li: list component
 
-### link
-### script
-### meta
+- ul: unordered list
+  - li: list component
 
-metaタグ内でHTML以外の言語が利用可能
+- dl: description list
+  - dt: title
+  - dd: description
+
+## inline text semantic
+
+- a: anchor element. create a hyperlink to other wab pages
+- b: bold
+- br: break line
+- mark: mark text in yellow color
+- ruby: ルビを振れる
+  - rt: this is ruby
+- s: strike through
+- span: span text
+- sub: 下付き文字
+- sup: 上付き文字
+- u: underline with red wave line
+
+## image and multimedia
+
+- audio: .mp3
+- img: .png, .jpg
+- video: .mp4
+- track: audio + video
+- svg: .svg
+
+## embedded content
+
+- iframe: nest sub browser window. embed another HTML page
+- script: script
+
+## table content
 
 
-# CSS(StyleSheet)
+## form content
 
-## import
 
-```html: index.html
-link rel="index.css"
-```
 
-## query-selector
+# attributes
 
-- id = #
-- class = .
+# global attributes
+
+# history
+
 
 
