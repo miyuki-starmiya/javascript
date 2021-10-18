@@ -114,15 +114,57 @@ https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 
 https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals
 
-
-
+- color: text color
+- font-family: specify font type
+  - font type: {
+    serif: dot font,
+    sans-serif: isn't dot font,
+    monospace: every character has same width
+    cursive: to emulate handwriting,
+    fantasy: to decorate,
+  }
+  - web safe font: {
+    Arial: sans-serif,
+    Courier New: monospace,
+    Georgia: serif,
+    Times New Roman: serif,
+    Trebuchet MS: sans-serif,
+    Verdana: sans-serif,
+  }
+- font-size(px, em, rem)
+- font-style: [normal, italic, oblique]
+- font-weight: [normal, bold]
+- text-transform: [none, uppercase, lowercase, capitalize, full-width]
+- text-decoration: [none, underline, overline, line-through]
+- text-shadow(horizontal, vertical, radius, color)
+- text-align: [left, right, center, justify]
+- line-height: text starts from specified height. this property is around 1.5 - 2
+- word-spacing
 
 
 ## layout
 
+display: {
+  block: default. break line both before and after,
+  inline: don't break line both before and after,
+  flex,
+  grid,
+  none,
+  }
+
+![direction](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow/mdn-horizontal.png)
+
 ### flexbox
 
+display 
+
 ### grid layout
+
+specify columns and rows
+
+### float
+
+### position
 
 
 ## function
