@@ -53,18 +53,69 @@ tag[attr="value"] {
 
 ### grouping selectors
 
-- 
+- list selector(A, B): specify both A and B
+- general combinator(A ~ B): specify all B when there is at least one of A
+- child combinator(A > B): specify direct child element
+- descendant combinator(A B): specify all descendant element
 
-### pseud class
-
-### media query(@media, @import)
+### media query
 
 
 
+## pseud class(疑似クラス)
+
+selector:pseudo-class {
+  property: value;
+}
+
+### location
+
+- :link : have not yet been visited
+- :visited : have been visited
+- :any-link : :link + :visited
+- :target : is the same page anchor to be targeted
+
+### user action
+
+- :hover : mouse over
+- :active : click on
+- :focus : mouse pointer on
+
+### user input
+
+- :enabled : input element in an enabled state
+- :disabled : input element in a disabled state
+- :read-only : input element in a read-only state
+- :blank : which is empty
+- :valid : with valid contents
+- :invalid : with invalid contents
+- :checked : checked status
+- :required : required status
+
+### DOM
+
+- :first-child : first child element
+- :last-child : last child element
+- :nth-child(n): specify n-th child element
 
 ## index
 
-### building block1 ...
+### box model
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+
+- padding: space inside box
+- border(style, width, color): space on border
+- margin: space outside box
+- width: box width(px, %)
+- height: box height(px, %)
+
+### styling text
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals
+
+
+
 
 
 ## layout
