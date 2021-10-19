@@ -12,12 +12,13 @@ CSS is stylesheet lang. CSS describes how elements should be rendered on browser
 
 ## syntax
 
+```css
 @IDENTIFIER (RULE) {
   selector {
     property: value;
   }
 }
-
+```
 
 ## selectors
 
@@ -25,27 +26,35 @@ to specify elements
 
 ### type selector
 
+```css
 tag {
   property: value;
 }
+```
 
 ### class selector
 
+```css
 .class {
   property: value;
 }
+```
 
 ### ID selector
 
+```
 #ID {
   property: value;
 }
+```
 
 ### attribute selector
 
+```css
 tag[attr="value"] {
   property: value;
 }
+```
 
 - [attr^=value]: value is prefixed
 - [attr$=value]: value is suffixed
@@ -60,6 +69,22 @@ tag[attr="value"] {
 
 ### media query
 
+```css
+@media media-type and (media-width) {
+  property: value;
+}
+```
+
+- media-type
+  - all
+  - print
+  - screen
+  - speech
+
+- media-width
+  - width
+  - max-width
+  - min-width
 
 
 ## pseud class(疑似クラス)
@@ -156,18 +181,57 @@ display: {
 
 ### flexbox
 
-display 
+![flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox/flex_terms.png)
+
+- flex-container:
+  - display: flex
+  - flex-direction: [row, column, row-reverse, column-reverse]
+  - flex-wrap: break flex items when flex items go over flex container
+  - flex-flow: flex-direction + flex-wrap
+  - justify-content: lay out items in main axis.
+    [center, space-around, space-between, flex-start, flex-end]
+  - align-items: lay out items in cross axis.
+    [stretch(default), center, flex-start, flex-end]
+- flex-item:
+  - flex: number that specify item's width rate
+  - flex-basis: [auto, 0, px]
+
 
 ### grid layout
 
-specify columns and rows
+specify columns and rows, gap
+
+![grid system](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids/grid.png)
+
+- container:
+  - display: grid
+  - grid-template-columns(item1, item2, ...): [px, fr(%)]
+  - gap: px. space between items
+  - repeat(range, scale): repeat(3, 1fr) = 1fr 1fr 1fr
+  - minmax(minwidth, maxwidth)
 
 ### float
 
+- float: [left, right]
+
 ### position
 
+- position: [relative, absolute]
+  - [top, right, bottom, left]
 
-## function
+### multi-column-layout
+
+- container:
+  - column-count: num;
+  - column-gap: px;
+  - column-rule: px, line-shape, color;
+
+
+
+## functional animation
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions
+
 
 
 
