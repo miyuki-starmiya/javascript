@@ -227,11 +227,21 @@ specify columns and rows, gap
   - column-rule: px, line-shape, color;
 
 
-
 ## functional animation
+
+make HTML elements animate dynamically
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Functions
 
+### transform
 
+- matrix(scaleX, skewY, skewX, scaleY, translateX, translateY)
+- matrix3d(a1, b1, ..., c4, d4)
+- rotate(deg): spin figure by specified degree
+- rotateX(deg, turn, rad): change figure length around horizontal axis
+- rotateY(deg, turn, rad): change figure length around vertical axis
+- scale(x, y): change figure scale
+- skew(x, y): distortion
+- translate(x, y): move figure in each direction
 
 
