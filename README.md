@@ -1,7 +1,11 @@
 
 # JS6(JavaScript ECMA Script6)
 
-JSはもともとprototype型のOOPであったが、2015年のES6でclassが導入された
+JavaScript was released by the Mosaic web browser.
+
+## history
+
+
 
 # Glossary
 
