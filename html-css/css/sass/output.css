@@ -1,0 +1,16 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: pink;
+}
+
+.box, .large-box {
+  background-color: skyblue;
+  width: 100px;
+  height: 100px;
+}
+
+.large-box {
+  transform: translate(200px, 200px);
+}
+
+/*# sourceMappingURL=output.css.map */

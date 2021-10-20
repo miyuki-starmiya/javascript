@@ -1,0 +1,14 @@
+
+$box-color: skyblue;
+$box-width: 100px;
+$box-height: 100px;
+
+@mixin box {
+  background-color: $box-color;
+  width: $box-width;
+  height: $box-height;
+}
+
+@mixin largeHeading($fontSize: 64px) {
+  font-size: $fontSize;
+}
