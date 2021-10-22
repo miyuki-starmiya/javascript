@@ -3,9 +3,40 @@
 
 JavaScript was released by the Mosaic web browser.
 
+JavaScript has features below
+  - curly-bracket syntax {}
+  - dynamic typing
+  - prototype-type-based OOP =>
+  - class-based OOP(ES6)
+  - first-class functions
+
+JavaScript has APIs below
+  - text
+  - dates
+  - regular expressions
+  - standard data structures
+  - DOM(DocumentObjectModel)
+
 ## history
 
+- 1993: The Mosaic web browser was released
+- 1995: first shipped called LiveScript as part of Navigator beta
+- 1996: Microsoft release JScript which is similar to JavaScript
+  cause cross browser problem that make developers confuse
 
+
+- appearance of AJAX
+
+
+### browser history
+
+- 1993: NCSA Mosaic
+- 1994: Netscape Navigator
+- 1995: Internet Explorer
+- 1996: Opera
+- 2003: Safari
+- 2004: Firefox
+- 2008: Google Chrome
 
 # Glossary
 
