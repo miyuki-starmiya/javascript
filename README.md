@@ -1,5 +1,5 @@
 
-# JS6(JavaScript ECMA Script6)
+# JavaScript6(JavaScript ECMA Script6)
 
 JavaScript was released by the Mosaic web browser.
 
@@ -17,16 +17,60 @@ JavaScript has APIs below
   - standard data structures
   - DOM(DocumentObjectModel)
 
+## ecosystem
+
+front-end frameworks: React, Angular, Vue, jQuery
+back-end runtime: Node
+frameworks for mobile: React Native
+package managers: npm, yarn
+build automation tools: Webpack, Grunt
+testing tools: Jest
+linter: ESLint
+transpilers: Babel
+alt JS: TypeScript
+
 ## history
+
+ES3(1999)
+  - regular expression
+  - new control statements
+  - exception handling
+
+ES5(2009)
+  - iteration functions(map, reduce, filter, forEach)
+  - JSON
+  - accessor(getter and setter)
+  - better reflection and object properties
+
+ES6(ES2015)
+  - block scope(let, const)
+  - arrow function
+  - class
+  - promise, async/await(ES2017)
+  - module(CommonJS => ES modules)
+  - template literal
+  - spread operator
+  - default value
+  - de-structuring assignment
+  - rest parameter
+  - symbol
+  - generator function
 
 - 1993: The Mosaic web browser was released
 - 1995: first shipped called LiveScript as part of Navigator beta
 - 1996: Microsoft release JScript which is similar to JavaScript
-  cause cross browser problem that make developers confuse
-
-
-- appearance of AJAX
-
+  => cause cross browser problem that make developers confuse
+- 1997: ECMA Script1 was released by Ecma International
+- 1998: ECMA Script2 was released
+- 1999: ECMA Script3 was released
+- 2000: Internet Explorer dominant about 95% in the browser market
+- 2004: FireFox was released by Mozilla ex-Netscape
+- 2005: AJAX appeared. It provided async procession
+  => affect jQuery
+- 2008: Google Chrome with just-in-time compilation was released
+- 2009: ECMA Script5 was released
+- 2009: Node.ja and npm was released by Ryan Dahl
+- 2015: ECMA Script6 was released
 
 ### browser history
 
@@ -38,14 +82,6 @@ JavaScript has APIs below
 - 2004: Firefox
 - 2008: Google Chrome
 
-# Glossary
-
-ES6(ES2015): ECMAScript6. JSのver6. ES5は2009年公開
-  - let, const
-  - arrow function
-  - class
-  - promise, async/await(ES2017)
-  - module(CommonJS -> ES modules)
 
 # Syntax
 
@@ -63,7 +99,7 @@ array: [1, 2]
 object: {key: "value"}
 ```
 
-### 予約語
+### reserved words
 
 ```js
 break       case    catch   continue    default
@@ -74,7 +110,7 @@ typeof      var     void    while       with
 const       let
 ```
 
-### 変数のコピー
+### copy variables
 ```js
 // 値渡し
 let x = 3;
@@ -91,7 +127,7 @@ a1[0] = "a";
 console.log(a2); // ["a",2,3]
 ```
 
-### 変数
+### variables
 
 ※関数内でvarやletを使わずに変数宣言するとglobal scopeになるので注意
 また、letはblock scope内ではglobal scopeに影響を与えない
@@ -107,7 +143,7 @@ let bar = null;
 const HOGE = null;
 ```
 
-### 型変換(cast)
+### type cast
 
 ```js
 // check
@@ -144,7 +180,7 @@ console.log(`${x}`)
 否定： ! // not
 ```
 
-## 制御フロー
+## control flows
 
 ### if 条件分岐
 
@@ -186,7 +222,7 @@ switch (signal) {
 }
 ```
 
-### for 繰り返し
+### for loop
 
 ```js
 for (let i=0; i < 10; i++) {
@@ -216,7 +252,7 @@ for (let e of array) { // elementsが返される
 }
 ```
 
-### while 繰り返し
+### while loop
 
 ```js
 let i = 0 // counter
@@ -236,7 +272,7 @@ do { // 初回は必ず実行
 } while (i < 10)
 ```
 
-### try 例外処理
+### try exception handling
 
 ```js
 let a = ['a', true, 0];
@@ -255,7 +291,7 @@ for (let i in a) {
 }
 ```
 
-## 関数
+## functions
 
 ```js
 // 関数リテラル型
@@ -278,7 +314,7 @@ let func = (...args) => {
 }
 ```
 
-## クラス
+## classes
 
 従来はprototypeで関数として実装していた。ES6からclassが登場。
 
@@ -303,7 +339,7 @@ class Human { // 先頭は大文字
 taro = new Human('taro', 7); // newでインスタンス生成
 ```
 
-### 継承
+### inheritance
 
 ```js
 class PokemonMaster extends Human {
@@ -313,7 +349,7 @@ class PokemonMaster extends Human {
 }
 ```
 
-### アクセサ
+### accessor
 
 クラスオブジェクトにおいて、プロパティの様に振る舞うメソッド
 
@@ -333,11 +369,9 @@ class Triangle {
     this.height = obj.height;
   }
 }
-
-
 ```
 
-## オブジェクトメソッド
+## object.method
 
 ### String
 
@@ -419,18 +453,18 @@ export { a, b }
 ```
 
 
-# 非同期処理(asynchronous)
+# asynchronous processing
 
-順次実行の構造型プログラミングの法則を壊すサーバサイドメインの処理。**Promise**という後で実オブジェクトを渡すための仮のオブジェクトを発行することによって実現する。サーバの**メインスレッド**領域を中断させないように考案された仕組み。
+順次実行の構造型プログラミングの法則を壊すサーバサイドメインの処理.**Promise**という後で実オブジェクトを渡すための仮のオブジェクトを発行することによって実現する. サーバの**メインスレッド**領域を中断させないように考案された仕組み
 
-JSはfsなど標準で非同期処理となる非同期型関数を多く保有している。
+JSはfsなど標準で非同期処理となる非同期型関数を多く保有している
 
 ## Promise (ES2015)
 
-PromiseのState
-- resolve: 成功
-- reject: 失敗
-- pending: 初期状態
+Promise state
+- resolve: success
+- reject: failure
+- pending: initial state
 
 Promiseで処理の状態を保持し、**コールバック関数**でresolve, rejectそれぞれの状態になった時の処理を記述できる
 
@@ -477,7 +511,7 @@ promise.then(() => {
 
 ```
 
-### Promiseチェーン
+### Promise chain
 
 コールバックで返した値を次のコールバックへ引数として渡す
 
@@ -541,7 +575,7 @@ function asyncMain() {
 asyncMain(); // Promiseインスタンスを返す
 ```
 
-# ブラウザObject
+# browser object
 
 windowObjectから以下のような階層構造を持つ
 
@@ -590,7 +624,7 @@ windowObjectから以下のような階層構造を持つ
 
 クライアントサイド(ブラウザ)で利用する要素をツリー構造で表現した仕様. W3C(World Wide Web Consortium)によって標準化されている. 要素をnodeと表現する
 
-- node: nodeの種類
+- node: variation of node
   - element node
   - attribute node
   - text node
@@ -604,13 +638,53 @@ windowObjectから以下のような階層構造を持つ
       ...
       - last child node
 
-### nodeの取得(get)
-
-- .textContentでnode内の
+### change node element
 
 ```js
+// get directly
 document.getElementById('id');
-document.querySelectorAll('class');
+// listなのでfor ofで要素取得. list.item(i)で個別取得可能
+document.getElementsByTagName('tagName');
+document.getElementsByClassName('className');
 
+// selectorによる統一記法
+document.querySelector('#id');
+document.querySelectorAll('.class');
+document.querySelectorAll('selector[attr]');
 
+// get and set attr
+element.getAttribute('attr');
+element.setAttribute('attr', 'value');
+
+// change text in node element
+element.textContent = 'newText';
+element.innerHTML = 'newText';
+
+// create
+document.createElement('tag');
+
+// set, update, delete like array object
+parentNode.appendChild(element);
+parentNode.replaceChild(element);
+parentNode.removeChild(element);
 ```
+
+### change CSS
+
+```js
+// change property
+element.style.property = 'value';
+// change class
+element.className = 'className';
+```
+
+### event listener
+
+set multi event listener for one event in node element
+
+```js
+element.addEventListener('event', e => {
+  callbackFunc();
+})
+```
+

@@ -1,0 +1,14 @@
+
+$text-position: center;
+$start-line: pink;
+
+// general config
+body {
+  text-align: $text-position;
+}
+
+span {
+  color: $start-line;
+}
+
+
