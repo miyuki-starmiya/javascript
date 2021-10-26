@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My timer app</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1>My timer app</h1>
+  <!-- timer part -->
+  <section class="timer">
+    <p id="counter"></p>
+
+    <form>
+      <label for="set-counter">please set counter</label>
+      <input id="set-counter" type="number" />
+    </form>
+    <button onclick="setCounter()">set</button>
+    <button onclick="timer.stop()">stop</button>
+    <button onclick="timer.restart()">restart</button>
+  </section>
+
+  <!-- todo list part -->
+  <section class="todo-list">
+    <ol>
+      <li>task1</li>
+      <li>task2</li>
+      <li>task3</li>
+    </ol>
+  </section>
+
+
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
