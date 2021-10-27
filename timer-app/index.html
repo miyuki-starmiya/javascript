@@ -10,24 +10,34 @@
   <h1>My timer app</h1>
   <!-- timer part -->
   <section class="timer">
-    <p id="counter"></p>
+    <p id="counter">
+      <span id="output-hours"></span>: 
+      <span id="output-minutes"></span>: 
+      <span id="output-seconds"></span>
+    </p>
 
     <form>
-      <label for="set-counter">please set counter</label>
-      <input id="set-counter" type="number" />
+      <label for="set-counter-by-hours"> hours </label>
+      <input id="set-counter-by-hours" type="number" value="00" min="0" max="59" />
+      <label for="set-counter-by-minutes"> minutes </label>
+      <input id="set-counter-by-minutes" type="number" value="00" min="0" max="59" />
+      <label for="set-counter-by-seconds"> seconds </label>
+      <input id="set-counter-by-seconds" type="number" value="00" min="0" max="59" />
     </form>
+    <br>
+
     <button onclick="setCounter()">set</button>
+    <button onclick="clearCounter()">clear</button>
+    <button onclick="timer.start()">start</button>
     <button onclick="timer.stop()">stop</button>
-    <button onclick="timer.restart()">restart</button>
+    <br>
+    <button onclick="test()">test</button>
   </section>
 
   <!-- todo list part -->
   <section class="todo-list">
-    <ol>
-      <li>task1</li>
-      <li>task2</li>
-      <li>task3</li>
-    </ol>
+    <h1>My tasks below</h1>
+    <textarea rows="25" cols="50" placeholder="please write tasks below"></textarea>
   </section>
 
 
