@@ -10,4 +10,14 @@ ol {
   display: inline-block;
 }
 
+textarea {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+}
+
+#counter {
+  font-size: 64px;
+  color: #00aaff;
+}
+
 /*# sourceMappingURL=index.css.map */
