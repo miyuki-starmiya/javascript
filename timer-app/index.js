@@ -18,9 +18,10 @@ class Timer {
     this.seconds = seconds;
     this.timer = null;
 
-    outputByHours.innerHTML = this.hours;
-    outputByMinutes.innerHTML = this.minutes;
-    outputBySeconds.innerHTML = this.seconds;
+    outputByHours.innerHTML = this.hours.padStart(2, '0');
+    outputByMinutes.innerHTML = this.minutes.padStart(2, '0');
+    outputBySeconds.innerHTML = this.seconds.padStart(2, '0');
+  
   }
 
   start() {
@@ -40,6 +41,14 @@ class Timer {
       let seconds = String(this.seconds).padStart(2, '0');
       this.seconds --;
       outputBySeconds.innerHTML = seconds;
+
+      // stop when all counter is zero
+      if (this.hours <= 0 && this.minutes <= 0 && this.seconds <0) {
+        this.stop();
+        clearCounter();
+        // congratulations
+        new Audio('https://alerm-music.s3.ap-northeast-3.amazonaws.com/fripSide+-+only+my+railgun.mp3').play();
+      }
     }, 1000);
   }
   
@@ -52,6 +61,8 @@ const setCounter = () => {
   const hours = inputByHours.value;
   const minutes = inputByMinutes.value;
   const seconds = inputBySeconds.value;
+
+  // create timer instance
   timer = new Timer(hours, minutes, seconds);
 }
 
@@ -68,11 +79,7 @@ const clearCounter = () => {
 }
 
 const test = () => {
-  const hours = parseInt(inputByHours.value) * 3600;
-  const minutes = parseInt(inputByMinutes.value) * 60;
-  const seconds = parseInt(inputBySeconds.value);
-  console.log(hours, minutes, seconds);
-  outputBySeconds.innerHTML = hours+minutes+seconds;
+  new Audio('https://alerm-music.s3.ap-northeast-3.amazonaws.com/fripSide+-+only+my+railgun.mp3').play();
 }
 
 // execute in created
