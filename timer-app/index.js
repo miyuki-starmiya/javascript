@@ -21,7 +21,6 @@ class Timer {
     outputByHours.innerHTML = this.hours.padStart(2, '0');
     outputByMinutes.innerHTML = this.minutes.padStart(2, '0');
     outputBySeconds.innerHTML = this.seconds.padStart(2, '0');
-  
   }
 
   start() {
