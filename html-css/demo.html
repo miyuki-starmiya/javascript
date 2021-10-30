@@ -3,31 +3,55 @@
 <head>
   <meta charset="utf-8">
   <title>Memo</title>
-  <link rel="stylesheet" href="./css/demo.css">
   <style>
-    .container > div {
-      background-color: hotpink;
-      width: 100px;
-      height: 100px;
-    }
-    .box1 {
-      transform: translate(500px, 200px);
+    table {
+      border: solid 1px brown;
     }
 
+    input[type=password] {
+      border: coral 1px solid;
+    }
   </style>
 </head>
 
 <body>
-  <div id="app"></div>
-  <h1>This is memo app !</h1>
-  
-  <div class="container">
-    <div class="box1">1</div>
-    <div class="box2">2</div>
-    <div class="box3">3</div>
-  </div>
+  <h1>Demo</h1>
+  <h3>create table below</h3>
 
+  <table>
+    <thead>
+      <tr>
+        <th>head1</th>
+        <th>head2</th>
+        <th>head3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>body1-1</td>
+        <td>body1-2</td>
+        <td>body1-3</td>
+      </tr>
+      <tr>
+        <td>body2-1</td>
+        <td>body2-2</td>
+        <td>body2-3</td>
+      </tr>
+    </tbody>
+  </table>
 
+  <h3>create form below</h3>
+
+  <form action="/" method="get" id="foo">
+    <fieldset for="foo">
+      <label for="text">text</label>
+      <input type="test" id="text" />
+      <label for="password">password</label>
+      <input type="password" id="password" required />
+      <input type="submit" value="submit" />
+    </fieldset>
+    <legend for="foo">this is legend</legend>
+  </form>
 
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>

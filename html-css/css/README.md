@@ -9,7 +9,6 @@ CSS is stylesheet lang. CSS describes how elements should be rendered on browser
 - CSS2: May, 1998
 - CSS3: Jun, 1999
 
-
 ### how to import
 
 ```html: index.html

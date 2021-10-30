@@ -29,13 +29,13 @@ class Timer {
         this.hours --;
         let hours = String(this.hours).padStart(2, '0');
         outputByHours.innerHTML = hours;
-        this.minutes += 5;
+        this.minutes += 60;
       }
       if (this.seconds < 0) {
         this.minutes --;
         let minutes = String(this.minutes).padStart(2, '0');
         outputByMinutes.innerHTML = minutes;
-        this.seconds += 5;
+        this.seconds += 60;
       }
       let seconds = String(this.seconds).padStart(2, '0');
       this.seconds --;

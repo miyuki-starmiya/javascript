@@ -1,16 +1,14 @@
 
 # HTML5(HyperTextMarkupLanguage)
 
-- 言語というよりはWeb上のドキュメントに課した仕様
-- W3Cが仕様策定している
-- HTTPとURLによってWeb上のあらゆるドキュメントと繋がることが可能
-
-WorldWideWeb = HTML + HTTP + URL
+- It is **specification** rather than programming lang to impose to docs in the Web
+- normalized by W3C(WorldWideWeb Consortium)
+- WorldWideWeb = HTML + HTTP + URL
 
 ## history
 
-Web1.0の基となるHyperTextSystemは1980年にTim Berners-LeeによってCERN向けに考案された. しかし、紆余曲折の結果1990年にCERNはWeb1.0の草稿を採用することはなかった. 
-
+- HyperTextSystem: 1980 Tim Berners-Lee propose to CERN
+- HTML1: 1990 CERN reject Web1.o draft written by Tim Berners-Lee
 - HTML2: Nov 24, 1995
 - HTML3: Jan 14, 1997
 - HTML4: Dec 18, 1997
@@ -19,11 +17,11 @@ Web1.0の基となるHyperTextSystemは1980年にTim Berners-LeeによってCERN
   - HTML5.2: Dec 14, 2017
 
 
-## tags
+## tags(elements)
 
 ### metadata
 
-HTMLのメタ情報を記述するもの
+describe meta infos on HTML
 
 - head: contain title, scripts, link to CSS
 - link: make link to CSS, favicon
@@ -32,13 +30,13 @@ HTMLのメタ情報を記述するもの
 - title: title
 - body: part to write contents
 
-### content section
+### content section(layout)
 
 - article: independent part
 - aside: sidebar, call-out boxes
 - header: header
 - footer: footer
-- h1: six levels of section headings. 1 to 6.
+- heading: six levels of section headings. 1 to 6.
 - main: main part
 - nav: navbar, menu
 - section: generic standalone part
@@ -68,15 +66,15 @@ identify text content
 
 - a: anchor element. create a hyperlink to other wab pages
 - b: bold
+- s: strike through
+- u: underline with red wave line
 - br: break line
 - mark: mark text in yellow color
-- ruby: ルビを振れる
+- ruby: ルビ
   - rt: this is ruby
-- s: strike through
 - span: span text
-- sub: 下付き文字
-- sup: 上付き文字
-- u: underline with red wave line
+- sub: text locate under side
+- sup: text locate upper side
 
 ### image and multimedia
 
@@ -96,15 +94,15 @@ identify text content
 - table: table flame
   - thead: table head
     - tr: table row
-      - th: table heading
+      - th: table heading. it is bold
       - td: table description
   - tbody: table body
     - tr: table row
-      - th: table heading
+      - th: table heading. it is bold
       - td: table description
   - tfoot: table foot
     - tr: table row
-      - th: table heading
+      - th: table heading. it is bold
       - td: table description
 
 ### form content
@@ -112,7 +110,7 @@ identify text content
 This is user input part
 
 - form: form flame
-  - fieldset: input areaを枠線で囲う
+  - fieldset: surround input area with border
   - legend: fieldsetの凡例
   - input: user input part 
   - label: describe what to input data
@@ -128,7 +126,7 @@ This is user input part
 
 ## attributes
 
-config values in tag
+config values in tags
 
 ex: attribute(tag1, tag2, ...): description
 
@@ -158,7 +156,8 @@ ex: attribute(tag1, tag2, ...): description
 - maxlength(input, textarea): define the maximum number of characters
 - minlength(input, textarea): define the minimum number of characters
 - value: define default value to send server
-- type: [button, checkbox, color, date, email, file, hidden, image, number, password, radio, range, reset, submit, tel, text] => (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+
+- type(input): [button, checkbox, color, date, email, file, hidden, image, number, password, radio, range, reset, submit, tel, text] => (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 
 ### embed
 
@@ -186,8 +185,8 @@ ex: attribute(tag1, tag2, ...): description
 
 ## global event attributes
 
-event attribute fire JavaScript when user make event
-attribute名の接頭辞にonが付く
+event attribute fire JavaScript when user make event.
+event attribute get "on" previous attribute name
 
 ### form events
 
@@ -201,8 +200,8 @@ attribute名の接頭辞にonが付く
 
 ### keyboard events
 
-- keydown: fire every keydown
-- keyup: fire every keyup
+- onkeydown: fire every keydown
+- onkeyup: fire every keyup
 
 ### mouse
 
@@ -217,6 +216,7 @@ attribute名の接頭辞にonが付く
 - oncopy: 
 - oncut: 
 - onpaste: 
+
 
 
 # HTTP(HyperTextTransferProtocol)
@@ -271,14 +271,19 @@ data type is key-value
 - x-xss-protection
 
 
+
 # URL(UniformResourceLocator)
 
 URL is unique resource on the Web
 
-URL = Scheme(Protocol) + Domain Name + Port + Path + Params + Anchor
+URL =
+Scheme(Protocol):// + FQDN + Port + Path + Params + Anchor
 
 ex: http://www.example.com:80/path/src/index.html?key=value#somewhere
 
+## FQDN(FullyQualifiedDomainName)
 
-
+FQDN = HostName + DomainName(include TopLevelDomain)
+HostName: www
+DomainName: example.com
 
