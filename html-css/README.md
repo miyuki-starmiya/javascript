@@ -5,7 +5,24 @@
 - normalized by W3C(WorldWideWeb Consortium)
 - WorldWideWeb = HTML + HTTP + URL
 
-## history
+# Table of Contents
+
+1. Basic
+2. Elements
+3. Global event attributes
+4. Web APIs
+5. DOM Management
+6. Accessibility
+7. PWA(ProgressiveWebApps)
+8. Client side storage
+9. Performance
+10. Mobile
+11. Web Sockets
+
+
+## Basic
+
+### History
 
 - HyperTextSystem: 1980 Tim Berners-Lee propose to CERN
 - HTML1: 1990 CERN reject Web1.o draft written by Tim Berners-Lee
@@ -16,8 +33,17 @@
   - HTML5.1: Nov 1, 2016
   - HTML5.2: Dec 14, 2017
 
+### difference HTML5 from HTML4
 
-## tags(elements)
+HTML4 had made web developers confuse HTML with XML.
+HTML5 = HTML4
+  + section elements
+  + Character Encoding(meta charset="")
+  + Doctype(!DOCTYPE html)
+  + MathML and SVG
+
+
+## Elements(Tags)
 
 ### metadata
 
@@ -218,72 +244,14 @@ event attribute get "on" previous attribute name
 - onpaste: 
 
 
+## Web APIs
 
-# HTTP(HyperTextTransferProtocol)
+https://developer.mozilla.org/en-US/docs/Web/API
 
-- L7 protocol
-- client request, then server response
-
-## HTTP request
-
-request contains below
-
-- HTTP version type
-- URL
-- HTTP method
-- request headers
-- HTTP body(optional)
-
-### HTTP version
-
-- HTTP/0.9: 1991
-- HTTP/1.0: 1996
-- HTTP/1.1(main): 1997
-- HTTP/2: 2015
-- HTTP/3(draft): 2020
-
-## HTTP response
-
-response contains below
-
-- HTTP status code
-- response headers
-- HTTP body(optional)
-
-### HTTP status code
-
-- 1xx information
-- 2xx success
-- 3xx redirection
-- 4xx client error
-- 5xx server error
-
-### response headers
-
-data type is key-value
-
-- version, status code
-- content-type
-- date
-- server
-- expires
-- set-cookie
-- x-xss-protection
+### file handling
+### local storage
 
 
+## PWA
 
-# URL(UniformResourceLocator)
-
-URL is unique resource on the Web
-
-URL =
-Scheme(Protocol):// + FQDN + Port + Path + Params + Anchor
-
-ex: http://www.example.com:80/path/src/index.html?key=value#somewhere
-
-## FQDN(FullyQualifiedDomainName)
-
-FQDN = HostName + DomainName(include TopLevelDomain)
-HostName: www
-DomainName: example.com
 
