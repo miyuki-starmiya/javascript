@@ -15,48 +15,18 @@
 </head>
 
 <body>
-  <h1>Demo</h1>
-  <h3>create table below</h3>
+  <h1>localStorage</h1>
 
-  <table>
-    <thead>
-      <tr>
-        <th>head1</th>
-        <th>head2</th>
-        <th>head3</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>body1-1</td>
-        <td>body1-2</td>
-        <td>body1-3</td>
-      </tr>
-      <tr>
-        <td>body2-1</td>
-        <td>body2-2</td>
-        <td>body2-3</td>
-      </tr>
-    </tbody>
-  </table>
+  
 
-  <h3>create form below</h3>
-
-  <form action="/" method="get" id="foo">
-    <fieldset for="foo">
-      <label for="text">text</label>
-      <input type="test" id="text" />
-      <label for="password">password</label>
-      <input type="password" id="password" required />
-      <input type="submit" value="submit" />
-    </fieldset>
-    <legend for="foo">this is legend</legend>
-  </form>
 
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
   <script type="text/javascript">
-    
+    localStorage.clear();
+    const cat = localStorage.getItem('myCat');
+    console.log(cat);
+
   </script>
 </body>
 

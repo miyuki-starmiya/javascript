@@ -11,13 +11,7 @@
 2. Elements
 3. Global event attributes
 4. Web APIs
-5. DOM Management
-6. Accessibility
-7. PWA(ProgressiveWebApps)
-8. Client side storage
-9. Performance
-10. Mobile
-11. Web Sockets
+5. PWA(ProgressiveWebApps)
 
 
 ## Basic
@@ -244,14 +238,11 @@ event attribute get "on" previous attribute name
 - onpaste: 
 
 
-## Web APIs
-
-https://developer.mozilla.org/en-US/docs/Web/API
-
-### file handling
-### local storage
-
-
 ## PWA
 
+PWA is Web Apps like Native Apps
+
+- Capable as stand-alone apps
+- Reliable as speed up
+- Installable as it runs on browser
 

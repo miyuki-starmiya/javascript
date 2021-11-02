@@ -601,14 +601,34 @@ windowObjectから以下のような階層構造を持つ
         - Select
           - options
 
-### window
+## window
 
 - methods: popup系のobject. renderする前に呼び出される
   - alert(): popupの表示
   - confirm(): y/nの確認, y = true, n = falseを返す
   - prompt(): user input popup
 
-### location
+### localStorage
+
+**The keys and values stored** with localStorage are always in the UTF-16 DOMSting format, which uses two bytes per character. As with objects, integer keys are automatically converted to strings
+
+syntax looks like Firebase
+
+```js
+// access
+const myStorage = window.localStorage;
+// set
+localStorage.setItem('key', 'value');
+// get
+localStorage.getItem('key'); // return value
+// delete
+localStorage.removeItem('key');
+// clear
+localStorage.clear();
+```
+
+
+## location
 
 - methods: 
   - reload(): 再読み込み = f5
@@ -618,6 +638,28 @@ windowObjectから以下のような階層構造を持つ
   - port
   - protocol: https://みたいな
   - href: location.href = URL = location.replace(URL)
+
+
+## document
+
+https://developer.mozilla.org/en-US/docs/Web/API
+
+### file handling
+
+```js
+const inputElement = document.getElementById('input');
+inputElement.addEventListener("change", handleFiles, false);
+
+// event handler
+function handleFiles() {
+  const fileList = this.files;
+  console.log(fileList);
+  for (let e of fileList) {
+    console.log(e);
+  }
+}
+```
+
 
 
 ## DOM(DocumentObjectModel)
