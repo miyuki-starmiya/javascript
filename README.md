@@ -725,8 +725,15 @@ element.className = 'className';
 set multi event listener for one event in node element
 
 ```js
+// syntax
+eventTarget("event", eventHandler, options);
+
+// example
 element.addEventListener('event', e => {
   callbackFunc();
 })
 ```
+
+
+
 

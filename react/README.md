@@ -74,9 +74,7 @@ const element = React.createElement(
 ## React Component
 
 it is parts and available in ReactDOM.render(). it is separated FUNCTION components and CLASS components.
-Attention: 
-
-※its initials must be capitalized
+Attention: its initials must be capitalized
 
 - have to divide components
 - Component(props) is pure. in other words, props can't be changed
@@ -127,21 +125,20 @@ ReactDOM.render(
 
 how to change function component into class component
 
-1. React.Componentクラスを継承したClassを作成する
-2. render()メソッドを挟む
-3. propsをthis.propsとして参照する
-4. this.propsをthis.stateに書き換えある
-5. constructor(props)を追加する.
-6. super(props)で親クラスにpropsを渡す
-7. <Component />のプロパティを削除する
+1. make class component extends React.Component
+2. create render()
+3. add this. to props
+4. change this.props to this.state
+5. set constructor(props)
+6. add super(props)
+7. delete <Component /> property
 
-- this.stateはComponent(Instance)内のlocal変数である
-- propsやstateは単方向バインディングだから, 子コンポーネントにしか影響を与えない
+- this.state is local variable in Component(Instance)
+- props, state only affect child components. because those are one direction binding
 
-また、propsもstateも同じ変数でありstateをpropsのように扱うことも可能だが、stateは動的(user inputが存在する)な場合にのみ使うのが良いとされている
-つまり、stateは[動的, 独立, 祖先(top Component)]なものしか必要がない
+both props and state are just variable. so you deal with state as props but you should use state if this variable have status of [dynamic, independent, top-component]
 
-以下ではまだclass Componentは完成しません
+let's make simple time app. following code is unfinished
 
 ```js
 // function Component
@@ -165,7 +162,7 @@ setInterval(tick, 1000);
 
 // class Component v1
 class Clock extends React.Component {
-  render() { // renderは必須
+  render() { // required
     return (
       <div>
         <h1>Hello, world</h1>
@@ -179,7 +176,7 @@ class Clock extends React.Component {
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()}; // 初期値
+    this.state = {date: new Date()}; // initial value
   }
 
   render() {
@@ -200,15 +197,15 @@ ReactDOM.render(
 
 ### Life Cycle Method
 
-Componentがmountあるいはunmountされた時に呼び出すメソッド. Componentのメモリリークに影響する
+this is method which called when components mount or unmount. this affects memory leak
 
-※setState()を利用せず, 直接this.stateを変更すると再度render()されない
+Attention: components can't be rendered again if you don't use setState()
 
 ```js
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()}; // 初期化
+    this.state = {date: new Date()}; // initialize
   }
 
   componentDidMount() { // mount
@@ -223,7 +220,7 @@ class Clock extends React.Component {
   }
 
   tick() {
-    this.setState({ // this.stateを変えて再度render()
+    this.setState({ // render() again with changed this.state
       date: new Date()
     });
   }
@@ -246,19 +243,17 @@ ReactDOM.render(
 
 ## Event Handler
 
-イベントハンドラの記法は以下のようになる
-
-- 発火させる関数に()を付けない
-- attributeはcamelCaseで表記
-- 明示的にe.preventDefault()を記述する必要がある
+- JSX notation doesn't need () with function you will fire
+- adapt camelCase to attributes
+- you have to write e.preventDefault() clearly
 
 ```html
-<!-- 生HTML -->
+<!-- plain HTML -->
 <button onclick="someFunc()">
   some func button
 </button>
 
-<!-- React -->
+<!-- JSX -->
 <button onClick={someFunc}>
   some func button
 </button>
@@ -266,13 +261,13 @@ ReactDOM.render(
 
 ### How to bind
 
-ReactではaddEventListenerを設定しない. 代わりに.bind(this)によってコンポーネントをHTML要素にbindさせる必要がある
+React doesn't require setting addEventListener. instead, you must bind eventHandler in components.
 
-コンポーネントメソッドはHTMLイベントにbindさせる記法は以下のように3通りある
+how to write
 
-1. constructor内でbind
-2. イベントメソッドのアロー関数化
-3. HTMLイベント要素内でのアロー関数化(非推奨)
+1. bind eventHandler in constructor
+2. make eventHandler arrow function
+3. make eventHandler arrow function in HTML(not recommended)
 
 ```js
 class Toggle extends React.Component {
@@ -302,10 +297,10 @@ class Toggle extends React.Component {
 }
 ```
 
-### イベントハンドラへの引数の渡し方
+### how to send props to eventHandler
 
-1. 直接bindを書く(thisが要る)
-2. アロー関数としてevent変数を渡す(event変数が要る)
+1. bind directly in JSX. first arg needs this
+2. send event value as arrow function
 
 ```html
 <button onClick={this.eventHandler.bind(this, arg)}>Send arg</button>
@@ -545,8 +540,8 @@ class EssayForm extends React.Component {
 
 親子コンポーネントの親にstateを設定し, stateを子の兄弟間で共有する. 子の変数はpropsとし親からstateを受け取れるようにする
 
-- 親から子: <Component props={} />のようにpropsを渡すだけ
-- 子から親: 
+- parent to child: just send props like <Component props={} />
+- child to parent: 
   - 親子両方のコンポーネントにイベントハンドラをbind
   - 親のイベントハンドラをpropsで子に渡す
     - 親のイベントハンドラprops名はonHandlerという風にする
@@ -563,7 +558,7 @@ class EssayForm extends React.Component {
 function Children(props) {
   return (
     <div>
-      // 親のJSXを出力する場所
+      // where you output parent JSX
       {props.children}
     </div>
   );
@@ -573,8 +568,8 @@ function Parent() {
   return (
     <Children>
       // as {props.children}
-      <h1>まったくもってぇ！</h1>
-      <p>なんでもいいよぉ！！！</p>
+      <h1>it accepts</h1>
+      <p>anything !!</p>
     </Children>
   );
 }

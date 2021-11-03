@@ -8,8 +8,7 @@
 <body>
   <h1>React demo page</h1>
   <div id="root"></div>
-  <div id="test"></div>
-
+  
 
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
@@ -18,24 +17,17 @@
   
   <!-- Component -->
   <script type="text/babel">
-    function Welcome(props) {
-      return <h3>hello, {props.name}!</h3>;
-    }
+  function Show(props) {
+    return console.log('bind');
+  }
 
-    class ShowAge extends React.Component {
-      render() {
-        return <h3>{this.props.name}'s age is {this.props.age}</h3>;
-      }
-    }
+  ReactDOM.render(
+    <div>
+      <button onClick={Show}>push</button>
+    </div>,
+    document.querySelector("#root")
+  );
 
-    ReactDOM.render(
-      <div>
-        <Welcome name="hitoe" />
-        <Welcome name="saitou" />
-        <ShowAge name="tanaka" age="16" />
-      </div>,
-      document.querySelector('#root')
-    );
 
   </script>
 </body>
