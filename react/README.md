@@ -1,9 +1,8 @@
 
 # React.js
 
-コンポーネント指向のJSフレームワーク.
-コンポーネントはexportして, モジュール間で再利用する.
-Vueに比べてテンプレート性がない代わりに, カスタマイズ性に優れている
+React is JS Framework which is COMPONENT ORIENTED
+Components can be reused if you export it. React is superior to Vue about CUSTOMIZING but inferior to it about PRE TEMPLATE
 
 ## Install
 
@@ -15,25 +14,24 @@ Vueに比べてテンプレート性がない代わりに, カスタマイズ性
   - prod: 
     - <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
     - <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
-※HTMLからJSを読み込む時<script type="text/babel">とすること
+
+Attention: you have to load with <script type="text/babel">
 
 - npm
   - npm init -y
-  - npm install babel-cli@6 babel-preset-react-app@3
-  - npx babel --watch src --out-dir . --presets react-app/prod
+  - npx create-react-app "some-app"
 
-## JSX(JS extension)記法
+## JSX(JS extension) notation
 
-- JSXはReactObjectのメソッドである(React.createElement()と等価)
-- render()の第一引数は単一タグで記載する必要がある(divタグで囲う)
-- class属性はclassName属性に置換(classが予約語のため)
-- 閉じタグ無しはスラッシュ要 ex: <hr />
-- 変数や関数は{}で囲う
-- JSXはcamelCaseで記述
-- ReactDOM.render(JSX)で任意のHTMLidに挿入
-- HTML内に挿入する場所をcontainerと呼ぶ
+- JSX is method of React Object. it is same as React.createElement()
+- first arg of ReactDOM.render() requires single tag like <div></div>
+- class attr in JSX must be written as className. because class is pre reserved word
+- you have to close tag with slash. ex: <hr />
+- if you need to write variables or functions, you have to surround with {}
+- you write JSX in camelCase
+- we call it CONTAINER where is injected
 
-以下は等価であり, Babelでトランスコンパイルしている
+those of below is totally same. Babel transpile JSX into React Object
 
 ```js
 // JSX
@@ -45,42 +43,44 @@ const element = (
 
 // React Object
 const element = React.createElement(
-  'h1',
-  {className: 'greeting'},
-  'Hello, world!'
+  'h1', // element
+  {className: 'greeting'}, // className
+  'Hello, world!'// innerHTML
 );
 ```
 
-## 組み込みObject
+## Built-in Object
 
 - React: {
-    props: {
+    props: [
       Component,
       PureComponent,
-    },
-    methods: {
+    ],
+    methods: [
       createElement(),
       createFactory(),
-    }
+    ]
 }
 - ReactDOM: {
-    methods: {
+    methods: [
       render(),
       hydrate(),
       unmountComponentAtNode(),
       findDOMNode(),
       createPortal(),
-    }
+    ]
 }
 
 ## React Component
 
-ReactDOM内で再利用可能な部品群。function Componentとclass Componentがある。
-※先頭は大文字にする必要がある
+it is parts and available in ReactDOM.render(). it is separated FUNCTION components and CLASS components.
+Attention: 
 
-- Componentは分割せよ
-- Component(props)において, propsの戻り値を変えてはいけない(pure)
-- return ()で戻り値を設定しないと, undefinedになるので注意
+※its initials must be capitalized
+
+- have to divide components
+- Component(props) is pure. in other words, props can't be changed
+- unless you set return value, component's return value gets undefined
 
 ```js
 // function Component
@@ -90,13 +90,13 @@ function Welcome(props) {
 
 // class Component
 class Welcome extends React.Component {
-  render() { // 絶対に必要なメソッド
+  render() { // absolutely required
     return <h1>Hello, {this.props.name}</h1>;
   }
 }
 ```
 
-以下のようにして, いくらでも再利用可能
+you can reuse components as much as you like
 
 ```js
 function Welcome(props) {
@@ -121,11 +121,11 @@ ReactDOM.render(
 
 ### Component state(Class Component)
 
-function Componentで良い場合と, class Componentにしなければならない場合を分析する
+- function Component = props + render()
+- class Component = function Component
+  + state + bind() + lifeCycleMethod()
 
-function Component = props + render()
-class Component = 
-  function Component + state + bind() + lifeCycleMethod()
+how to change function component into class component
 
 1. React.Componentクラスを継承したClassを作成する
 2. render()メソッドを挟む
@@ -312,7 +312,7 @@ class Toggle extends React.Component {
 <button onClick={(e) => this.eventHandler(arg, e)}>Send arg</button>
 ```
 
-## 制御フロー
+## control flows
 
 ### if, else
 
@@ -541,7 +541,7 @@ class EssayForm extends React.Component {
 }
 ```
 
-## stateの祖先共有(lift up)
+## lift up state
 
 親子コンポーネントの親にstateを設定し, stateを子の兄弟間で共有する. 子の変数はpropsとし親からstateを受け取れるようにする
 
