@@ -17,14 +17,34 @@
   
   <!-- Component -->
   <script type="text/babel">
+    class ShowClass extends React.Component {
+      constructor(props) {
+        super(props);
+        this.props = props;
+        this.state = null;
+        this.handleEvent = this.handleEvent.bind(this);
+      }
+
+      handleEvent(value) {
+        console.log(`value is ${value}`);
+      }
+
+      render() {
+        return (
+          <div>
+            <button onClick={(e) => this.handleEvent('bar', e)}>push</button>
+          </div>
+        )
+      }
+    }
+
+
   function Show(props) {
-    return console.log('bind');
+    return console.log(`props is ${props.foo}`);
   }
 
   ReactDOM.render(
-    <div>
-      <button onClick={Show}>push</button>
-    </div>,
+    <ShowClass />,
     document.querySelector("#root")
   );
 
