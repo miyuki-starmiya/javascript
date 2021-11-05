@@ -7,13 +7,13 @@ Components can be reused if you export it. React is superior to Vue about CUSTOM
 ## Install
 
 - CDN
-  - JSX: <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  - JSX(Babel): <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   - development: 
-    - <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    - <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    - React: <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    - ReactDOM: <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
   - prod: 
-    - <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    - <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    - React: <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    - ReactDOM: <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
 
 Attention: you have to load with <script type="text/babel">
 
@@ -21,7 +21,7 @@ Attention: you have to load with <script type="text/babel">
   - npm init -y
   - npx create-react-app "some-app"
 
-## JSX(JS extension) notation
+## JSX(JavaScript XML) notation
 
 - JSX is method of React Object. it is same as React.createElement()
 - first arg of ReactDOM.render() requires single tag like <div></div>
