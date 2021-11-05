@@ -17,34 +17,57 @@
   
   <!-- Component -->
   <script type="text/babel">
-    class ShowClass extends React.Component {
-      constructor(props) {
-        super(props);
-        this.props = props;
-        this.state = null;
-        this.handleEvent = this.handleEvent.bind(this);
-      }
-
-      handleEvent(value) {
-        console.log(`value is ${value}`);
-      }
-
-      render() {
-        return (
-          <div>
-            <button onClick={(e) => this.handleEvent('bar', e)}>push</button>
-          </div>
-        )
-      }
+  class Child extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {value: ''};
+      this.childHandler = this.childHandler.bind(this);
+      this.fireParent = this.fireParent.bind(this);
     }
 
+    childHandler(event) {
+      this.setState({value: event.target.value});
+    }
 
-  function Show(props) {
-    return console.log(`props is ${props.foo}`);
+    fireParent(e) {
+      this.props.onParentHandler(this.state.value);
+      e.preventDefault();
+    }
+
+    render() {
+      return(
+        <form>
+          <label htmlFor="input">input</label>
+          <input 
+            id="input"
+            type="text"
+            value={this.state.value}
+            onChange={this.childHandler}
+          />
+          <button onClick={this.fireParent}>fire</button>
+        </form>
+      )
+    }
+  }
+
+  class Parent extends React.Component {
+    constructor(props) {
+      super(props);
+    }
+
+    parentHandler(element) {
+      console.log(element);
+    }
+
+    render() {
+      return(
+        <Child onParentHandler={this.parentHandler} />
+      )
+    }
   }
 
   ReactDOM.render(
-    <ShowClass />,
+    <Parent />,
     document.querySelector("#root")
   );
 

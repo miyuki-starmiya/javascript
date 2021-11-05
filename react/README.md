@@ -449,7 +449,7 @@ const todoItems = todos.map((todo, index) =>
 
 ## Form(controlled Component)
 
-<form>内のinput要素をすべてstateにbindさせる. stateとinputをbindさせるために全てにイベントハンドラを記述する必要がある. formに関しては[Formik](https://formik.org/)という依存ライブラリも選択肢の一つである
+form tag内のinput要素をすべてstateにbindさせる. stateとinputをbindさせるために全てにイベントハンドラを記述する必要がある. formに関しては[Formik](https://formik.org/)という依存ライブラリも選択肢の一つである
 
 - inputのvalueは.target.valueで参照可能
 
@@ -538,21 +538,17 @@ class EssayForm extends React.Component {
 
 ## lift up state
 
-親子コンポーネントの親にstateを設定し, stateを子の兄弟間で共有する. 子の変数はpropsとし親からstateを受け取れるようにする
-
 - parent to child: just send props like <Component props={} />
 - child to parent: 
-  - 親子両方のコンポーネントにイベントハンドラをbind
-  - 親のイベントハンドラをpropsで子に渡す
-    - 親のイベントハンドラprops名はonHandlerという風にする
-    - 親のイベントハンドラ名はhandleEventという風にする
-  - 子のイベントハンドラで親のイベントハンドラを発火させる
-
-
+  - both parent and child components bind event handler
+  - send parent's event handler to child as props
+    - you have to name parent's props of event handler like onHandler
+    - you have to name parent's event handler like handleSomething
+  - child's event handler fire parent's one
 
 ## Composition
 
-親コンポーネントから子コンポーネントにJSXを渡す箱として{props.children}を設定できる
+if you want to send JSX to child component from parent one, you can set {props.children}
 
 ```js
 function Children(props) {
