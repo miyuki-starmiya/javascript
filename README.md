@@ -436,6 +436,17 @@ arr.shift() // [1, 2, 3]
 let [a, b, ...arr] = [1,2,3,4,5] // a = 1, b = 2, arr = [3,4,5]
 ```
 
+### Array Destructuring
+
+you can assign values for less repetition
+
+```js
+const arr = ['red', 'blue', 'green'];
+
+const [first, second, third] = arr;
+// first = 'red', second = 'blue', third = 'green'
+```
+
 ### Object
 
 ```js

@@ -49,6 +49,19 @@ const element = React.createElement(
 );
 ```
 
+JSX allows us to nest elements, JS values
+
+```js
+const name = 'saitou';
+const greeting = (
+  <div>
+    <h1>My name is {name}</h1>
+    <p>hello new world !</p>
+  </div>
+);
+```
+
+
 ## VDOM(VirtualDOM)
 
 React use VDOM for updating real DOM.
@@ -561,7 +574,7 @@ class EssayForm extends React.Component {
 
 ## Composition
 
-if you want to send JSX to child component from parent one, you can set {props.children}
+if you want to send JSX or Components to child component from parent one, you can set {props.children}
 
 ```js
 function Children(props) {
@@ -579,9 +592,78 @@ function Parent() {
       // as {props.children}
       <h1>it accepts</h1>
       <p>anything !!</p>
+      <SomeComponent />
     </Children>
   );
 }
 ```
+
+
+# Hooks
+
+Hooks are a new addition in React 16.8. they let you use state and other React features without writing a class component
+
+Hooks are **functions** that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes
+
+- function components + Hooks = class components
+
+Attention: Hooks start with "use"
+
+## useState
+
+this provides function components with local state. this is similar to this.setState in class components
+
+useState creates [stateful value, state handler]
+
+```js
+import React, { useState } from 'react';
+
+function Example() {
+  // [value, setValue] = useState(initialValue);
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  )
+}
+```
+
+## useEffect
+
+this provides function components with LifeCycleMethods like componentDidMount, componentDidUpdate, componentWillUnmount
+
+```js
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+## Rules
+
+- only call Hooks at the top level. don't call Hooks inside loops, conditions, or nested functions
+- only call Hooks from React function components. don't call Hooks from regular JavaScript functions
+
 
 
