@@ -49,6 +49,18 @@ const element = React.createElement(
 );
 ```
 
+## VDOM(VirtualDOM)
+
+React use VDOM for updating real DOM.
+VDOM is much faster than real DOM because VDOM don't render DOM on screen.
+VDOM compares to only changed part on VDOM, which is called "diffing"
+
+how it works is below
+1. The entire virtual DOM gets updated.
+2. The virtual DOM gets compared to what it looked like before you updated it. React figures out which objects have changed.
+3. The changed objects, and the changed objects only, get updated on the real DOM.
+4. Changes on the real DOM cause the screen to change.
+
 ## Built-in Object
 
 - React: {
@@ -387,17 +399,18 @@ ReactDOM.render(
 );
 ```
 
-### 論理演算子を用いた表現
+### express with short conditionals and logical operator
 
 ```js
-function Mailbox(props) {
-  const unreadMessages = props.unreadMessages;
+const Navbar = () => {
+  const isAuth = true;
+
   return (
     <div>
-      <h1>Hello</h1>
-      {unreadMessages.length > 0 && // if (unreadMessages)
-        <h2>you have {unreadMessages.length} unread messages</h2>
-      }
+      // if user is authenticated, show auth links, otherwise a login link
+      {isAuth ? <AuthLinks /> : <Login />}
+      // if user is authenticated, show their profile. If not, nothing.
+      {isAuth && <UserProfile/>}
     </div>
   );
 }

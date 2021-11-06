@@ -129,17 +129,16 @@ console.log(a2); // ["a",2,3]
 
 ### variables
 
-※関数内でvarやletを使わずに変数宣言するとglobal scopeになるので注意
-また、letはblock scope内ではglobal scopeに影響を与えない
+Attention: if you declare values without var or let, values are in global scope
 
 ```js
-// 再宣言あり変数
+// you can declare and reassign again
 var foo = null;
 
-// 再宣言なし変数
+// block scope. you must not declare again
 let bar = null;
 
-// 再代入なし変数 = 定数
+// you must not reassign again. it is CONSTANT VALUE
 const HOGE = null;
 ```
 
@@ -164,7 +163,7 @@ Boolean(x)
 // to array
 Array(1,2) // [1, 2]
 
-// 文字列フォーマット
+// template literal
 console.log(`${x}`)
 ```
 
@@ -182,7 +181,7 @@ console.log(`${x}`)
 
 ## control flows
 
-### if 条件分岐
+### if condition
 
 ```js
 let height = 162
@@ -195,11 +194,11 @@ if (height > 160) {
   console.log("soso ...")
 }
 
-// 条件演算子
+// short conditionals
 height > 160 ? console.log("good !") : console.log("bad");
 ```
 
-### switch case 条件分岐
+### switch case condition
 
 ※breakを入れないと他の条件も実行するので注意
 
@@ -294,24 +293,36 @@ for (let i in a) {
 ## functions
 
 ```js
-// 関数リテラル型
+// function literal
 function hello(name) {
   console.log(`hello ${name}`);
   return name;
 }
 
-// 関数式 変数代入型
+// function formula. like to assign value
 let add = function(a, b) {
   return a + b;
 }
 
-// アロー関数 = function + returnの省略
-let add = (a, b) => (a+b);
+// arrow function. all below are same
+function add(a, b) {
+  return a+b;
+}
+const add = (a, b) => {
+  return a+b;
+}
+const add = (a, b) => (a+b);
 
 // spread operator
 let func = (...args) => {
-  console.log(args) // argsArray
+  console.log(args) // argsArray [arg1, arg2, ..., arg n]
 }
+
+// default parameters
+function sayHi(name='hitoe') {
+  return 'hello ' + name;
+}
+sayHi(); // hello hitoe
 ```
 
 ## classes
@@ -434,22 +445,47 @@ obj.hasOwnProperty(1) // true
 Object.freeze(obj) // objのconst化
 ```
 
+### Object Destructuring
+
+you can assign values for less repetition
+
+```js
+const user = {
+  name: 'hitoe',
+  age: 16,
+  works: {
+    title: 'Machine Human',
+  },
+}
+
+const { name, age } = user; // name = 'hitoe', age = 16
+const { works: { title } } = user; // title = 'Machine Human'
+```
+
+
 ### Date
 
 ```js
 
 ```
 
-## module
+## modules
 
-ES moduleでは、exportする時もimportする時も{}で囲う
-exportの方法は[named export, export default]があり、export defaultは１つの値を出力する
+named export require surrounding modules by {} when you export and import
+
+- how to export
+  - named export: you can't rename modules
+  - export default: you can rename modules and export only one module
 
 ```js
+// named export
 const a = 1;
 const b = 2;
 
-export { a, b }
+export { a, b };
+
+// export default
+export default a;
 ```
 
 
@@ -459,7 +495,7 @@ export { a, b }
 
 JSはfsなど標準で非同期処理となる非同期型関数を多く保有している
 
-## Promise (ES2015)
+## Promise Object(ES2015)
 
 Promise state
 - resolve: success
@@ -474,7 +510,7 @@ Promiseで処理の状態を保持し、**コールバック関数**でresolve, 
 console.log('start');
 
 function puts(str) {
-    // promiseオブジェクトを返す. callback関数のresolve()は後で定義
+    // return promise instance. callback関数のresolve()は後で定義
     return new Promise(function(resolve) {
         return setTimeout(function() {
             return resolve(str);
