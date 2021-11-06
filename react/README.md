@@ -666,4 +666,71 @@ function Example() {
 - only call Hooks from React function components. don't call Hooks from regular JavaScript functions
 
 
+# React Router
+
+React Router is a fully-featured client and server-side routing library for React, a JavaScript library for building user interfaces. React Router runs anywhere React runs, on the web, on the server with node.js and on React Native
+
+## install
+
+```shell
+# create react app
+npx create-react-app "app-name"
+# add react router
+npm add react-router-dom@6 history@5
+```
+
+## import
+
+```js
+import { SomeModule } from 'react-router-dom';
+```
+
+## modules
+
+- BrowserRouter: top level module
+- Link: global navigation. like HTML a tag
+  - to: "/path"
+- NavLink: special kind of Link that knows whether or not it is active
+- Routes: the primary ways to render something in React Router based on the current location
+- Route: kind of like an if statement; if its path matches the current URL, it renders its element
+  - path: "path" without "/"
+  - element: render React Component
+- Outlet: 
+
+
+# Redux
+
+Redux is a predictable state container for JavaScript apps.
+Redux is a pattern and library for managing and updating application state, using events called "actions"
+
+## install
+
+- install Redux Toolkit
+
+```shell
+# NPM
+npm install @reduxjs/toolkit
+# Yarn
+yarn add @reduxjs/toolkit
+```
+
+- or Redux Core
+
+```shell
+# NPM
+npm install redux
+# Yarn
+yarn add redux
+```
+
+- create React app with Redux
+
+```shell
+# Redux + Plain JS template
+npx create-react-app my-app --template redux
+# Redux + TypeScript template
+npx create-react-app my-app --template redux-typescript
+```
+
+
 
