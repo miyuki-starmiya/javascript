@@ -666,6 +666,79 @@ function Example() {
 - only call Hooks from React function components. don't call Hooks from regular JavaScript functions
 
 
+# styled-components
+
+styled-components allow you to write CSS in JS.
+
+styled.component`` = function Component()
+
+features are below
+- automatic critical CSS
+- no class name bugs
+- easier deletion of CSS
+- simple dynamic styling
+- painless maintenance
+- automatic vendor prefixing
+
+## install
+
+```shell
+# npm
+npm install --save styled-components
+# yarn
+yarn add styled-components
+```
+
+## import
+
+we call styled components literal `tagged template literal`
+
+```js
+import styled from 'styled-components';
+// example
+const Button = styled.button``;
+```
+
+## add class attribute
+
+if you insert JS in styled-components, you surround it with ${}
+
+```js
+import styled, { css } from 'styled-components'
+
+const StyledComponent = styled.element`
+  /* this is general css */
+  property: value;
+  ${props => props.class && css`
+    /* this is class css */
+    property: value;
+  `}
+`;
+```
+
+## extend styles(like inheritance)
+
+like Class extends
+
+```js
+const ChildComponent = styled(ParentComponent)`
+  property: value;
+`
+```
+
+## how to pass props
+
+you can put props in styled-components by using arrow function
+
+```js
+const StyledComponent = styled.element`
+  property: ${props => props.someAttribute || "defaultValue"};
+`;
+
+<StyledComponent someAttribute="value" />
+```
+
+
 # React Router
 
 React Router is a fully-featured client and server-side routing library for React, a JavaScript library for building user interfaces. React Router runs anywhere React runs, on the web, on the server with node.js and on React Native
@@ -731,6 +804,9 @@ npx create-react-app my-app --template redux
 # Redux + TypeScript template
 npx create-react-app my-app --template redux-typescript
 ```
+
+## import
+
 
 
 
