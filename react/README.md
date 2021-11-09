@@ -603,7 +603,7 @@ function Parent() {
 
 Hooks are a new addition in React 16.8. they let you use state and other React features without writing a class component
 
-Hooks are **functions** that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes
+Hooks are `functions` that let you “hook into” React state and lifecycle features from function components. Hooks don’t work inside classes — they let you use React without classes
 
 - function components + Hooks = class components
 
