@@ -1,8 +1,8 @@
 
 # React.js
 
-React is JS Framework which is COMPONENT ORIENTED
-Components can be reused if you export it. React is superior to Vue about CUSTOMIZING but inferior to it about PRE TEMPLATE
+React is JS Framework which is `component oriented`
+Components can be reused if you export it. React is superior to Vue about `customizing` but inferior to it about `pre template`
 
 ## Install
 
@@ -29,7 +29,7 @@ Attention: you have to load with <script type="text/babel">
 - you have to close tag with slash. ex: <hr />
 - if you need to write variables or functions, you have to surround with {}
 - you write JSX in camelCase
-- we call it CONTAINER where is injected
+- we call it `container` where is injected
 
 those of below is totally same. Babel transpile JSX into React Object
 
@@ -64,7 +64,7 @@ const greeting = (
 
 ## VDOM(VirtualDOM)
 
-React use VDOM for updating real DOM.
+React use `VDOM` for updating real DOM.
 VDOM is much faster than real DOM because VDOM don't render DOM on screen.
 VDOM compares to only changed part on VDOM, which is called "diffing"
 
