@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "./node_modules/eslint/bin/eslint.js --format 'node_modules/eslint-friendly-formatter' . --ext .js --ext .jsx && webpack && webpack-dev-server",
+    "lint": "./node_modules/eslint/bin/eslint.js --fix --format 'node_modules/eslint-friendly-formatter' . --ext .js --ext .jsx;exit 0"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0"
+  }
+}
