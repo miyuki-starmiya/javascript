@@ -1,7 +1,40 @@
 
-
-
 # JEST
+
+Jest is a delightful JavaScript Testing Framework with a focus on simplicity.
+It works with projects uring [Babel, TypeScript, Node, React, Angular, Vue] and more!
+
+
+## install
+
+```shell
+# npm
+npm install --save-dev jest
+# yarn
+yarn add --dev jest
+```
+
+global install
+
+```shell
+# npm
+npm install --global jest
+# yarn
+yarn global add jest
+```
+
+## init
+
+generate jest.config.js
+
+```shell
+jest --init
+```
+
+do I need???
+instead of .test.js?
+
+
 
 
 # ESLint
