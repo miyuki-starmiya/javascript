@@ -482,6 +482,22 @@ const { works: { title } } = user; // title = 'Machine Human'
 
 ## modules
 
+### commonJS
+
+how to export
+
+```js
+module.exports = someModule;
+```
+
+how to import
+
+```js
+const package = require('someModule');
+```
+
+### ES6 modules
+
 named export require surrounding modules by {} when you export and import
 
 - how to export
@@ -497,6 +513,16 @@ export { a, b };
 
 // export default
 export default a;
+```
+
+how to import
+
+```js
+// named import
+import { a, b } from './someModule';
+
+// import default
+import a from './someModule';
 ```
 
 
