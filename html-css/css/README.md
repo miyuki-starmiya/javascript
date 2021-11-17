@@ -199,9 +199,16 @@ display: {
   - align-items: lay out items in cross axis.
     [stretch(default), center, flex-start, flex-end]
 - flex-item:
-  - flex: number that specify item's width rate
+  - flex(grow, shrink, basis): number that specify item's width rate
   - flex-basis: [auto, 0, px]
 
+to locate flex-container in the center
+
+```css
+.flex-container {
+  margin: 0 auto;
+}
+```
 
 ### grid layout
 
