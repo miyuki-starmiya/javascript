@@ -619,7 +619,7 @@ useState creates [stateful value, state handler]
 import React, { useState } from 'react';
 
 function Example() {
-  // [value, setValue] = useState(initialValue);
+  // [value, eventValue] = useState(initialValue);
   const [count, setCount] = useState(0);
 
   return (
@@ -760,7 +760,6 @@ yarn add @mui/material @mui/styled-engine-sc styled-components
 
 
 
-
 # React Router
 
 React Router is a fully-featured client and server-side routing library for React, a JavaScript library for building user interfaces. React Router runs anywhere React runs, on the web, on the server with node.js and on React Native
@@ -795,8 +794,15 @@ import { SomeModule } from 'react-router-dom';
 
 # Redux
 
-Redux is a predictable state container for JavaScript apps.
-Redux is a pattern and library for managing and updating application state, using events called "actions"
+Redux is a `predictable state container` for JavaScript apps.
+Redux is a pattern and library for managing and updating application state, using events called `actions`
+Redux helps you manage `global state`
+
+## SVA(State View Actions) model
+
+- state: the source of truth that drives our app
+- view: a declarative description of the UI based on the current state
+- actions: the events that occur in the app based user input, and trigger updates in the state
 
 ## install
 
@@ -827,7 +833,11 @@ npx create-react-app my-app --template redux
 npx create-react-app my-app --template redux-typescript
 ```
 
-## import
+## structure
+
+- reducer: include [state, action]
+- dispatch: eventHandler
+- selector: access state and re-render
 
 
 ## Redux Toolkit
