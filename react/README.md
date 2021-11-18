@@ -616,15 +616,50 @@ this provides function components with local state. this is similar to this.setS
 useState creates [stateful value, state handler]
 
 ```js
+import React from 'react';
+
+class Counter extends React.Component {
+  // state or model
+  constructor(props) {
+    super(props);
+    // bind func
+    this.incr = this.incr.bind(this);
+    this.state = { num: 0 };
+  }
+
+  // actions or controller
+  incr() {
+    this.setState({ num: this.state.num + 1 })
+  }
+
+  // view
+  render() {
+    return (
+      <div>
+        <p>class num is {this.state.num}</p>
+        <button onClick={this.incr}>incr</button>
+      </div>
+    )
+  }
+}
+
+```
+
+below code is equivalent
+
+```js
 import React, { useState } from 'react';
 
-function Example() {
+function Counter() {
   // [value, eventValue] = useState(initialValue);
+  // state and actions
   const [count, setCount] = useState(0);
 
+  // view
   return (
     <div>
       <p>You clicked {count} times</p>
+      // bind func by arrow func
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
@@ -802,7 +837,26 @@ Redux helps you manage `global state`
 
 - state: the source of truth that drives our app
 - view: a declarative description of the UI based on the current state
-- actions: the events that occur in the app based user input, and trigger updates in the state
+- actions: the events that occur in the app based user input, and trigger updates in the state. this is like eventHandlers
+
+## main elements of Redux
+
+- store: this is global component that stores the current state and it is an immutable object
+- action: state in the store is not changed directly, but with different actions. like `hooks` as functions
+- reducer: it is used to define the impact of the action on the state of the application
+- subscribe: it is used to create a callback function the store calls when its state is changed
+
+- dispatch: eventHandler
+- selector: access state and re-render
+
+Redux principles:
+  - The global state of your application is stored as an object inside a single store
+  - The only way to change the state is to dispatch an action
+  - Changes are made with pure reducer functions
+
+
+
+
 
 ## install
 
@@ -833,11 +887,36 @@ npx create-react-app my-app --template redux
 npx create-react-app my-app --template redux-typescript
 ```
 
-## structure
+## how to implement
 
-- reducer: include [state, action]
-- dispatch: eventHandler
-- selector: access state and re-render
+create store
+
+```js
+import { createStore } from 'redux';
+
+const store = createStore(
+  rootReducer,
+  preloadedState
+);
+```
+
+apply store to our app
+
+```js
+import React from 'react';
+import store from './store';
+import { Provider } from 'react-redux';
+
+function App() {
+  return (
+    <Provider store={store}>
+      <Components>
+    </Provider>
+  )
+}
+
+export default App;
+```
 
 
 ## Redux Toolkit
