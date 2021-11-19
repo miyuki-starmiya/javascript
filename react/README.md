@@ -833,6 +833,11 @@ Redux is a `predictable state container` for JavaScript apps.
 Redux is a pattern and library for managing and updating application state, using events called `actions`
 Redux helps you manage `global state`
 
+Redux principles:
+  - The global state of your application is stored as an object inside a single store
+  - The only way to change the state is to dispatch an action
+  - Changes are made with pure reducer functions
+
 ## SVA(State View Actions) model
 
 - state: the source of truth that drives our app
@@ -843,25 +848,10 @@ Redux helps you manage `global state`
 
 - store: this is global component that stores the current state and it is an immutable object
 - action: state in the store is not changed directly, but with different actions. like `hooks` as functions
-- reducer: it is used to define the impact of the action on the state of the application
 - actionCreator: function that returns an action
+- reducer: it is used to define the impact of the action on the state of the application
 - subscribe: it is used to create a callback function the store calls when its state is changed
-
-### Redux Thunk
-
-this is `redux-middleware` which must be initialized along with the initialization of the store
-
-- dispatch: eventHandler
-- selector: access state and re-render
-
-Redux principles:
-  - The global state of your application is stored as an object inside a single store
-  - The only way to change the state is to dispatch an action
-  - Changes are made with pure reducer functions
-
-
-
-
+- dispatch: dispatch(actionCreator)
 
 ## install
 
@@ -893,29 +883,40 @@ reducer require below arguments
 1. state value
 2. action
 
-createStore() accepts three arguments
-
-1. reducer(required)
-2. initial state value(optional)
-3. enhancer where we can pass middleware(optional)
-
 ```js
 import { createStore } from 'redux';
+
+// let be constant
+const ACTION_NAME = 'ACTION_NAME';
 
 // first, you need to create reducer
 const reducer = (state = 'initialValue' , action) => {
   switch (action.type) {
-    case 'ACTION1':
+    case ACTION_NAME:
       // some action
-      return state1;
+      return someState;
     ...
     default:
       return state;
   }
 }
 
+// define action creators
+const actionCreator = (value) => {
+  return {
+    type: ACTION_NAME;
+    key: value;
+  }
+}
+
+store.dispatch({
+  actionCreator(value);
+})
+
+// finally create store
 const store = createStore(
-  reducer
+  reducer,
+  reduxMiddleware
 );
 
 // when state changed, store calls callback
@@ -928,37 +929,18 @@ define dispatching actions. actions are objects sent to the store
 dispatch(actionCreator). actionCreator is just function, returns object
 
 ```js
-const actionCreator = (value) => {
-  return {
-    type: 'ACTION_NAME';
-    key: value;
-  }
-}
 
-store.dispatch({
-  actionCreator(value);
-})
 ```
 
-apply store to our app
 
-```js
-import React from 'react';
-import store from './store';
-import { Provider } from 'react-redux';
 
-function App() {
-  return (
-    <Provider store={store}>
-      <Components>
-    </Provider>
-  )
-}
+## redux functions
 
-export default App;
-```
+createStore() accepts three arguments
 
-### redux functions
+1. reducer(required)
+2. initial state value(optional)
+3. enhancer where we can pass middleware(optional)
 
 ```js
 import { createStore } from 'redux';
@@ -973,7 +955,25 @@ combineReducers({
 })
 ```
 
+## asynchronous actions(Redux Thunk)
+
+this is `redux-middleware` which must be initialized along with the initialization of the store
+
+- selector: access state and re-render
+
+## react-redux
+
+this connects react with redux and provides a way for you to pass Redux state and dispatch to your React Components as props
+
+
+
+
 ## Redux Toolkit
 
 this is Redux Library
+
+
+# Next.js
+
+
 
