@@ -1,17 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createStore } from 'redux';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// avoid hard coding
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const reducer = (state = 0, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      console.log(action.describe);
+      return state + action.payload;
+    case DECREMENT:
+      console.log(action.describe);
+      return state - action.payload;
+    default:
+      return state;
+  }
+};
+
+const store = createStore(reducer);
+
+// when state changed, store calls callback func
+store.subscribe(() => {
+  console.log('current state', store.getState());
+});
+
+// define dispatch(action) as object
+store.dispatch({
+  type: INCREMENT,
+  payload: 3,
+  describe: 'incr 3',
+});
+store.dispatch({
+  type: INCREMENT,
+  payload: 5,
+  describe: 'incr 5',
+});
+store.dispatch({
+  type: DECREMENT,
+  payload: 7,
+  describe: 'decr 7',
+});

@@ -844,6 +844,7 @@ Redux helps you manage `global state`
 - store: this is global component that stores the current state and it is an immutable object
 - action: state in the store is not changed directly, but with different actions. like `hooks` as functions
 - reducer: it is used to define the impact of the action on the state of the application
+- actionCreator: function that returns an action
 - subscribe: it is used to create a callback function the store calls when its state is changed
 
 ### Redux Thunk
@@ -885,15 +886,58 @@ yarn add redux react-redux redux-thunk
 
 ## how to implement
 
-create store
+create store.
+before this, you have to create `reducer`
+reducer require below arguments
+
+1. state value
+2. action
+
+createStore() accepts three arguments
+
+1. reducer(required)
+2. initial state value(optional)
+3. enhancer where we can pass middleware(optional)
 
 ```js
 import { createStore } from 'redux';
 
+// first, you need to create reducer
+const reducer = (state = 'initialValue' , action) => {
+  switch (action.type) {
+    case 'ACTION1':
+      // some action
+      return state1;
+    ...
+    default:
+      return state;
+  }
+}
+
 const store = createStore(
-  rootReducer,
-  preloadedState
+  reducer
 );
+
+// when state changed, store calls callback
+store.subscribe(() => {
+  // callback
+});
+```
+
+define dispatching actions. actions are objects sent to the store
+dispatch(actionCreator). actionCreator is just function, returns object
+
+```js
+const actionCreator = (value) => {
+  return {
+    type: 'ACTION_NAME';
+    key: value;
+  }
+}
+
+store.dispatch({
+  actionCreator(value);
+})
 ```
 
 apply store to our app
@@ -914,6 +958,20 @@ function App() {
 export default App;
 ```
 
+### redux functions
+
+```js
+import { createStore } from 'redux';
+
+const store = createStore(reducer);
+```
+
+```js
+import { combineReducers } from 'redux';
+combineReducers({
+  describe: reducerName,
+})
+```
 
 ## Redux Toolkit
 
