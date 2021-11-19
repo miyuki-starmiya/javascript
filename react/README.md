@@ -846,6 +846,10 @@ Redux helps you manage `global state`
 - reducer: it is used to define the impact of the action on the state of the application
 - subscribe: it is used to create a callback function the store calls when its state is changed
 
+### Redux Thunk
+
+this is `redux-middleware` which must be initialized along with the initialization of the store
+
 - dispatch: eventHandler
 - selector: access state and re-render
 
@@ -873,19 +877,11 @@ yarn add @reduxjs/toolkit
 
 ```shell
 # NPM
-npm install redux
+npm install redux react-redux redux-thunk
 # Yarn
-yarn add redux
+yarn add redux react-redux redux-thunk
 ```
 
-- create React app with Redux
-
-```shell
-# Redux + Plain JS template
-npx create-react-app my-app --template redux
-# Redux + TypeScript template
-npx create-react-app my-app --template redux-typescript
-```
 
 ## how to implement
 
