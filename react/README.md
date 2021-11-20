@@ -975,5 +975,61 @@ this is Redux Library
 
 # Next.js
 
+Next.js is the React Framework
+
+- Next = React + React Router + SSR(node)
+
+## features
+
+- An intuitive page-based routing system (with support for dynamic routes)
+- Pre-rendering, both static generation(SSG) and server-side rendering(SSR) are supported on a per-page basis
+- Automatic code splitting for faster page loads
+- Client-side routing with optimized pre-fetching
+- Built-in CSS and Sass support, and support for any CSS-in-JS library
+- Development environment with Fast Refresh support
+- API routes to build API endpoints with Serverless Functions
+- Fully extendable
+
+
+## create next app
+
+```shell
+npx create-next-app "app-name" --use-npm
+```
+
+## tag components
+
+- Head: metadata. you customize <title />, <meta /> every component
+- Link: this enables client-side navigation between two pages in Nuxt app. you can import it from 'next/link'. this requires <a /> as its child component. furthermore this pre-fetch Link components when they appear in the browser's viewpoint
+- Image: optimize and style image
+
+## directory
+
+- public/: here is static resources. directly render this files
+- pages/: routes automatically
+- styles/: place module.css files
+
+## import .css or .scss
+
+you must call css file as `*.module.css`
+styled components wrap child component
+
+```js
+import styles from '*.module.css';
+
+export default function Component({ children }) {
+  return <div className={styles.some-class}>{children}</div>;
+}
+```
+
+if you use global CSS(like index.css), create `styles/global.css` and a file called `pages/_app.js` and 
+
+```js:pages/_app.js
+import '../styles/global.css';
+
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+```
 
 
