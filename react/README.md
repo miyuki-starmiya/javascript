@@ -977,7 +977,7 @@ this is Redux Library
 
 Next.js is the React Framework
 
-- Next = React + React Router + SSR(node)
+- Next = React + React Router + styled-jsx + SSR(node)
 
 ## features
 
@@ -1031,5 +1031,10 @@ export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 ```
+
+## pre-rendering
+
+- Static Generation: generates the HTML at build time. the pre-rendered HTML is then reused on each request. this is used when data in web pages isn't frequently changed
+- SSR: generates the HTML on each request. this is used when web pages frequently updated, and page content changes on every request
 
 
