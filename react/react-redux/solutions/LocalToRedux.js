@@ -84,6 +84,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     submitNewMessage: (message) => {
+      // dispatch(action)
       dispatch(addMessage(message))
     }
   }

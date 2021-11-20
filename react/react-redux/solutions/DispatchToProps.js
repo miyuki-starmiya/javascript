@@ -1,3 +1,13 @@
+// state to props
+const state = [];
+
+const mapStateToProps = (state)=>{
+  return {
+    messages: state
+  }
+}
+
+// dispatch to props
 const addMessage = (message) => {
   return {
     type: 'ADD',
@@ -5,7 +15,6 @@ const addMessage = (message) => {
   }
 };
 
-// change code below this line
 const mapDispatchToProps = (dispatch) => {
     return {
         submitNewMessage: (message)=>{

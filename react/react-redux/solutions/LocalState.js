@@ -1,6 +1,7 @@
 class DisplayMessages extends React.Component {
   constructor(props) {
     super(props);
+    // state is object
     this.state = {
       input: '',
       messages: []
@@ -17,6 +18,7 @@ class DisplayMessages extends React.Component {
   submitMessage(){
     this.setState({
       input: '',
+      // create shallow copy
       messages: [...this.state.messages, this.state.input]
     })
   }
