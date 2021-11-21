@@ -850,21 +850,13 @@ Redux principles:
 - action: state in the store is not changed directly, but with different actions. like `hooks` as functions
 - actionCreator: function that returns an action
 - reducer: it is used to define the impact of the action on the state of the application
-- subscribe: it is used to create a callback function the store calls when its state is changed
+
 - dispatch: dispatch(actionCreator)
+- subscribe: it is used to create a callback function the store calls when its state is changed
 
 ## install
 
-- install Redux Toolkit
-
-```shell
-# NPM
-npm install @reduxjs/toolkit
-# Yarn
-yarn add @reduxjs/toolkit
-```
-
-- or Redux Core
+- install Redux Core
 
 ```shell
 # NPM
@@ -873,21 +865,38 @@ npm install redux react-redux redux-thunk
 yarn add redux react-redux redux-thunk
 ```
 
+- or install Redux Toolkit
+
+```shell
+# NPM
+npm install @reduxjs/toolkit
+# Yarn
+yarn add @reduxjs/toolkit
+```
+
 
 ## how to implement
 
-create store.
-before this, you have to create `reducer`
-reducer require below arguments
-
-1. state value
-2. action
+1. define constant action name. it must be named in UPPERCASE
+2. create actionCreator which returns action object and requires type, keys
+3. create reducer which requires (state = 'initialValue', action)
+4. create store which requires reducer
+5. dispatch calls actionCreator
 
 ```js
 import { createStore } from 'redux';
 
 // let be constant
 const ACTION_NAME = 'ACTION_NAME';
+
+  // define action creators
+  const actionCreator = (value) => {
+    // return action
+    return {
+      type: ACTION_NAME;
+      key: value;
+    }
+  }
 
 // first, you need to create reducer
 const reducer = (state = 'initialValue' , action) => {
@@ -901,23 +910,15 @@ const reducer = (state = 'initialValue' , action) => {
   }
 }
 
-// define action creators
-const actionCreator = (value) => {
-  return {
-    type: ACTION_NAME;
-    key: value;
-  }
-}
-
-store.dispatch({
-  actionCreator(value);
-})
-
 // finally create store
 const store = createStore(
   reducer,
   reduxMiddleware
 );
+
+store.dispatch({
+  actionCreator(value);
+})
 
 // when state changed, store calls callback
 store.subscribe(() => {
@@ -925,18 +926,9 @@ store.subscribe(() => {
 });
 ```
 
-define dispatching actions. actions are objects sent to the store
-dispatch(actionCreator). actionCreator is just function, returns object
-
-```js
-
-```
-
-
-
 ## redux functions
 
-createStore() accepts three arguments
+- createStore() accepts three arguments
 
 1. reducer(required)
 2. initial state value(optional)
@@ -947,6 +939,8 @@ import { createStore } from 'redux';
 
 const store = createStore(reducer);
 ```
+
+- combineReducers() combines multiple reducers
 
 ```js
 import { combineReducers } from 'redux';
@@ -963,14 +957,26 @@ this is `redux-middleware` which must be initialized along with the initializati
 
 ## react-redux
 
-this connects react with redux and provides a way for you to pass Redux state and dispatch to your React Components as props
+it connects redux with react and provides a way for you to pass Redux state and dispatch to your React Components as props
 
+- connect(mapProps1, ..., mapPropsN)(bondedComponent)
+- <Provider store={store}>: bind Redux store with Component container
 
+```js
+import { Provider, connect } from 'react-redux';
 
+// send props to React
+const Container = connect(mapStateToProps, mapDispatchToProps)(MessageInputShow)
 
-## Redux Toolkit
-
-this is Redux Library
+// bond React
+export default function AppWrapper() {
+  return (
+    <Provider store={store}>
+      <Container />
+    </Provider>
+  )
+}
+```
 
 
 # Next.js

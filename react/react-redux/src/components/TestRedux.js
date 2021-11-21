@@ -1,120 +1,99 @@
-import React from "react";
-import { Provider, connect } from "react-redux";
-import { createStore } from "redux";
+import React from 'react';
+import { Provider, connect } from 'react-redux';
+import { createStore } from 'redux';
 
-// be constant
+/**
+ * create Redux Component
+ * it contains [actionCreator, Reducer, Store]
+ */
+
+// naming
 const ADD = 'ADD';
 
-/**
- * actionCreator
- * @param {string} type 
- * @param {any} message 
- * @returns 
- */
+// actionCreator which is object
 const addMessage = (message) => {
-  return {
+  return ({
     type: ADD,
-    message: message
-  }
-};
+    message: message,
+  })
+}
 
-/**
- * reducer
- * @param {any} state 
- * @param {object} action 
- * @returns 
- */
-const messageReducer = (state = [], action) => {
+// reducer = (state = 'initialState', action)
+const rootReducer = (state = [], action) => {
   switch (action.type) {
     case ADD:
       return [
-        // create shallow copy then push()
         ...state,
         action.message
       ];
+    // default return
     default:
       return state;
   }
-};
+}
 
 // store
-const store = createStore(messageReducer);
+const store = createStore(rootReducer);
 
-// React Class Component
-class Presentational extends React.Component {
+
+/**
+ * React Component
+ * it contains [eventHandler, View]
+ */
+class MessageInputShow extends React.Component {
   constructor(props) {
     super(props);
-    
-    // Remove property 'messages' from Presentational's local state
-    this.state = {
-      input: ''
-    }
     this.handleChange = this.handleChange.bind(this);
-    this.submitMessage = this.submitMessage.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      input: '',
+    };
   }
   handleChange(event) {
-    this.setState({
-      input: event.target.value
-    });
+    this.setState({input: event.target.value});
   }
-  submitMessage() {
-  
-    // Call 'submitNewMessage', which has been mapped to Presentational's props, with a new message;
-    // meanwhile, remove the 'messages' property from the object returned by this.setState().
-    this.props.submitNewMessage(this.state.input);
-    this.setState({
-      input: ''
-    });
+  handleClick() {
+    this.setState({input: ''})
+    this.props.onSubmitMessage(this.state.input);
   }
   render() {
     return (
       <div>
-        <h2>Type in a new Message:</h2>
-        <input
-          value={this.state.input}
-          onChange={this.handleChange}/><br/>
-        <button onClick={this.submitMessage}>Submit</button>
+        <h1>Test Page</h1>
+        <h3>send to new Message, please</h3>
+        <input type="text" onChange={this.handleChange}></input>
+        <input type="submit" onClick={this.handleClick}></input>
         <ul>
-           {/* The messages state is mapped to Presentational's props; therefore, when rendering,
-               you should access the messages state through props, instead of Presentational's
-               local state. */}
-          {this.props.messages.map( (message, idx) => {
-              return (
-                 <li key={idx}>{message}</li>
-              )
-            })
-          }
+          {this.props.messages.map((e, i) => {
+            return <li key={i}>{e}</li>
+          })}
         </ul>
       </div>
-    );
+    )
   }
-};
+}
 
-// map Redux state and dispatch to React props
+// send messages, dispatch as props
 const mapStateToProps = (state) => {
   return {messages: state}
-};
-
+}
 const mapDispatchToProps = (dispatch) => {
   return {
-    submitNewMessage: (message) => {
-      // dispatch(action)
-      dispatch(addMessage(message))
+    // declare eventHandler and call action by dispatch
+    onSubmitMessage: (message) => {
+      dispatch(addMessage(message));
     }
-  }
-};
+  };
+}
 
-// connect Redux with React
-const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);
+// send props to React
+const Container = connect(mapStateToProps, mapDispatchToProps)(MessageInputShow)
 
-export default class AppWrapper extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <Container/>
-      </Provider>
-    );
-  }
-};
-
-
+// bond React
+export default function AppWrapper() {
+  return (
+    <Provider store={store}>
+      <Container />
+    </Provider>
+  )
+}
