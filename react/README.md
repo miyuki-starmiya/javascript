@@ -701,6 +701,14 @@ function Example() {
 - only call Hooks from React function components. don't call Hooks from regular JavaScript functions
 
 
+## Images
+
+you can render images by below ways
+
+- import directly
+- require: <img src={require("path").default} />
+
+
 # styled-components
 
 styled-components allow you to write CSS in JS.
