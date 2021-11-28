@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    <img alt="ichigo" src="./assets/ichigo02.jpg" id="top-image">
-    <Home />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Home from './pages/Home.vue'
-
 export default {
   name: 'App',
   components: {
-    Home,
   }
 }
 </script>

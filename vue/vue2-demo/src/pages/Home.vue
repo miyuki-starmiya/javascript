@@ -1,9 +1,10 @@
 <template>
   <div class="sample">
+    <img alt="ichigo" src="../assets/ichigo02.jpg" id="top-image">
     <h1>This is Aikatsu fan site!</h1>
     <ul>
       <li v-for="mc in mcList" v-bind:key="mc.id">
-        {{ mc }}
+        <router-link to="/about/only-ichigo">{{ mc }}</router-link>
       </li>
     </ul>
   </div>

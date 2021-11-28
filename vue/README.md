@@ -52,9 +52,6 @@ vue file return below object keys
 - computed: 
 - methods: this value is method objects
 
-## DOM
-
-### render
 
 ## Life Cycle Hooks
 
@@ -63,7 +60,7 @@ vue file return below object keys
 - updated: 
 - destroyed: 
 
-## directives
+## Directives
 
 you can use vue-directive in <template />. you should surround them with "". for example, <li v-for="todo in todos" v-bind:key="id" />
 
@@ -86,6 +83,69 @@ below is same way
 
 
 # Vue Router
+
+Vue Router is the official router for Vue.js
+
+- Nested route/view mapping
+- Modular, component-based router configuration
+- Route params, query, wildcards
+- View transition effects powered by Vue.js transition system
+- Fine-grained navigation control
+- Links with automatic active CSS classes
+- HTML5 history mode or hash mode, with auto-fallback in IE9
+- Customizable Scroll Behavior
+
+## install
+
+```shell
+# npm
+npm install vue-router
+# vue cli
+vue add router
+```
+
+## create router.js
+
+```js:router.js
+import VueRouter from 'vue-router';
+import Page from 'pages/*';
+
+const router = VueRouter({
+    mode: "history",
+    routes: [
+        { path: "/path", components: Page },
+    ]
+});
+export { router };
+```
+
+## import and activate
+
+```js:main.js
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+
+Vue.use(VueRouter);
+new Vue({
+  render: h => h(App),
+  router,
+}).$mount('#app')
+```
+
+```js:App.vue
+<template>
+    <router-view>
+    // render route contains
+    </router-view>
+</template>
+```
+
+## link
+
+```html
+<router-link to="/path">to path</router-link>
+```
+
 # Vuex
 
 # Nuxt.js
