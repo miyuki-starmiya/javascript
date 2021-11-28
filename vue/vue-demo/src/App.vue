@@ -1,6 +1,6 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="ichigo" src="./assets/ichigo02.jpg" id="top-image">
+  <HelloWorld msg="Hello Aikatsu!" num="3" />
 </template>
 
 <script>
@@ -22,5 +22,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+#top-image {
+  max-width: 500px;
 }
 </style>
