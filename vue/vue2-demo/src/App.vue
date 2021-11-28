@@ -1,15 +1,17 @@
 <template>
-  <img alt="ichigo" src="./assets/ichigo02.jpg" id="top-image">
-  <HelloWorld msg="Hello Aikatsu!" num="3" />
+  <div id="app">
+    <img alt="ichigo" src="./assets/ichigo02.jpg" id="top-image">
+    <Home />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './pages/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home,
   }
 }
 </script>

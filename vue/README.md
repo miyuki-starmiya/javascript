@@ -28,11 +28,19 @@ npm update -g @vue/cli
 yarn global upgrade @vue/cli
 ```
 
-# API
+## create app
 
-## global
+```shell
+vue create "app-name"
+```
 
-### Vue.use
+## single file components
+
+vue file consist of below elements
+
+- template: 
+- script: 
+- style: scoped attribute make this file scoped
 
 ## export data
 
@@ -126,5 +134,4 @@ This is Vue Framework
 1. install @nuxtjs/dotenv package
 2. add @nuxtjs/dotenv to buildModules in nuxt.config.js
 3. you can refer to process.env.VAR
-
 
