@@ -146,6 +146,7 @@ new Vue({
 <router-link to="/path">to path</router-link>
 ```
 
+
 # Vuex
 
 # Nuxt.js
