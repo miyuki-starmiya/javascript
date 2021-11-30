@@ -46,7 +46,7 @@ vue file consist of below elements
 
 vue file return below object keys
 
-- name: 
+- name: component's name. maybe it is useless
 - data: this value is a function which return store data object which you want to render
 - props: this value is received props object by parent component
 - computed: 
@@ -55,8 +55,8 @@ vue file return below object keys
 
 ## Life Cycle Hooks
 
-- created: 
-- mounted: 
+- created: you have access reactive `data`. At this stage DOM has not been mounted. So you cannot do any DOM manipulation here
+- mounted: called after the DOM has been mounted or rendered. Here you can access to the DOM and manipulate DOM
 - updated: 
 - destroyed: 
 
