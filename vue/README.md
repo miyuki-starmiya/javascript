@@ -149,6 +149,61 @@ new Vue({
 
 # Vuex
 
+
+# Vuetify
+
+## install
+
+Webpack
+```shell
+yarn add vuetify
+yarn add sass@~1.32 sass-loader deepmerge -D
+# OR
+npm install vuetify
+npm install sass@~1.32 sass-loader deepmerge -D
+```
+
+```js:src/plugins/vuetify.js
+import Vue from 'vue'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
+Vue.use(Vuetify)
+
+const opts = {}
+
+export default new Vuetify(opts)
+```
+
+```js:src/main.js
+import Vue from 'vue'
+import vuetify from '@/plugins/vuetify' // path to vuetify export
+
+new Vue({
+  vuetify,
+}).$mount('#app')
+```
+
+Nuxt
+```shell
+yarn add @nuxtjs/vuetify -D
+# OR
+npm install @nuxtjs/vuetify -D
+```
+
+```js:nuxt.config.js
+{
+  buildModules: [
+    // Simple usage
+    '@nuxtjs/vuetify',
+
+    // With options
+    ['@nuxtjs/vuetify', { /* module options */ }]
+  ]
+}
+```
+
+
 # Nuxt.js
 
 This is Vue Framework
