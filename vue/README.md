@@ -213,8 +213,21 @@ This is Vue Framework
 
 ## Get started
 
+create app
+```shell
+# yarn
+yarn create nuxt-app "PROJECT_NAME"
+# npm
+npm init nuxt-app "PROJECT_NAME"
+```
 
-
+run dev-env
+```shele
+# yarn
+yarn dev
+# npm
+npm run dev
+```
 
 ## tags
 
@@ -245,7 +258,20 @@ This is Vue Framework
 - SPA: this doesn't require node. browser render <NuxtLink /> only once, after static hosting server render files
 - lifecycle: load plugin -> serverInit(Vuex, context) -> middleware -> created() -> fetch() -> mounted()
 
-## .env
+## config
+
+you can overwrite `nuxt.config.js`
+
+```js:nuxt.config.js
+export default {
+  server: {
+    host: '0', // default: localhost
+    port: 8080, // default: 3000
+  }
+}
+```
+    
+### .env
 
 1. install @nuxtjs/dotenv package
 2. add @nuxtjs/dotenv to buildModules in nuxt.config.js
