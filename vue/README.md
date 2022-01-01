@@ -44,7 +44,7 @@ vue file consist of below elements
 
 ## export data
 
-vue file return below object keys
+it is `object`
 
 - name: component's name. maybe it is useless
 - data: this value is a function which return store data object which you want to render
@@ -54,6 +54,8 @@ vue file return below object keys
 
 
 ## Life Cycle Hooks
+
+it is `function`
 
 - created: you have access reactive `data`. At this stage DOM has not been mounted. So you cannot do any DOM manipulation here
 - mounted: called after the DOM has been mounted or rendered. Here you can access to the DOM and manipulate DOM
@@ -79,6 +81,94 @@ below is same way
     v-bind:value="something"
     v-on:input="something = $event.target.value"
 >
+```
+
+## use TypeScript
+
+install packages
+```shell
+# yarn
+yarn add @nuxt/typescript-build
+# npm
+npm install @nuxt/typescript-build
+```
+
+configuration
+```js:nuxt.config.js
+export default {
+  buildModules: ['@nuxt/typescript-build']
+}
+```
+
+```json:tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
+    },
+    "types": [
+      "@types/node",
+      "@nuxt/types"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+```
+
+```ts:vue-shim.d.ts
+declare module "*.vue" {
+  import Vue from 'vue'
+  export default Vue
+}
+```
+
+write to .vue in ts
+```vue:*.vue
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data() {
+    return {
+    }
+  },
+})
+```
+
+## use Sass
+
+install packages
+```shell
+# yarn
+yarn add sass sass-loader@10
+# npm
+npm install sass sass-loader
+```
+
+be careful to `scss` not sass
+```vue:*.vue
+<style lang="scss" scoped>
+</style>
 ```
 
 
