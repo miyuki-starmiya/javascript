@@ -332,7 +332,7 @@ npm run dev
 - components/: be run files automatically
 - assets/: css, img, font which has been compiled
 - static/: like public/. this files are never compiled and located as raw
-- layouts/: default.vue = App.vue + <header /> + <nav /> + <footer>
+- layouts/: default.vue = App.vue + <header /> + <nav /> + <footer />
 - store/: activate Vuex in index.js
 - nuxt.config.js: config file in nuxt app. you can config plugin, <head />
 
@@ -351,6 +351,20 @@ npm run dev
 ## config
 
 you can overwrite `nuxt.config.js`
+
+- nuxt.config.js
+  - ssr: true or false
+  - head: HTML header
+  - css
+  - plugins
+  - components: true
+  - buildModules
+  - modules
+  - vuetify
+  - build
+  - server
+  - axios
+  - proxy
 
 ```js:nuxt.config.js
 export default {
