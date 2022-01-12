@@ -304,6 +304,24 @@ npm install @nuxtjs/vuetify -D
 - v-container: it provides the ability to center and horizontally. it is contents unit for app
   - v-row: it is a wrapper component for v-col. it utilizes flex properties to control the layout and flow of its inner columns
     - v-col: it is flex col component
+- form: 
+  - v-text-field: input type="text"
+  - v-select: input type="select"
+  - v-checkbox: input type="checkbox"
+- v-list: create list group
+  - v-subheader: subheader in lists
+  - v-divider: line that divide lists
+  - v-list-group: it allow you select item in lists
+    - v-list-item: list item unit
+      - v-list-item-title
+      - v-list-item-content
+      - v-list-item-icon
+      - v-list-item-avatar
+        - v-img
+- v-tabs: you have to set v-model with v-tabs-items
+  - v-tab
+- v-tabs-items: you have to set v-model with v-tabs
+  - v-tab-item
 
 
 # Nuxt.js
