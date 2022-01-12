@@ -242,6 +242,8 @@ new Vue({
 
 # Vuetify
 
+Vuetify is Material Design Framework for Vue. it has various `Material colors` and `Material design icons` produced by Google
+
 ## install
 
 Webpack
@@ -274,7 +276,7 @@ new Vue({
 }).$mount('#app')
 ```
 
-Nuxt
+for Nuxt. Vuetify is chosen as Nuxt options when you create app
 ```shell
 yarn add @nuxtjs/vuetify -D
 # OR
@@ -292,6 +294,16 @@ npm install @nuxtjs/vuetify -D
   ]
 }
 ```
+
+## API
+
+- v-app: it is mount point and required for all apps
+  - v-app-bar: it is always placed at the top of an app
+  - v-navigation-drawer: it can be placed on the left or right side of an app. you choose it placed next to v-app-bar or below
+  - v-footer: it is always placed at the bottom of an app
+- v-container: it provides the ability to center and horizontally. it is contents unit for app
+  - v-row: it is a wrapper component for v-col. it utilizes flex properties to control the layout and flow of its inner columns
+    - v-col: it is flex col component
 
 
 # Nuxt.js
