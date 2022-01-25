@@ -63,9 +63,15 @@ Jest inspects all [.js, .jsx, .ts, .tsx] files
 
 ## how to write test code
 
-test one value
+test block
+- describe(description, callback): test suite
+  - beforeEach(callback): run before each test unit
+  - afterEach(callback): run after each test unit
+  - it(description, callback): individual each test unit
+    - expext(input): test function that test input as expected result
 
-```js: isInteger.test.js
+test one value
+```js
 // import module from other.js
 const isInteger = require("./isInteger");
 const data = [value, result]
@@ -77,7 +83,6 @@ test("isInteger description", () => {
 ```
 
 test multiple values
-
 ```js
 const isInteger = require("./isInteger");
 const data = [
@@ -92,7 +97,29 @@ test.each(data)(
 )
 ```
 
-### runs tests for new change
+### Jest Helpers
+
+- Booleans:
+  - toBeTruthy(): checks that a variable/statement is true
+  - toBeFalsy(): checks that a variable/statement is false
+- Defined:
+  - toBeNull(): checks if a variable matches only null
+  - toBeUndefined(): checks if a variable is not defined
+  - toBeDefined(): check if a variable is defined
+- Numbers:
+  - toBeGreaterThan(): checks if a number is greater than the value specified
+  - toBeGreaterThanOrEqual(): checks if a number is greater than or equal to the value specified
+  - toBeLessThan(): checks if a number is less than the value specified
+  - toBeLessThanOrEqual(): checks if a number is less than or equal to the value specified
+  - toBe() and toEqual(): checks if a number is the same as the value specified (these functions are equivalent for numbers)
+  - toBeCloseTo(): checks if a number is equal to the value specified within a small tolerance (useful for floating-point numbers)
+- Strings:
+  - toMatch(): checks if a string is equal to the value specified (Regex can be used as the value specified!)
+- Arrays:
+  - toContain(): checks if an array contains the specified value
+- not: qualifier can be chained with most of these checks:
+
+### runs tests every code changes
 
 ```shell
 jest --watch
