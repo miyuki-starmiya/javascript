@@ -133,16 +133,47 @@ ESLint is a tool for identifying and reporting on patterns found in ECMAScript c
 - ESLint uses an AST to evaluate patterns in code
 - ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime
 
-## install
+## install all dependencies
+
+first you have to install eslint-cli module into global
+```shell
+npm i eslint-cli -g
+```
+
+- eslint: linting, error messages, etc
+- babel-esling: ES6, flow types, etc
+- eslint-config-prettier: special config for prettier so it will not interfere with other eslint formatting rules
+- eslint-plugin-prettier: runs prettier as an eslint rule so wrong formatting is seen as an error
+- eslint-plugin-nuxt: adds nuxt support to eslint
+- prettier: to properly format code
 
 ```shell
 # npm
-npm install eslint --save-dev
+npm install eslint babel-eslint eslint-config-prettier eslint-plugin-prettier eslint-loader prettier --save-dev
 # yarn
-yarn add eslint --dev
+yarn add eslint babel-eslint eslint-config-prettier eslint-plugin-prettier eslint-loader prettier --dev
+# if you use nuxt
+npm i eslint-plugin-nuxt @nuxtjs/eslint-config-typescript @nuxtjs/eslint-module -D
 ```
 
-## init
+## Prettier
+
+Prettier is an opinionated code formatter with support for:
+
+- JavaScript (including experimental features)
+- JSX
+- Angular
+- Vue
+- Flow
+- TypeScript
+- CSS, Less, and SCSS
+- HTML
+- JSON
+- GraphQL
+- Markdown, including GFM and MDX
+- YAML
+
+### init
 
 init project and generate .eslintrc.js
 
@@ -152,4 +183,13 @@ npm eslint --init
 # yarn
 yarn run eslint --init
 ```
+
+### run ESLint
+
+```shell
+eslint "dir/" --ext .js,.ts,.vue
+# run all
+eslint */ --ext .js,.ts,.vue
+```
+
 
