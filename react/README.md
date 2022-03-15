@@ -781,9 +781,9 @@ const StyledComponent = styled.element`
 <StyledComponent someAttribute="value" />
 ```
 
-## Material UI
+# Material UI
 
-this is UI(styling) library for React.
+this is `UI(styling) library` for React.
 
 ## features
 
@@ -794,13 +794,14 @@ this is UI(styling) library for React.
 ## install
 
 ```shell
-// with npm
+# npm
 npm install @mui/material @mui/styled-engine-sc styled-components
-
-// with yarn
+# yarn
 yarn add @mui/material @mui/styled-engine-sc styled-components
+  
+# alternative with emotion
+yarn add @mui/material @emotion/react @emotion/styled
 ```
-
 
 
 # React Router
@@ -986,12 +987,24 @@ export default function AppWrapper() {
 }
 ```
 
+# Recoil
+  
+it is a `state management library` for React
+
+## install
+
+```shell
+# npm
+npm install recoil
+# yarn
+yarn add recoil
+```
 
 # Next.js
 
 Next.js is the React Framework
 
-- Next = React + React Router + styled-jsx + SSR(node)
+- Next = React + React Router + styled-jsx + SSR(node) + TypeScript + ESLint
 
 ## features
 
@@ -1008,7 +1021,13 @@ Next.js is the React Framework
 ## create next app
 
 ```shell
-npx create-next-app "app-name" --use-npm
+# npm
+npx create-next-app "app-name"@latest
+# yarn
+yarn create next-app "app-name"
+
+# with TypeScript
+yarn create next-app "app-name" --typescript
 ```
 
 ## tag components
@@ -1020,12 +1039,12 @@ npx create-next-app "app-name" --use-npm
 ## directory
 
 - public/: here is static resources. directly render this files
-- pages/: routes automatically
-- styles/: place module.css files
+- pages/: _app.jsxがglobalなpageとなり、ディレクトリ内のファイルは全て自動でルーティングされる
+- styles/: globals.cssが
 
 ## import .css or .scss
 
-you must call css file as `*.module.css`
+you must call css file as `*.module.css` or `*.module.scss`
 styled components wrap child component
 
 ```js
@@ -1036,7 +1055,7 @@ export default function Component({ children }) {
 }
 ```
 
-if you use global CSS(like index.css), create `styles/global.css` and a file called `pages/_app.js` and 
+if you use global CSS(like index.css), create `styles/global.css` and a file called `pages/_app.js`
 
 ```js:pages/_app.js
 import '../styles/global.css';
