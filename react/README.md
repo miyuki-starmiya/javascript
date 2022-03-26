@@ -1000,6 +1000,19 @@ npm install recoil
 yarn add recoil
 ```
 
+## components
+
+- atom: it is `state` that is read from any component
+  - key: state key
+  - default: default value
+- selector: atomを参照するstate
+
+## Hooks  
+
+- useRecoilState: get and set
+- useRecoilValue: only get
+- useSetRecoilState: only set, it is async hook method
+
 # Next.js
 
 Next.js is the React Framework
