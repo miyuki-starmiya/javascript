@@ -3,33 +3,35 @@
 
 JavaScript was released by the Mosaic web browser.
 
-JavaScript has features below
-  - curly-bracket syntax {}
-  - dynamic typing
-  - prototype-type-based OOP =>
-  - class-based OOP(ES6)
-  - first-class functions
+### Features
 
-JavaScript has APIs below
-  - text
-  - dates
-  - regular expressions
-  - standard data structures
-  - DOM(DocumentObjectModel)
+- curly-bracket syntax {}
+- dynamic typing
+- prototype-type-based OOP =>
+- class-based OOP(ES6)
+- first-class functions
 
-## ecosystem
+### APIs
 
-front-end frameworks: React, Angular, Vue, jQuery
-back-end runtime: Node
-frameworks for mobile: React Native
-package managers: npm, yarn
-build automation tools: Webpack, Grunt
-testing tools: Jest
-linter: ESLint
-transpilers: Babel
-alt JS: TypeScript
+- text
+- dates
+- regular expressions
+- standard data structures
+- DOM(DocumentObjectModel)
 
-## history
+## Ecosystem
+
+- front-end frameworks: React, Angular, Vue, jQuery
+- back-end runtime: Node
+- frameworks for mobile: React Native
+- package managers: npm, yarn
+- build automation tools: Webpack, Grunt
+- testing tools: Jest
+- linter: ESLint
+- transpilers: Babel(ES6, React)
+- alt JS: TypeScript
+
+## History
 
 ES3(1999)
   - regular expression
@@ -56,8 +58,10 @@ ES6(ES2015)
   - symbol
   - generator function
 
+### Surroundings history
+
 - 1993: The Mosaic web browser was released
-- 1995: first shipped called LiveScript as part of Navigator beta
+- 1995: first shipped called `LiveScript` as part of Navigator beta
 - 1996: Microsoft release JScript which is similar to JavaScript
   => cause cross browser problem that make developers confuse
 - 1997: ECMA Script1 was released by Ecma International
@@ -65,14 +69,14 @@ ES6(ES2015)
 - 1999: ECMA Script3 was released
 - 2000: Internet Explorer dominant about 95% in the browser market
 - 2004: FireFox was released by Mozilla ex-Netscape
-- 2005: AJAX appeared. It provided async procession
+- 2005: `AJAX` appeared. It provided async procession
   => affect jQuery
 - 2008: Google Chrome with just-in-time compilation was released
 - 2009: ECMA Script5 was released
-- 2009: Node.ja and npm was released by Ryan Dahl
-- 2015: ECMA Script6 was released
+- 2009: `Node.js` and `npm` was released by Ryan Dahl
+- 2015: `ECMA Script6` was released
 
-### browser history
+### Browser history
 
 - 1993: NCSA Mosaic
 - 1994: Netscape Navigator
@@ -90,13 +94,39 @@ ES6(ES2015)
 ## Data Type
 
 ```js
-number: 12
-string: 'foo' // 'str' or "str"
-undefined: undefined
-null: null
-boolean: true, false
-array: [1, 2]
-object: {key: "value"}
+Number: 12
+String: 'foo' // 'str' or "str"
+Undefined: undefined
+Boolean: true, false
+Object: {key: "value"}
+  Null: null
+  Array: [1, 2]
+```
+
+### type cast
+
+```js
+// check
+typeof(x)
+
+// to int
+parseInt(x)
+Number(x)
+
+// to float
+parseFloat(x)
+
+// to string
+String(x)
+
+// to boolean
+Boolean(x)
+
+// to array
+Array(1,2) // [1, 2]
+
+// template literal
+console.log(`${x}`)
 ```
 
 ### reserved words
@@ -127,9 +157,9 @@ a1[0] = "a";
 console.log(a2); // ["a",2,3]
 ```
 
-### variables
+### Variable
 
-Attention: if you declare values without var or let, values are in global scope
+Attention: if you declare variables without var or let, variables are in global scope
 
 ```js
 // you can declare and reassign again
@@ -138,33 +168,8 @@ var foo = null;
 // block scope. you must not declare again
 let bar = null;
 
-// you must not reassign again. it is CONSTANT VALUE
-const HOGE = null;
-```
-
-### type cast
-
-```js
-// check
-typeof(x)
-
-// to int
-parseInt(x)
-
-// to float
-parseFloat(x)
-
-// to string
-String(x)
-
-// to boolean
-Boolean(x)
-
-// to array
-Array(1,2) // [1, 2]
-
-// template literal
-console.log(`${x}`)
+// you must not reassign again. it is CONSTANT VALUE. it is the most general way
+const baz = null;
 ```
 
 ### Operand
@@ -184,7 +189,7 @@ console.log(`${x}`)
 ### if condition
 
 ```js
-let height = 162
+const height = 162
 
 if (height > 160) {
   console.log("good !")
@@ -194,7 +199,7 @@ if (height > 160) {
   console.log("soso ...")
 }
 
-// short conditionals
+// short conditionals(one liner)
 height > 160 ? console.log("good !") : console.log("bad");
 ```
 
@@ -203,7 +208,7 @@ height > 160 ? console.log("good !") : console.log("bad");
 ※breakを入れないと他の条件も実行するので注意
 
 ```js
-let signal = "yellow";
+const signal = "yellow";
 
 switch (signal) {
   case "red":
@@ -228,8 +233,14 @@ for (let i=0; i < 10; i++) {
     console.log(i);
 }
 
+// forEach
+let array = ['a', 'b', 'c']
+array.forEach((e, index) => 
+  console.log(e, index) // callback func
+);
+
 // for i in
-array = ['a', 'b', 'c']
+let array = ['a', 'b', 'c']
 for (let i in array) { // indexが返される
     console.log(array[i]);
 }
@@ -239,22 +250,20 @@ for (let k in obj) {
     console.log(obj[k]);
 }
 
-// forEach
-array.forEach((e, index) => 
-  console.log(e, index) // callback func
-);
-
 // for of
 array = ['a', 'b', 'c']
-for (let e of array) { // elementsが返される
+for (let e of array) { // elementが返される
     console.log(e); // 'a', 'b', 'c'
 }
 ```
 
 ### while loop
 
+- break: it makes loop end
+- continue: it makes loop skip following lines
+
 ```js
-let i = 0 // counter
+let i = 0 // counter variable
 
 while (i < 10) {
   if (i === 3) {
@@ -271,7 +280,12 @@ do { // 初回は必ず実行
 } while (i < 10)
 ```
 
-### try exception handling
+### exception handling
+
+- tyy: start exception block
+  - throw: raise Error
+- catch: exception
+- finally: exceptionにかかわらず、常に出力
 
 ```js
 let a = ['a', true, 0];
@@ -290,7 +304,9 @@ for (let i in a) {
 }
 ```
 
-## functions
+## function
+
+- return: return variables
 
 ```js
 // function literal
@@ -304,12 +320,12 @@ let add = function(a, b) {
   return a + b;
 }
 
-// arrow function. all below are same
+// arrow function. all below are equivalent
 function add(a, b) {
-  return a+b;
+  return a + b;
 }
 const add = (a, b) => {
-  return a+b;
+  return a + b;
 }
 const add = (a, b) => (a+b);
 
@@ -325,7 +341,7 @@ function sayHi(name='hitoe') {
 sayHi(); // hello hitoe
 ```
 
-## classes
+## class
 
 従来はprototypeで関数として実装していた。ES6からclassが登場。
 
@@ -528,7 +544,7 @@ import a from './someModule';
 
 # asynchronous processing
 
-順次実行の構造型プログラミングの法則を壊すサーバサイドメインの処理.**Promise**という後で実オブジェクトを渡すための仮のオブジェクトを発行することによって実現する. サーバの**メインスレッド**領域を中断させないように考案された仕組み
+順次実行の構造型プログラミングの法則を壊すサーバサイドメインの処理.`Promise`という後で実オブジェクトを渡すための仮のオブジェクトを発行することによって実現する. サーバの`メインスレッド`領域を中断させないように考案された仕組み
 
 JSはfsなど標準で非同期処理となる非同期型関数を多く保有している
 
@@ -539,7 +555,7 @@ Promise state
 - reject: failure
 - pending: initial state
 
-Promiseで処理の状態を保持し、**コールバック関数**でresolve, rejectそれぞれの状態になった時の処理を記述できる
+Promiseで処理の状態を保持し、`コールバック関数`でresolve, rejectそれぞれの状態になった時の処理を記述できる
 
 ```js
 // resolveのみの処理
@@ -605,7 +621,7 @@ Promise.resolve(1).then((value) => {
 
 ## async/await (ES2017)
 
-async functionという常にPromiseインスタンスを返す関数。resolve, rejectのstateの記載を省ける。非同期処理を同期処理のように記述可能
+async functionという常にPromiseインスタンスを返す関数. resolve, rejectのstateの記載を省ける. 非同期処理を同期処理のように記述可能. Promise.then()の`コールバック地獄`を解消するために考案された
 
 ```js
 async function doAsync(what) {
@@ -732,7 +748,6 @@ function handleFiles() {
   }
 }
 ```
-
 
 
 ## DOM(DocumentObjectModel)
