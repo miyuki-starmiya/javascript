@@ -1,13 +1,15 @@
 
-# JavaScript6(JavaScript ECMA Script6)
+# JavaScript(JavaScript ECMA Script6(2015))
 
-JavaScript was released by the Mosaic web browser.
+JavaScript was released by the `Mosaic web browser`.
+- ECMAScript: Ecma Internationalという団体によって標準化されている仕様この技術委員会はMicrosoft、Mozilla、Google、AppleといったブラウザベンダーやECMAScriptに関心のある企業などによって構成されている. `後方互換性`を重視しているので過去のコードが使えなくなることはあまり考えられない
+- Transpiler: BabelやTypeScript. ESの仕様として合意されてない構文を解析するトランスコンパイラ
 
 ### Features
 
 - curly-bracket syntax {}
 - dynamic typing
-- prototype-type-based OOP =>
+- prototype-type-based OOP
 - class-based OOP(ES6)
 - first-class functions
 
@@ -33,6 +35,8 @@ JavaScript was released by the Mosaic web browser.
 
 ## History
 
+### ECMAScript
+
 ES3(1999)
   - regular expression
   - new control statements
@@ -57,6 +61,8 @@ ES6(ES2015)
   - rest parameter
   - symbol
   - generator function
+
+以降は`Living Standard`という形で毎年更新されるようになった
 
 ### Surroundings history
 
@@ -89,15 +95,18 @@ ES6(ES2015)
 
 # Syntax
 
-'use strict'はコードの安全性を確保するためにES5から実装された機能である。
+'use strict'はコードの安全性を確保するためにES5から実装された機能であり、古く安全でない構文を禁止する
 
 ## Data Type
 
 ```js
+// primitive type
 Number: 12
 String: 'foo' // 'str' or "str"
 Undefined: undefined
 Boolean: true, false
+
+// object type
 Object: {key: "value"}
   Null: null
   Array: [1, 2]
@@ -159,7 +168,15 @@ console.log(a2); // ["a",2,3]
 
 ### Variable
 
-Attention: if you declare variables without var or let, variables are in global scope
+if you declare variables without var or let, variables are in global scope
+
+- const: ES2015. declare constant value. 基本的に参照透過性(変数がimmutableであること)を担保するために変数宣言時はconstを使うのがベター
+- let: ES2015. declare block scope value. ループ中の変数など途中で変化する必要がある変数に用いる
+
+Flow
+1. 宣言: let x;
+2. 代入: x = 3;
+3. 評価: 変数に格納された値を参照する行為
 
 ```js
 // you can declare and reassign again
