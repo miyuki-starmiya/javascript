@@ -1,7 +1,8 @@
 
-# JavaScript(JavaScript ECMA Script6(2015))
+# JavaScript
 
-JavaScript was released by the `Mosaic web browser`.
+JavaScript was released by the `Mosaic web browser`. ECMAScript6(2015)で非常に大きなアップデートが行われた.
+
 - ECMAScript: Ecma Internationalという団体によって標準化されている仕様この技術委員会はMicrosoft、Mozilla、Google、AppleといったブラウザベンダーやECMAScriptに関心のある企業などによって構成されている. `後方互換性`を重視しているので過去のコードが使えなくなることはあまり考えられない
 - Transpiler: BabelやTypeScript. ESの仕様として合意されてない構文を解析するトランスコンパイラ
 
