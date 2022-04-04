@@ -2,6 +2,7 @@
 # JavaScript
 
 JavaScript was released by the `Mosaic web browser`. ECMAScript6(2015)で非常に大きなアップデートが行われた.
+JavaScriptは文(Statement)と式(Expression)から構成される(文⊂式)
 
 - ECMAScript: Ecma Internationalという団体によって標準化されている仕様この技術委員会はMicrosoft、Mozilla、Google、AppleといったブラウザベンダーやECMAScriptに関心のある企業などによって構成されている. `後方互換性`を重視しているので過去のコードが使えなくなることはあまり考えられない
 - Transpiler: BabelやTypeScript. ESの仕様として合意されてない構文を解析するトランスコンパイラ
@@ -103,14 +104,38 @@ ES6(ES2015)
 ```js
 // primitive type
 Number: 12
+BingInt: 9007199254740992n // ES2020. it is over 2^53-1
 String: 'foo' // 'str' or "str"
+Symbol: Symbol('str')
 Undefined: undefined
+Null: null
 Boolean: true, false
 
 // object type
 Object: {key: "value"}
-  Null: null
-  Array: [1, 2]
+Array: [1, 2] // Objectから派生. Array = { 0: 'value1', 1: 'value2', ... }
+Function: function() {}
+RegExp: /[a-z]/
+```
+
+### escape character
+
+```js
+\n: new line
+\t: tab
+\b: backspace
+\0: null
+\': single quote
+\": double quote
+\\: backslash
+```
+
+### RegExp type
+
+```js
+\d: digit(Arabic numeral)
+\w: [A-Za-z0-9_]
+\s:[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]
 ```
 
 ### type cast
@@ -190,13 +215,29 @@ let bar = null;
 const baz = null;
 ```
 
+falsy variables
+- false
+- undefined
+- null
+- 0
+- 0n
+- NaN
+- ""
+
 ### Operand
 
+単項、二項、三項の演算子が存在する
+
 ```js
-型付き等号: === // 値とデータ型も同じ
-型付き不等号: !== // 値とデータ型も同じ
-等号: == // 値のみ評価
-不等号: != // 値のみ評価
+代入演算子: =
+剰余演算子: %
+冪乗演算子: ** // ES2016
+increment: ++ // 単項演算子
+decrement: --
+厳密等価演算子: === // 値とデータ型も同じ. あるいは値と参照変数も同じ
+厳密不等価演算子: !== // 値とデータ型も同じ. あるいは値と参照変数も同じ
+等価演算子: == // 値のみ評価. 型違いの場合は暗黙的に型変換する
+不等価演算子: != // 値のみ評価. 型違いの場合は暗黙的に型変換する
 論理積: && // and
 論理和: || // or
 否定： ! // not
@@ -257,7 +298,7 @@ array.forEach((e, index) =>
   console.log(e, index) // callback func
 );
 
-// for i in
+// for in // 要素の処理をする際はあまり推奨されていない
 let array = ['a', 'b', 'c']
 for (let i in array) { // indexが返される
     console.log(array[i]);
@@ -268,7 +309,7 @@ for (let k in obj) {
     console.log(obj[k]);
 }
 
-// for of
+// for of. ES2015. iterableに対して用いる
 array = ['a', 'b', 'c']
 for (let e of array) { // elementが返される
     console.log(e); // 'a', 'b', 'c'
@@ -322,7 +363,7 @@ for (let i in a) {
 }
 ```
 
-## function
+## Function
 
 - return: return variables
 
@@ -338,28 +379,41 @@ let add = function(a, b) {
   return a + b;
 }
 
-// arrow function. all below are equivalent
+// arrow function. ES2015. all below are equivalent
 function add(a, b) {
   return a + b;
 }
-const add = (a, b) => {
+const add = (a, b) => { // omit function
   return a + b;
 }
-const add = (a, b) => (a+b);
+const add = (a, b) => (a+b); // omit function, { return }
 
-// spread operator
+// spread operator. ES2015
 let func = (...args) => {
   console.log(args) // argsArray [arg1, arg2, ..., arg n]
 }
 
-// default parameters
+// default parameters. ES2015
 function sayHi(name='hitoe') {
+  // const name = name || 'hitoe' // ES2015以前はOR演算子でデフォルト引数を指定していた
   return 'hello ' + name;
 }
 sayHi(); // hello hitoe
+
+// object method. they are equivalent
+const obj = {
+  someMethod: function() { // function formula
+    return 'it is method';
+  }
+};
+const obj = {
+  someMethod() {
+    return 'it is method';
+  }
+};
 ```
 
-## class
+## Class
 
 従来はprototypeで関数として実装していた。ES6からclassが登場。
 
@@ -416,7 +470,7 @@ class Triangle {
 }
 ```
 
-## object.method
+## Object.method
 
 ### String
 
@@ -484,9 +538,16 @@ const [first, second, third] = arr;
 ### Object
 
 ```js
-obj = {1: 'a', 2: 'b', 3: 'c'}
+obj = {a: 1, b: 2, c: 3}
+// dot
+obj.a // 1
+// bracket
+obj['b'] // 2
 
 obj.hasOwnProperty(1) // true
+Object.keys(obj) // ['a', 'b', 'c']
+Object.values(obj) // [1, 2, 3]
+Object.entries(obj) // [['a', 1], ['b', 2], ['c', 3]]
 Object.freeze(obj) // objのconst化
 ```
 
