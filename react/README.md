@@ -1,4 +1,3 @@
-
 # React.js
 
 React is JS Framework which is `component oriented`
@@ -6,32 +5,40 @@ Components can be reused if you export it. React is superior to Vue about `custo
 
 ## Install
 
+v18.0.0
 - CDN
   - JSX(Babel): <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   - development: 
-    - React: <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    - ReactDOM: <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    - React: <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    - ReactDOM: <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   - prod: 
-    - React: <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
-    - ReactDOM: <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    - React: <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    - ReactDOM: <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
-Attention: you have to load with <script type="text/babel">
+**you have to load with <script type="text/babel">**
 
-- npm
-  - npm init -y
-  - npx create-react-app "some-app"
+### create react app
+
+```shell
+npx create-react-app "some-app"
+yarn create react-app "some-app"
+# TypeScript
+npx create-react-app "some-app" --template typescript
+yarn create react-app "some-app" --template typescript
+```
 
 ## JSX(JavaScript XML) notation
 
-- JSX is method of React Object. it is same as React.createElement()
+- JSX is `Javascript XML Object` in React library. it is just `Expression`(式)
 - first arg of ReactDOM.render() requires single tag like <div></div>
-- class attr in JSX must be written as className. because class is pre reserved word
+- class attr in JSX must be written as `className`. because class is pre reserved word
 - you have to close tag with slash. ex: <hr />
 - if you need to write variables or functions, you have to surround with {}
 - you write JSX in camelCase
 - we call it `container` where is injected
+- JSX prevents injection attacks. e.g. XSS
 
-those of below is totally same. Babel transpile JSX into React Object
+those of below is totally equivalent. Babel transpile JSX into React Object
 
 ```js
 // JSX
@@ -49,7 +56,7 @@ const element = React.createElement(
 );
 ```
 
-JSX allows us to nest elements, JS values
+JSX allows us to nest elements as JS values
 
 ```js
 const name = 'saitou';
@@ -61,14 +68,13 @@ const greeting = (
 );
 ```
 
-
 ## VDOM(VirtualDOM)
 
 React use `VDOM` for updating real DOM.
 VDOM is much faster than real DOM because VDOM don't render DOM on screen.
 VDOM compares to only changed part on VDOM, which is called "diffing"
 
-how it works is below
+how it works
 1. The entire virtual DOM gets updated.
 2. The virtual DOM gets compared to what it looked like before you updated it. React figures out which objects have changed.
 3. The changed objects, and the changed objects only, get updated on the real DOM.
@@ -77,33 +83,50 @@ how it works is below
 ## Built-in Object
 
 - React: {
-    props: [
-      Component,
-      PureComponent,
-    ],
-    methods: [
-      createElement(),
-      createFactory(),
-    ]
+  props: [
+    Component,
+    PureComponent,
+  ],
+  methods: [
+    createElement(),
+    createFactory(),
+  ]
 }
 - ReactDOM: {
-    methods: [
-      render(),
-      hydrate(),
-      unmountComponentAtNode(),
-      findDOMNode(),
-      createPortal(),
+  methods: [
+    render(),
+    hydrate(),
+    unmountComponentAtNode(),
+    findDOMNode(),
+    createPortal(),
+    createRoot(), // v18
     ]
 }
+
+```js
+<div id="root"></div>
+// ReactDOM before v18
+ReactDOM.render(
+  <Element />,
+  document.getElementById('root')
+);
+
+// ReactDOM after v18
+const element = <h1>Hello, react!</h1>;
+const root = ReactDOM.createRoot(
+  document.getElementById('root')
+)
+root.render(element);
+```
 
 ## React Component
 
-it is parts and available in ReactDOM.render(). it is separated FUNCTION components and CLASS components.
-Attention: its initials must be capitalized
+it is classified `Function components` or `Class components`.
+**its initials must be capitalized**
 
 - have to divide components
 - Component(props) is pure. in other words, props can't be changed
-- unless you set return value, component's return value gets undefined
+- unless you set return value, component's return value becomes undefined
 
 ```js
 // function Component
@@ -149,7 +172,6 @@ ReactDOM.render(
   + state + bind() + lifeCycleMethod()
 
 how to change function component into class component
-
 1. make class component extends React.Component
 2. create render()
 3. add this. to props
@@ -159,7 +181,7 @@ how to change function component into class component
 7. delete <Component /> property
 
 - this.state is local variable in Component(Instance)
-- props, state only affect child components. because those are one direction binding
+- props, state only affect child components. because those are `one direction binding` unlike Vue.js
 
 both props and state are just variable. so you deal with state as props but you should use state if this variable have status of [dynamic, independent, top-component]
 
@@ -200,7 +222,7 @@ class Clock extends React.Component {
 // class Component v2
 class Clock extends React.Component {
   constructor(props) {
-    super(props);
+    super(props); // required
     this.state = {date: new Date()}; // initial value
   }
 
@@ -224,7 +246,7 @@ ReactDOM.render(
 
 this is method which called when components mount or unmount. this affects memory leak
 
-Attention: components can't be rendered again if you don't use setState()
+**components can't be rendered again if you don't use setState()**
 
 ```js
 class Clock extends React.Component {
@@ -322,8 +344,7 @@ class Toggle extends React.Component {
 }
 ```
 
-### how to send props to eventHandler
-
+how to send props to eventHandler
 1. bind directly in JSX. first arg needs this
 2. send event value as arrow function
 
@@ -412,8 +433,7 @@ ReactDOM.render(
 );
 ```
 
-### express with short conditionals and logical operator
-
+express with short conditionals and logical operator
 ```js
 const Navbar = () => {
   const isAuth = true;
@@ -429,9 +449,9 @@ const Navbar = () => {
 }
 ```
 
-### for
+### for loop
 
-iterableの操作にはmap()を用いる. map(e => <div>JSX</div>)という風に記述する
+iterableの操作には`map()`を用いる. map(e => <div>JSX</div>)という風に記述する
 
 ```js
 function NumberList(props) {
@@ -599,7 +619,7 @@ function Parent() {
 ```
 
 
-# Hooks
+## Hooks
 
 Hooks are a new addition in React 16.8. they let you use state and other React features without writing a class component
 
@@ -607,9 +627,9 @@ Hooks are `functions` that let you “hook into” React state and lifecycle fea
 
 - function components + Hooks = class components
 
-Attention: Hooks start with "use"
+**Hooks start with "useHookName"**
 
-## useState
+### useState
 
 this provides function components with local state. this is similar to this.setState in class components
 
@@ -668,7 +688,7 @@ function Counter() {
 }
 ```
 
-## useEffect
+### useEffect
 
 this provides function components with LifeCycleMethods like componentDidMount, componentDidUpdate, componentWillUnmount
 
@@ -1039,7 +1059,8 @@ npx create-next-app "app-name"@latest
 # yarn
 yarn create next-app "app-name"
 
-# with TypeScript
+# TypeScript
+npx create-next-app -e with-typescript
 yarn create next-app "app-name" --typescript
 ```
 

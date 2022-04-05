@@ -8,70 +8,30 @@
 <body>
   <h1>React demo page</h1>
   <div id="root"></div>
-  
 
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-  <!-- JSX -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- JSX Babel -->
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   
   <!-- Component -->
   <script type="text/babel">
-  class Child extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {value: ''};
-      this.childHandler = this.childHandler.bind(this);
-      this.fireParent = this.fireParent.bind(this);
-    }
+    const root = ReactDOM.createRoot(
+      document.getElementById('root')
+    );
 
-    childHandler(event) {
-      this.setState({value: event.target.value});
-    }
-
-    fireParent(e) {
-      this.props.onParentHandler(this.state.value);
-      e.preventDefault();
-    }
-
-    render() {
+    // create root element
+    const App = () => {
       return(
-        <form>
-          <label htmlFor="input">input</label>
-          <input 
-            id="input"
-            type="text"
-            value={this.state.value}
-            onChange={this.childHandler}
-          />
-          <button onClick={this.fireParent}>fire</button>
-        </form>
+        <div>
+          <Test />
+        </div>
       )
-    }
   }
 
-  class Parent extends React.Component {
-    constructor(props) {
-      super(props);
-    }
+    const Test = () => <h1>this is the test</h1>;
 
-    parentHandler(element) {
-      console.log(element);
-    }
-
-    render() {
-      return(
-        <Child onParentHandler={this.parentHandler} />
-      )
-    }
-  }
-
-  ReactDOM.render(
-    <Parent />,
-    document.querySelector("#root")
-  );
-
-
+    root.render(<App />);
   </script>
 </body>
 
