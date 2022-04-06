@@ -1,20 +1,26 @@
-interface Props {
-  text: string,
-}
-function add(a: number, b: number): number {
-  return a + b;
+import React from 'react';
+
+interface Human<T=string> {
+  name: T,
 }
 
-const Test: React.FC<Props> = (props) => {
+export const Test = (props: Human) => {
   return (
     <div>
-      <h3>this is test component</h3>
-      <p>{props.text}</p>
-      <p>{add(1, 2)}</p>
+      <h3>this is a function component</h3>
+      {props.name}
     </div>
   )
 }
 
-export default Test
-
+export class TestClass extends React.Component<Human> {
+  render() {
+    return (
+      <div>
+        <h3>this is a class component</h3>
+        {this.props.name}
+      </div>
+    )
+  }
+}
 

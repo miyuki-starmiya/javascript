@@ -4,12 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import App from './App';
 import AppProps from './types/AppProps';
-import Test from './components/Test';
+import { Test, TestClass } from './components/Test';
 
 ReactDOM.render(
   <React.StrictMode>
     <h1>React demo site</h1>
-    <Test text='text' />
+    <Test name='john' />
+    <TestClass name='mike' />
   </React.StrictMode>,
   document.getElementById('root')
 );
