@@ -6,12 +6,13 @@ Components can be reused if you export it. React is superior to Vue about `custo
 ## Install
 
 v18.0.0
+
 - CDN
   - JSX(Babel): <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  - development: 
+  - development:
     - React: <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     - ReactDOM: <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  - prod: 
+  - prod:
     - React: <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     - ReactDOM: <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
@@ -42,24 +43,20 @@ those of below is totally equivalent. Babel transpile JSX into React Object
 
 ```js
 // JSX
-const element = (
-  <h1 className="greeting">
-    Hello, world!
-  </h1>
-);
+const element = <h1 className="greeting">Hello, world!</h1>;
 
 // React Object
 const element = React.createElement(
-  'h1', // element
-  {className: 'greeting'}, // className
-  'Hello, world!'// innerHTML
+  "h1", // element
+  { className: "greeting" }, // className
+  "Hello, world!" // innerHTML
 );
 ```
 
 JSX allows us to nest elements as JS values
 
 ```js
-const name = 'saitou';
+const name = "saitou";
 const greeting = (
   <div>
     <h1>My name is {name}</h1>
@@ -75,6 +72,7 @@ VDOM is much faster than real DOM because VDOM don't render DOM on screen.
 VDOM compares to only changed part on VDOM, which is called "diffing"
 
 how it works
+
 1. The entire virtual DOM gets updated.
 2. The virtual DOM gets compared to what it looked like before you updated it. React figures out which objects have changed.
 3. The changed objects, and the changed objects only, get updated on the real DOM.
@@ -84,38 +82,33 @@ how it works
 
 - React: {
   props: [
-    Component,
-    PureComponent,
+  Component,
+  PureComponent,
   ],
   methods: [
-    createElement(),
-    createFactory(),
+  createElement(),
+  createFactory(),
   ]
-}
+  }
 - ReactDOM: {
   methods: [
-    render(),
-    hydrate(),
-    unmountComponentAtNode(),
-    findDOMNode(),
-    createPortal(),
-    createRoot(), // v18
-    ]
-}
+  render(),
+  hydrate(),
+  unmountComponentAtNode(),
+  findDOMNode(),
+  createPortal(),
+  createRoot(), // v18
+  ]
+  }
 
 ```js
-<div id="root"></div>
+<div id="root"></div>;
 // ReactDOM before v18
-ReactDOM.render(
-  <Element />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Element />, document.getElementById("root"));
 
 // ReactDOM after v18
 const element = <h1>Hello, react!</h1>;
-const root = ReactDOM.createRoot(
-  document.getElementById('root')
-)
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(element);
 ```
 
@@ -127,6 +120,7 @@ it is classified `Function components` or `Class components`.
 - have to divide components
 - Component(props) is pure. in other words, props can't be changed
 - unless you set return value, component's return value becomes undefined
+- props require Object Type not Primitive Type
 
 ```js
 // function Component
@@ -136,7 +130,8 @@ function Welcome(props) {
 
 // class Component
 class Welcome extends React.Component {
-  render() { // absolutely required
+  render() {
+    // absolutely required
     return <h1>Hello, {this.props.name}</h1>;
   }
 }
@@ -156,22 +151,20 @@ function MultiWelcome() {
       <Welcome name="jiro" />
       <Welcome name="hanako" />
     </div>
-  )
+  );
 }
 
-ReactDOM.render(
-  <MultiWelcome />,
-  document.getElementById('root')
-);
+ReactDOM.render(<MultiWelcome />, document.getElementById("root"));
 ```
 
 ### Component state(Class Component)
 
 - function Component = props + render()
 - class Component = function Component
-  + state + bind() + lifeCycleMethod()
+  - state + bind() + lifeCycleMethod()
 
 how to change function component into class component
+
 1. make class component extends React.Component
 2. create render()
 3. add this. to props
@@ -199,17 +192,15 @@ function Clock(props) {
 }
 
 function tick() {
-  ReactDOM.render(
-    <Clock date={new Date()} />,
-    document.getElementById('root')
-  );
+  ReactDOM.render(<Clock date={new Date()} />, document.getElementById("root"));
 }
 
 setInterval(tick, 1000);
 
 // class Component v1
 class Clock extends React.Component {
-  render() { // required
+  render() {
+    // required
     return (
       <div>
         <h1>Hello, world</h1>
@@ -223,7 +214,7 @@ class Clock extends React.Component {
 class Clock extends React.Component {
   constructor(props) {
     super(props); // required
-    this.state = {date: new Date()}; // initial value
+    this.state = { date: new Date() }; // initial value
   }
 
   render() {
@@ -232,14 +223,11 @@ class Clock extends React.Component {
         <h1>Hello, world</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}</h2>
       </div>
-    )
+    );
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Clock />, document.getElementById("root"));
 ```
 
 ### Life Cycle Method
@@ -252,23 +240,23 @@ this is method which called when components mount or unmount. this affects memor
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()}; // initialize
+    this.state = { date: new Date() }; // initialize
   }
 
-  componentDidMount() { // mount
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
+  componentDidMount() {
+    // mount
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
-  componentWillUnmount() { // unmount
+  componentWillUnmount() {
+    // unmount
     clearInterval(this.timerID);
   }
 
   tick() {
-    this.setState({ // render() again with changed this.state
-      date: new Date()
+    this.setState({
+      // render() again with changed this.state
+      date: new Date(),
     });
   }
 
@@ -282,10 +270,7 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Clock />, document.getElementById("root"));
 ```
 
 ## Event Handler
@@ -296,14 +281,10 @@ ReactDOM.render(
 
 ```html
 <!-- plain HTML -->
-<button onclick="someFunc()">
-  some func button
-</button>
+<button onclick="someFunc()">some func button</button>
 
 <!-- JSX -->
-<button onClick={someFunc}>
-  some func button
-</button>
+<button onClick="{someFunc}">some func button</button>
 ```
 
 ### How to bind
@@ -320,7 +301,7 @@ how to write
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
+    this.state = { isToggleOn: true };
 
     // directory bind pattern
     // this.handleClick = this.handleClick.bind(this);
@@ -328,8 +309,8 @@ class Toggle extends React.Component {
 
   // handleClick = () => { // arrow func pattern
   handleClick() {
-    this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
+    this.setState((prevState) => ({
+      isToggleOn: !prevState.isToggleOn,
     }));
   }
 
@@ -337,14 +318,15 @@ class Toggle extends React.Component {
     return (
       // <button onClick={() => this.handleClick()}> // arrow func
       <button onClick={this.handleClick}>
-        {this.state.isToggleOn ? 'ON': 'OFF'}
+        {this.state.isToggleOn ? "ON" : "OFF"}
       </button>
-    )
+    );
   }
 }
 ```
 
 how to send props to eventHandler
+
 1. bind directly in JSX. first arg needs this
 2. send event value as arrow function
 
@@ -357,9 +339,9 @@ how to send props to eventHandler
 
 ### if, else
 
-vueでいう<v-if>, <v-else>のようなdirectiveはなく, JavaScriptの仕様を極力活用した実装方法を取る
+vue でいう<v-if>, <v-else>のような directive はなく, JavaScript の仕様を極力活用した実装方法を取る
 
-Componentをcondition(true / false)によって使い分けるもっとも基本的な方法, すなわち親コンポーネントでラップする方法を以下に記す
+Component を condition(true / false)によって使い分けるもっとも基本的な方法, すなわち親コンポーネントでラップする方法を以下に記す
 
 ```js
 function True() {
@@ -379,15 +361,12 @@ function Wrap(props) {
   }
 }
 
-ReactDOM.render(
-  <Wrap condition={false} />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Wrap condition={false} />, document.getElementById("root"));
 ```
 
-### class Componentでの条件分岐
+### class Component での条件分岐
 
-function Componentと違って, conditionとComponentも変数化させる
+function Component と違って, condition と Component も変数化させる
 
 ```js
 class LoginControl extends React.Component {
@@ -397,15 +376,15 @@ class LoginControl extends React.Component {
     this.handleLoginClick = this.handleLoginClick.bind(this);
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
     // stateのinitialize
-    this.state = {isLoggedIn: false};
+    this.state = { isLoggedIn: false };
   }
 
   handleLoginClick() {
-    this.setState({isLoggedIn: true});
+    this.setState({ isLoggedIn: true });
   }
 
   handleLogoutClick() {
-    this.setState({isLoggedIn: false});
+    this.setState({ isLoggedIn: false });
   }
 
   render() {
@@ -427,13 +406,11 @@ class LoginControl extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <LoginControl />,
-  document.getElementById('root')
-);
+ReactDOM.render(<LoginControl />, document.getElementById("root"));
 ```
 
 express with short conditionals and logical operator
+
 ```js
 const Navbar = () => {
   const isAuth = true;
@@ -443,78 +420,66 @@ const Navbar = () => {
       // if user is authenticated, show auth links, otherwise a login link
       {isAuth ? <AuthLinks /> : <Login />}
       // if user is authenticated, show their profile. If not, nothing.
-      {isAuth && <UserProfile/>}
+      {isAuth && <UserProfile />}
     </div>
   );
-}
+};
 ```
 
 ### for loop
 
-iterableの操作には`map()`を用いる. map(e => <div>JSX</div>)という風に記述する
+iterable の操作には`map()`を用いる. map(e => <div>JSX</div>)という風に記述する
 
 ```js
 function NumberList(props) {
   const numbers = props.numbers;
-  const listItems = numbers.map(number =>
-  <li>{number}</li>
-  );
+  const listItems = numbers.map((number) => <li>{number}</li>);
 
-  return (
-    <ul>{listItems}</ul>
-  );
+  return <ul>{listItems}</ul>;
 }
 
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 ReactDOM.render(
   <NumberList numbers={numbers} />,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 ```
 
 ### list key
 
-list要素を識別するために用いられる. 識別用途なので, keyは一意に決まるIDが良いとされる. 一意なIDが無い場合はindexを用いることもあるが非推奨である. list作成時にkeyを設定しないとWarningがでる
+list 要素を識別するために用いられる. 識別用途なので, key は一意に決まる ID が良いとされる. 一意な ID が無い場合は index を用いることもあるが非推奨である. list 作成時に key を設定しないと Warning がでる
 
-- keyはmapのアロー関数の戻り値に設定する
+- key は map のアロー関数の戻り値に設定する
 
 ```js
-const todoItems = todos.map(todo =>
-  <li key={todo.id}>
-    {todo.text}
-  </li>
-);
+const todoItems = todos.map((todo) => <li key={todo.id}>{todo.text}</li>);
 
 // index
-const todoItems = todos.map((todo, index) =>
-  <li key={index}>
-    {todo.text}
-  </li>
-);
+const todoItems = todos.map((todo, index) => <li key={index}>{todo.text}</li>);
 ```
 
 ## Form(controlled Component)
 
-form tag内のinput要素をすべてstateにbindさせる. stateとinputをbindさせるために全てにイベントハンドラを記述する必要がある. formに関しては[Formik](https://formik.org/)という依存ライブラリも選択肢の一つである
+form tag 内の input 要素をすべて state に bind させる. state と input を bind させるために全てにイベントハンドラを記述する必要がある. form に関しては[Formik](https://formik.org/)という依存ライブラリも選択肢の一つである
 
-- inputのvalueは.target.valueで参照可能
+- input の value は.target.value で参照可能
 
 ```js
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = { value: "" };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert("A name was submitted: " + this.state.value);
     event.preventDefault();
   }
 
@@ -523,7 +488,11 @@ class NameForm extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
         </label>
         <input type="submit" value="Submit" />
       </form>
@@ -531,10 +500,7 @@ class NameForm extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <NameForm />,
-  document.getElementById('root')
-)
+ReactDOM.render(<NameForm />, document.getElementById("root"));
 ```
 
 ### textarea
@@ -585,7 +551,7 @@ class EssayForm extends React.Component {
 ## lift up state
 
 - parent to child: just send props like <Component props={} />
-- child to parent: 
+- child to parent:
   - both parent and child components bind event handler
   - send parent's event handler to child as props
     - you have to name parent's props of event handler like onHandler
@@ -618,7 +584,6 @@ function Parent() {
 }
 ```
 
-
 ## Hooks
 
 Hooks are a new addition in React 16.8. they let you use state and other React features without writing a class component
@@ -636,7 +601,7 @@ this provides function components with local state. this is similar to this.setS
 useState creates [stateful value, state handler]
 
 ```js
-import React from 'react';
+import React from "react";
 
 class Counter extends React.Component {
   // state or model
@@ -649,7 +614,7 @@ class Counter extends React.Component {
 
   // actions or controller
   incr() {
-    this.setState({ num: this.state.num + 1 })
+    this.setState({ num: this.state.num + 1 });
   }
 
   // view
@@ -659,16 +624,15 @@ class Counter extends React.Component {
         <p>class num is {this.state.num}</p>
         <button onClick={this.incr}>incr</button>
       </div>
-    )
+    );
   }
 }
-
 ```
 
 below code is equivalent
 
 ```js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Counter() {
   // [value, eventValue] = useState(initialValue);
@@ -680,11 +644,9 @@ function Counter() {
     <div>
       <p>You clicked {count} times</p>
       // bind func by arrow func
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
-  )
+  );
 }
 ```
 
@@ -693,7 +655,7 @@ function Counter() {
 this provides function components with LifeCycleMethods like componentDidMount, componentDidUpdate, componentWillUnmount
 
 ```js
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 function Example() {
   const [count, setCount] = useState(0);
@@ -707,9 +669,7 @@ function Example() {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
   );
 }
@@ -720,14 +680,12 @@ function Example() {
 - only call Hooks at the top level. don't call Hooks inside loops, conditions, or nested functions
 - only call Hooks from React function components. don't call Hooks from regular JavaScript functions
 
-
 ## Images
 
 you can render images by below ways
 
 - import directly
 - require: <img src={require("path").default} />
-
 
 # styled-components
 
@@ -736,6 +694,7 @@ styled-components allow you to write CSS in JS.
 styled.component`` = function Component()
 
 features are below
+
 - automatic critical CSS
 - no class name bugs
 - easier deletion of CSS
@@ -757,7 +716,7 @@ yarn add styled-components
 we call styled components literal `tagged template literal`
 
 ```js
-import styled from 'styled-components';
+import styled from "styled-components";
 // example
 const Button = styled.button``;
 ```
@@ -767,15 +726,17 @@ const Button = styled.button``;
 if you insert JS in styled-components, you surround it with ${}
 
 ```js
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 const StyledComponent = styled.element`
   /* this is general css */
   property: value;
-  ${props => props.class && css`
-    /* this is class css */
-    property: value;
-  `}
+  ${(props) =>
+    props.class &&
+    css`
+      /* this is class css */
+      property: value;
+    `}
 `;
 ```
 
@@ -786,7 +747,7 @@ like Class extends
 ```js
 const ChildComponent = styled(ParentComponent)`
   property: value;
-`
+`;
 ```
 
 ## how to pass props
@@ -795,10 +756,10 @@ you can put props in styled-components by using arrow function
 
 ```js
 const StyledComponent = styled.element`
-  property: ${props => props.someAttribute || "defaultValue"};
+  property: ${(props) => props.someAttribute || "defaultValue"};
 `;
 
-<StyledComponent someAttribute="value" />
+<StyledComponent someAttribute="value" />;
 ```
 
 # Material UI
@@ -818,11 +779,10 @@ this is `UI(styling) library` for React.
 npm install @mui/material @mui/styled-engine-sc styled-components
 # yarn
 yarn add @mui/material @mui/styled-engine-sc styled-components
-  
+
 # alternative with emotion
 yarn add @mui/material @emotion/react @emotion/styled
 ```
-
 
 # React Router
 
@@ -840,7 +800,7 @@ npm add react-router-dom@6 history@5
 ## import
 
 ```js
-import { SomeModule } from 'react-router-dom';
+import { SomeModule } from "react-router-dom";
 ```
 
 ## modules
@@ -853,8 +813,7 @@ import { SomeModule } from 'react-router-dom';
 - Route: kind of like an if statement; if its path matches the current URL, it renders its element
   - path: "path" without "/"
   - element: render React Component
-- Outlet: 
-
+- Outlet:
 
 # Redux
 
@@ -863,9 +822,10 @@ Redux is a pattern and library for managing and updating application state, usin
 Redux helps you manage `global state`
 
 Redux principles:
-  - The global state of your application is stored as an object inside a single store
-  - The only way to change the state is to dispatch an action
-  - Changes are made with pure reducer functions
+
+- The global state of your application is stored as an object inside a single store
+- The only way to change the state is to dispatch an action
+- Changes are made with pure reducer functions
 
 ## SVA(State View Actions) model
 
@@ -902,7 +862,6 @@ npm install @reduxjs/toolkit
 # Yarn
 yarn add @reduxjs/toolkit
 ```
-
 
 ## how to implement
 
@@ -964,7 +923,7 @@ store.subscribe(() => {
 3. enhancer where we can pass middleware(optional)
 
 ```js
-import { createStore } from 'redux';
+import { createStore } from "redux";
 
 const store = createStore(reducer);
 ```
@@ -972,10 +931,10 @@ const store = createStore(reducer);
 - combineReducers() combines multiple reducers
 
 ```js
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 combineReducers({
   describe: reducerName,
-})
+});
 ```
 
 ## asynchronous actions(Redux Thunk)
@@ -992,10 +951,13 @@ it connects redux with react and provides a way for you to pass Redux state and 
 - <Provider store={store}>: bind Redux store with Component container
 
 ```js
-import { Provider, connect } from 'react-redux';
+import { Provider, connect } from "react-redux";
 
 // send props to React
-const Container = connect(mapStateToProps, mapDispatchToProps)(MessageInputShow)
+const Container = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(MessageInputShow);
 
 // bond React
 export default function AppWrapper() {
@@ -1003,12 +965,12 @@ export default function AppWrapper() {
     <Provider store={store}>
       <Container />
     </Provider>
-  )
+  );
 }
 ```
 
 # Recoil
-  
+
 it is a `state management library` for React
 
 ## install
@@ -1025,9 +987,9 @@ yarn add recoil
 - atom: it is `state` that is read from any component
   - key: state key
   - default: default value
-- selector: atomを参照するstate
+- selector: atom を参照する state
 
-## Hooks  
+## Hooks
 
 - useRecoilState: get and set
 - useRecoilValue: only get
@@ -1049,7 +1011,6 @@ Next.js is the React Framework
 - Development environment with Fast Refresh support
 - API routes to build API endpoints with Serverless Functions
 - Fully extendable
-
 
 ## create next app
 
@@ -1073,8 +1034,8 @@ yarn create next-app "app-name" --typescript
 ## directory
 
 - public/: here is static resources. directly render this files
-- pages/: _app.jsxがglobalなpageとなり、ディレクトリ内のファイルは全て自動でルーティングされる
-- styles/: globals.cssが
+- pages/: \_app.jsx が global な page となり、ディレクトリ内のファイルは全て自動でルーティングされる
+- styles/: globals.css が
 
 ## import .css or .scss
 
@@ -1103,5 +1064,3 @@ export default function App({ Component, pageProps }) {
 
 - Static Generation: generates the HTML at build time. the pre-rendered HTML is then reused on each request. this is used when data in web pages isn't frequently changed
 - SSR: generates the HTML on each request. this is used when web pages frequently updated, and page content changes on every request
-
-

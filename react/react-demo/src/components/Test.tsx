@@ -1,26 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { User } from '../types/Types';
 
-interface Human<T=string> {
-  name: T,
-}
+export const Test = () => {
+  const [user, setUser] = useState<User | null>(null);
+  const fetchUser = () => {
+    return setUser({
+      name: 'hitoe',
+      age: 12,
+    });
+  }
 
-export const Test = (props: Human) => {
   return (
-    <div>
-      <h3>this is a function component</h3>
-      {props.name}
-    </div>
+    <>
+      <button onClick={fetchUser}>fetch user</button>
+      {user && <p>name is {user.name}</p>}
+    </>
   )
 }
 
-export class TestClass extends React.Component<Human> {
-  render() {
-    return (
-      <div>
-        <h3>this is a class component</h3>
-        {this.props.name}
-      </div>
-    )
-  }
-}
+function Foo<T>(e) {
+  return e
+};
+
+const foo = Foo<string>('s');
 
