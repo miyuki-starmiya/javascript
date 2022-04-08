@@ -4,12 +4,10 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 // import App from './App';
 import { Test } from './components/Test';
-// import { TypeScript } from './components/Test';
 
 ReactDOM.render(
   <React.StrictMode>
     <h1>React demo site</h1>
-    {/* <JavaScript v="test value" w="test value2" /> */}
     <Test />
 
   </React.StrictMode>,

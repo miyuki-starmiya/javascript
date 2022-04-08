@@ -117,7 +117,7 @@ root.render(element);
 it is classified `Function components` or `Class components`.
 **its initials must be capitalized**
 
-- have to divide components
+- we have to divide components
 - Component(props) is pure. in other words, props can't be changed
 - unless you set return value, component's return value becomes undefined
 - props require Object Type not Primitive Type
@@ -159,9 +159,11 @@ ReactDOM.render(<MultiWelcome />, document.getElementById("root"));
 
 ### Component state(Class Component)
 
+function component と class component の差分は以下だけど, state, event handler は useState() Hook によって, life cycle method は useEffect() Hook によって実装できるから, 実質 class component の優位性ってなくね？w
+
 - function Component = props + render()
 - class Component = function Component
-  - state + bind() + lifeCycleMethod()
+  - state + event handler + life cycle method()
 
 how to change function component into class component
 
@@ -173,10 +175,10 @@ how to change function component into class component
 6. add super(props)
 7. delete <Component /> property
 
-- this.state is local variable in Component(Instance)
+- this.state is instance variable in Component
 - props, state only affect child components. because those are `one direction binding` unlike Vue.js
 
-both props and state are just variable. so you deal with state as props but you should use state if this variable have status of [dynamic, independent, top-component]
+both props and state are just `instance variable`. so you deal with state as props but you should use state if this variable have status of [dynamic, independent, top-component]
 
 let's make simple time app. following code is unfinished
 

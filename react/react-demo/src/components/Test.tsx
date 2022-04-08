@@ -2,25 +2,15 @@ import React, { useState } from 'react';
 import { User } from '../types/Types';
 
 export const Test = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const fetchUser = () => {
-    return setUser({
-      name: 'hitoe',
-      age: 12,
-    });
-  }
+  const [cnt, setCnt] = useState(0);
 
   return (
     <>
-      <button onClick={fetchUser}>fetch user</button>
-      {user && <p>name is {user.name}</p>}
+      <button onClick={() => setCnt(cnt + 1)}>increment</button>
+      <p>{cnt}</p>
     </>
   )
 }
 
-function Foo<T>(e) {
-  return e
-};
 
-const foo = Foo<string>('s');
 

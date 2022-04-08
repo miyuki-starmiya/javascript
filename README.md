@@ -1,11 +1,10 @@
-
 # JavaScript
 
 JavaScript was released by the `Mosaic web browser`. ECMAScript6(2015)で非常に大きなアップデートが行われた.
-JavaScriptは文(Statement)と式(Expression)から構成される(文⊂式)
+JavaScript は文(Statement)と式(Expression)から構成される(文 ⊂ 式)
 
-- ECMAScript: Ecma Internationalという団体によって標準化されている仕様この技術委員会はMicrosoft、Mozilla、Google、AppleといったブラウザベンダーやECMAScriptに関心のある企業などによって構成されている. `後方互換性`を重視しているので過去のコードが使えなくなることはあまり考えられない
-- Transpiler: BabelやTypeScript. ESの仕様として合意されてない構文を解析するトランスコンパイラ
+- ECMAScript: Ecma International という団体によって標準化されている仕様この技術委員会は Microsoft、Mozilla、Google、Apple といったブラウザベンダーや ECMAScript に関心のある企業などによって構成されている. `後方互換性`を重視しているので過去のコードが使えなくなることはあまり考えられない
+- Transpiler: Babel や TypeScript. ES の仕様として合意されてない構文を解析するトランスコンパイラ
 
 ### Features
 
@@ -40,29 +39,32 @@ JavaScriptは文(Statement)と式(Expression)から構成される(文⊂式)
 ### ECMAScript
 
 ES3(1999)
-  - regular expression
-  - new control statements
-  - exception handling
+
+- regular expression
+- new control statements
+- exception handling
 
 ES5(2009)
-  - iteration functions(map, reduce, filter, forEach)
-  - JSON
-  - accessor(getter and setter)
-  - better reflection and object properties
+
+- iteration functions(map, reduce, filter, forEach)
+- JSON
+- accessor(getter and setter)
+- better reflection and object properties
 
 ES6(ES2015)
-  - block scope(let, const)
-  - arrow function
-  - class
-  - promise, async/await(ES2017)
-  - module(CommonJS => ES modules)
-  - template literal
-  - spread operator
-  - default value
-  - de-structuring assignment
-  - rest parameter
-  - symbol
-  - generator function
+
+- block scope(let, const)
+- arrow function
+- class
+- promise, async/await(ES2017)
+- module(CommonJS => ES modules)
+- template literal
+- spread operator
+- default value
+- de-structuring assignment
+- rest parameter
+- symbol
+- generator function
 
 以降は`Living Standard`という形で毎年更新されるようになった
 
@@ -94,10 +96,9 @@ ES6(ES2015)
 - 2004: Firefox
 - 2008: Google Chrome
 
-
 # Syntax
 
-'use strict'はコードの安全性を確保するためにES5から実装された機能であり、古く安全でない構文を禁止する
+'use strict'はコードの安全性を確保するために ES5 から実装された機能であり、古く安全でない構文を禁止する
 
 ## Data Type
 
@@ -142,26 +143,26 @@ RegExp: /[a-z]/
 
 ```js
 // check
-typeof(x)
+typeof x;
 
 // to int
-parseInt(x)
-Number(x)
+parseInt(x);
+Number(x);
 
 // to float
-parseFloat(x)
+parseFloat(x);
 
 // to string
-String(x)
+String(x);
 
 // to boolean
-Boolean(x)
+Boolean(x);
 
 // to array
-Array(1,2) // [1, 2]
+Array(1, 2); // [1, 2]
 
 // template literal
-console.log(`${x}`)
+console.log(`${x}`);
 ```
 
 ### reserved words
@@ -176,6 +177,7 @@ const       let
 ```
 
 ### copy variables
+
 ```js
 // 値渡し
 let x = 3;
@@ -185,7 +187,7 @@ x = 1;
 console.log(y); // 3
 
 // 参照渡し(ポインタ渡し) = [x,y], {k:"value"}
-let a1 = [1,2,3];
+let a1 = [1, 2, 3];
 let a2;
 a2 = a1;
 a1[0] = "a";
@@ -196,10 +198,11 @@ console.log(a2); // ["a",2,3]
 
 if you declare variables without var or let, variables are in global scope
 
-- const: ES2015. declare constant value. 基本的に参照透過性(変数がimmutableであること)を担保するために変数宣言時はconstを使うのがベター
+- const: ES2015. declare constant value. 基本的に参照透過性(変数が immutable であること)を担保するために変数宣言時は const を使うのがベター
 - let: ES2015. declare block scope value. ループ中の変数など途中で変化する必要がある変数に用いる
 
 Flow
+
 1. 宣言: let x;
 2. 代入: x = 3;
 3. 評価: 変数に格納された値を参照する行為
@@ -216,6 +219,7 @@ const baz = null;
 ```
 
 falsy variables
+
 - false
 - undefined
 - null
@@ -248,14 +252,14 @@ decrement: --
 ### if condition
 
 ```js
-const height = 162
+const height = 162;
 
 if (height > 160) {
-  console.log("good !")
+  console.log("good !");
 } else if (height > 170) {
-  console.log("great !!")
+  console.log("great !!");
 } else {
-  console.log("soso ...")
+  console.log("soso ...");
 }
 
 // short conditionals(one liner)
@@ -264,7 +268,7 @@ height > 160 ? console.log("good !") : console.log("bad");
 
 ### switch case condition
 
-※breakを入れないと他の条件も実行するので注意
+※break を入れないと他の条件も実行するので注意
 
 ```js
 const signal = "yellow";
@@ -288,31 +292,33 @@ switch (signal) {
 ### for loop
 
 ```js
-for (let i=0; i < 10; i++) {
-    console.log(i);
+for (let i = 0; i < 10; i++) {
+  console.log(i);
 }
 
 // forEach
-let array = ['a', 'b', 'c']
-array.forEach((e, index) => 
-  console.log(e, index) // callback func
+let array = ["a", "b", "c"];
+array.forEach(
+  (e, index) => console.log(e, index) // callback func
 );
 
 // for in // 要素の処理をする際はあまり推奨されていない
-let array = ['a', 'b', 'c']
-for (let i in array) { // indexが返される
-    console.log(array[i]);
+let array = ["a", "b", "c"];
+for (let i in array) {
+  // indexが返される
+  console.log(array[i]);
 }
 
-obj = {k1: "value1", k2: "value2"}
+obj = { k1: "value1", k2: "value2" };
 for (let k in obj) {
-    console.log(obj[k]);
+  console.log(obj[k]);
 }
 
 // for of. ES2015. iterableに対して用いる
-array = ['a', 'b', 'c']
-for (let e of array) { // elementが返される
-    console.log(e); // 'a', 'b', 'c'
+array = ["a", "b", "c"];
+for (let e of array) {
+  // elementが返される
+  console.log(e); // 'a', 'b', 'c'
 }
 ```
 
@@ -322,7 +328,7 @@ for (let e of array) { // elementが返される
 - continue: it makes loop skip following lines
 
 ```js
-let i = 0 // counter variable
+let i = 0; // counter variable
 
 while (i < 10) {
   if (i === 3) {
@@ -334,9 +340,10 @@ while (i < 10) {
 }
 
 // do while
-do { // 初回は必ず実行
+do {
+  // 初回は必ず実行
   console.log(i);
-} while (i < 10)
+} while (i < 10);
 ```
 
 ### exception handling
@@ -344,21 +351,21 @@ do { // 初回は必ず実行
 - tyy: start exception block
   - throw: raise Error
 - catch: exception
-- finally: exceptionにかかわらず、常に出力
+- finally: exception にかかわらず、常に出力
 
 ```js
-let a = ['a', true, 0];
+let a = ["a", true, 0];
 
 for (let i in a) {
   try {
     if (a[i] === 0) {
-      throw new Error("0で割らないで") // raise
+      throw new Error("0で割らないで"); // raise
     }
     console.log(3 / a[i]);
   } catch (e) {
     console.log(e.message);
   } finally {
-    console.log("常に出力")
+    console.log("常に出力");
   }
 }
 ```
@@ -375,67 +382,73 @@ function hello(name) {
 }
 
 // function formula. like to assign value
-let add = function(a, b) {
+let add = function (a, b) {
   return a + b;
-}
+};
 
 // arrow function. ES2015. all below are equivalent
 function add(a, b) {
   return a + b;
 }
-const add = (a, b) => { // omit function
+const add = (a, b) => {
+  // omit function
   return a + b;
-}
-const add = (a, b) => (a+b); // omit function, { return }
+};
+const add = (a, b) => a + b; // omit function, { return }
 
 // spread operator. ES2015
 let func = (...args) => {
-  console.log(args) // argsArray [arg1, arg2, ..., arg n]
-}
+  console.log(args); // argsArray [arg1, arg2, ..., arg n]
+};
 
 // default parameters. ES2015
-function sayHi(name='hitoe') {
+function sayHi(name = "hitoe") {
   // const name = name || 'hitoe' // ES2015以前はOR演算子でデフォルト引数を指定していた
-  return 'hello ' + name;
+  return "hello " + name;
 }
 sayHi(); // hello hitoe
 
 // object method. they are equivalent
 const obj = {
-  someMethod: function() { // function formula
-    return 'it is method';
-  }
+  someMethod: function () {
+    // function formula
+    return "it is method";
+  },
 };
 const obj = {
   someMethod() {
-    return 'it is method';
-  }
+    return "it is method";
+  },
 };
 ```
 
 ## Class
 
-従来はprototypeで関数として実装していた。ES6からclassが登場。
+従来は prototype で関数として実装していた。ES6 から class が登場。
 
 ```js
-class Human { // 先頭は大文字
-  classProp = 'This is class prop'; // クラス変数
+class Human {
+  // 先頭は大文字
+  classProp = "This is class prop"; // クラス変数
 
-  constructor(name, age) { // インスタンス変数
+  constructor(name, age) {
+    // インスタンス変数
     this.name = name; // this = インスタンス
     this.age = age;
   }
 
-  static sayHello() { // クラスメソッド
-    console.log('say hello');
+  static sayHello() {
+    // クラスメソッド
+    console.log("say hello");
   }
 
-  sayPokemon(pokemon) { // インスタンスメソッド
+  sayPokemon(pokemon) {
+    // インスタンスメソッド
     console.log(`say ${pokemon}`);
   }
 }
 
-taro = new Human('taro', 7); // newでインスタンス生成
+taro = new Human("taro", 7); // newでインスタンス生成
 ```
 
 ### inheritance
@@ -443,7 +456,7 @@ taro = new Human('taro', 7); // newでインスタンス生成
 ```js
 class PokemonMaster extends Human {
   breedPokemon() {
-    console.log('ポケモンを育てるよ')
+    console.log("ポケモンを育てるよ");
   }
 }
 ```
@@ -460,7 +473,7 @@ class Triangle {
   }
 
   get calc() {
-    return this.width * this.height / 2;
+    return (this.width * this.height) / 2;
   }
 
   set props(obj) {
@@ -475,99 +488,98 @@ class Triangle {
 ### String
 
 ```js
-let s = 'susi,zume,geki,dai'
+let s = "susi,zume,geki,dai";
 
-s.split(',') // , でsplit to array
-s.slice(3, 7) // start endでslice
-s.search('s') // 文字位置検索
-s.replace('s', 't') // replace
-s.length // = len(s)
-s.toUpperCase()
+s.split(","); // , でsplit to array
+s.slice(3, 7); // start endでslice
+s.search("s"); // 文字位置検索
+s.replace("s", "t"); // replace
+s.length; // = len(s)
+s.toUpperCase();
 ```
 
 ### Math
 
 ```js
-Math.random() // 0 <= x < 1
-Math.abs(-7) // 7
-Math.pow(2, 4) // 16
-Math.ceil(3.4) // 4
-Math.floor(7.7) // 7
-Math.round(3.1) // 3
-Math.sqrt(16) // 4
-Math.PI // 3.14...
-Math.E // 2.7...
+Math.random(); // 0 <= x < 1
+Math.abs(-7); // 7
+Math.pow(2, 4); // 16
+Math.ceil(3.4); // 4
+Math.floor(7.7); // 7
+Math.round(3.1); // 3
+Math.sqrt(16); // 4
+Math.PI; // 3.14...
+Math.E; // 2.7...
 ```
 
 ### Array
 
 ```js
-let arr = [1, 2, 3]
+let arr = [1, 2, 3];
 
-arr.map(e => (e*2)) // [1, 4, 6]
-arr.filter(e => (e === 2 || e === 3)) // [2, 3]
-arr.concat(arr) // [1, 2, 3, 1, 2, 3]
-arr.every(e => e < 5) // true
-arr.some(e => e === 1) //true
-arr.includes(1) // true
-arr.join('') // '123'
-arr.find(e => e >= 2) // 2. only return first element
-arr.slice(1,3) // [2, 3]
-arr.splice(0,2) // [1, 2]
-arr.reduce((total, current) => total + current) // 6 = sum()
-arr.reverse() // [3, 2, 1]
-arr.push(4) // [1, 2, 3, 4]
-arr.pop() // [1, 2, 3]
-arr.unshift(0) // [0, 1, 2, 3]
-arr.shift() // [1, 2, 3]
+arr.map((e) => e * 2); // [1, 4, 6]
+arr.filter((e) => e === 2 || e === 3); // [2, 3]
+arr.concat(arr); // [1, 2, 3, 1, 2, 3]
+arr.every((e) => e < 5); // true
+arr.some((e) => e === 1); //true
+arr.includes(1); // true
+arr.join(""); // '123'
+arr.find((e) => e >= 2); // 2. only return first element
+arr.slice(1, 3); // [2, 3]
+arr.splice(0, 2); // [1, 2]
+arr.reduce((total, current) => total + current); // 6 = sum()
+arr.reverse(); // [3, 2, 1]
+arr.push(4); // [1, 2, 3, 4]
+arr.pop(); // [1, 2, 3]
+arr.unshift(0); // [0, 1, 2, 3]
+arr.shift(); // [1, 2, 3]
 
-let [a, b, ...arr] = [1,2,3,4,5] // a = 1, b = 2, arr = [3,4,5]
-```
-
-### Array Destructuring
-
-you can assign values for less repetition
-
-```js
-const arr = ['red', 'blue', 'green'];
-
-const [first, second, third] = arr;
+// destructuring
+const strArr = ["red", "blue", "green"];
+const [first, second, third] = strArr;
 // first = 'red', second = 'blue', third = 'green'
+
+// destructuring with spread syntax
+const [a, ...newArr] = [1, 2, 3, 4]; // a = 1, neWarr = [2,3,4]
+const arr2 = [...arr, 4]; // arr2 = [1,2,3,4]
 ```
 
 ### Object
 
 ```js
-obj = {a: 1, b: 2, c: 3}
+obj = { a: 1, b: 2, c: 3 };
 // dot
-obj.a // 1
+obj.a; // 1
 // bracket
-obj['b'] // 2
+obj["b"]; // 2
 
-obj.hasOwnProperty(1) // true
-Object.keys(obj) // ['a', 'b', 'c']
-Object.values(obj) // [1, 2, 3]
-Object.entries(obj) // [['a', 1], ['b', 2], ['c', 3]]
-Object.freeze(obj) // objのconst化
-```
+obj.hasOwnProperty(1); // true
+Object.keys(obj); // ['a', 'b', 'c']
+Object.values(obj); // [1, 2, 3]
+Object.entries(obj); // [['a', 1], ['b', 2], ['c', 3]]
+Object.freeze(obj); // objのconst化
 
-### Object Destructuring
-
-you can assign values for less repetition
-
-```js
+// destructuring
 const user = {
-  name: 'hitoe',
+  name: "hitoe",
   age: 16,
   works: {
-    title: 'Machine Human',
+    title: "Machine Human",
   },
-}
+};
 
 const { name, age } = user; // name = 'hitoe', age = 16
-const { works: { title } } = user; // title = 'Machine Human'
-```
+const {
+  works: { title },
+} = user; // title = 'Machine Human'
 
+// destructuring with spread syntax
+const newUser = {
+  ...user,
+  job: "engineer",
+};
+Object.keys(newUser); // ['name', 'age', 'works', 'job']
+```
 
 ### Date
 
@@ -588,7 +600,7 @@ module.exports = someModule;
 how to import
 
 ```js
-const package = require('someModule');
+const package = require("someModule");
 ```
 
 ### ES6 modules
@@ -614,69 +626,71 @@ how to import
 
 ```js
 // named import
-import { a, b } from './someModule';
+import { a, b } from "./someModule";
 
 // import default
-import a from './someModule';
+import a from "./someModule";
 ```
-
 
 # asynchronous processing
 
 順次実行の構造型プログラミングの法則を壊すサーバサイドメインの処理.`Promise`という後で実オブジェクトを渡すための仮のオブジェクトを発行することによって実現する. サーバの`メインスレッド`領域を中断させないように考案された仕組み
 
-JSはfsなど標準で非同期処理となる非同期型関数を多く保有している
+JS は fs など標準で非同期処理となる非同期型関数を多く保有している
 
 ## Promise Object(ES2015)
 
 Promise state
+
 - resolve: success
 - reject: failure
 - pending: initial state
 
-Promiseで処理の状態を保持し、`コールバック関数`でresolve, rejectそれぞれの状態になった時の処理を記述できる
+Promise で処理の状態を保持し、`コールバック関数`で resolve, reject それぞれの状態になった時の処理を記述できる
 
 ```js
 // resolveのみの処理
 
-console.log('start');
+console.log("start");
 
 function puts(str) {
-    // return promise instance. callback関数のresolve()は後で定義
-    return new Promise(function(resolve) {
-        return setTimeout(function() {
-            return resolve(str);
-        }, 1000);
-    });
+  // return promise instance. callback関数のresolve()は後で定義
+  return new Promise(function (resolve) {
+    return setTimeout(function () {
+      return resolve(str);
+    }, 1000);
+  });
 }
 
 // callback関数. thenの引数は非同期関数の戻り値
-puts('async').then(function(result) {
-    // resolve(str)の内容. str = result
-    return console.log(result);
+puts("async").then(function (result) {
+  // resolve(str)の内容. str = result
+  return console.log(result);
 });
 
-console.log('end');
+console.log("end");
 // start -> end -> async
 ```
 
-resolve, reject両方の処理を記述
+resolve, reject 両方の処理を記述
 
 ```js
 const promise = new Promise((resolve, reject) => {
-    // 非同期でresolveする
-    setTimeout(() => {
-        resolve();
-        // すでにresolveされているため無視される
-        reject(new Error("エラー"));
-    }, 16);
+  // 非同期でresolveする
+  setTimeout(() => {
+    resolve();
+    // すでにresolveされているため無視される
+    reject(new Error("エラー"));
+  }, 16);
 });
-promise.then(() => {
+promise.then(
+  () => {
     console.log("Fulfilledとなった");
-}, (error) => {
+  },
+  (error) => {
     // この行は呼び出されない
-});
-
+  }
+);
 ```
 
 ### Promise chain
@@ -684,68 +698,72 @@ promise.then(() => {
 コールバックで返した値を次のコールバックへ引数として渡す
 
 ```js
-Promise.resolve(1).then((value) => {
+Promise.resolve(1)
+  .then((value) => {
     console.log(value); // => 1
     return value * 2;
-}).then(value => {
+  })
+  .then((value) => {
     console.log(value); // => 2
     return value * 2;
-}).then(value => {
+  })
+  .then((value) => {
     console.log(value); // => 4
     // 値を返さない場合は undefined を返すのと同じ
-}).then(value => {
+  })
+  .then((value) => {
     console.log(value); // => undefined
-});
+  });
 ```
 
 ## async/await (ES2017)
 
-async functionという常にPromiseインスタンスを返す関数. resolve, rejectのstateの記載を省ける. 非同期処理を同期処理のように記述可能. Promise.then()の`コールバック地獄`を解消するために考案された
+async function という常に Promise インスタンスを返す関数. resolve, reject の state の記載を省ける. 非同期処理を同期処理のように記述可能. Promise.then()の`コールバック地獄`を解消するために考案された
 
 ```js
 async function doAsync(what) {
-    return what;
-};
+  return what;
+}
 
 // コールバック関数
-doAsync('hoge').then(val => {
-    console.log(val);
+doAsync("hoge").then((val) => {
+  console.log(val);
 });
 
 // 以下のPromise記法と同義
 function doAsync(what) {
-    return new Promise((resolve) => {
-        resolve(what);
-    });
-};
+  return new Promise((resolve) => {
+    resolve(what);
+  });
+}
 
-doAsync('hoge').then(val => {
-    console.log(val);
+doAsync("hoge").then((val) => {
+  console.log(val);
 });
 ```
 
-awaitはコールバック関数の省略記法
+await はコールバック関数の省略記法
 
 ```js
 async function asyncMain() {
-    const value = await Promise.resolve(42);
-    // コールバック関数
-    console.log(value); // => 42
+  const value = await Promise.resolve(42);
+  // コールバック関数
+  console.log(value); // => 42
 }
 asyncMain(); // Promiseインスタンスを返す
 
 // 以下のthenを用いたコールバック関数と同義
 function asyncMain() {
-    return Promise.resolve(42).then(value => {
-        console.log(value); // => 42
-    });
+  return Promise.resolve(42).then((value) => {
+    console.log(value); // => 42
+  });
 }
 asyncMain(); // Promiseインスタンスを返す
 ```
 
 # browser object
 
-windowObjectから以下のような階層構造を持つ
+windowObject から以下のような階層構造を持つ
 
 - window(global)
   - screen
@@ -771,9 +789,9 @@ windowObjectから以下のような階層構造を持つ
 
 ## window
 
-- methods: popup系のobject. renderする前に呼び出される
-  - alert(): popupの表示
-  - confirm(): y/nの確認, y = true, n = falseを返す
+- methods: popup 系の object. render する前に呼び出される
+  - alert(): popup の表示
+  - confirm(): y/n の確認, y = true, n = false を返す
   - prompt(): user input popup
 
 ### localStorage
@@ -786,27 +804,25 @@ syntax looks like Firebase
 // access
 const myStorage = window.localStorage;
 // set
-localStorage.setItem('key', 'value');
+localStorage.setItem("key", "value");
 // get
-localStorage.getItem('key'); // return value
+localStorage.getItem("key"); // return value
 // delete
-localStorage.removeItem('key');
+localStorage.removeItem("key");
 // clear
 localStorage.clear();
 ```
 
-
 ## location
 
-- methods: 
+- methods:
   - reload(): 再読み込み = f5
-  - replace(URL): ページ遷移 = aタグ
-- props: 
-  - pathname: URLのpath
+  - replace(URL): ページ遷移 = a タグ
+- props:
+  - pathname: URL の path
   - port
   - protocol: https://みたいな
   - href: location.href = URL = location.replace(URL)
-
 
 ## document
 
@@ -815,7 +831,7 @@ https://developer.mozilla.org/en-US/docs/Web/API
 ### file handling
 
 ```js
-const inputElement = document.getElementById('input');
+const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 
 // event handler
@@ -828,12 +844,12 @@ function handleFiles() {
 }
 ```
 
-
 ## DOM(DocumentObjectModel)
 
-クライアントサイド(ブラウザ)で利用する要素をツリー構造で表現した仕様. W3C(World Wide Web Consortium)によって標準化されている. 要素をnodeと表現する
+クライアントサイド(ブラウザ)で利用する要素をツリー構造で表現した仕様. W3C(World Wide Web Consortium)によって標準化されている. 要素を node と表現する
 
 - node: variation of node
+
   - element node
   - attribute node
   - text node
@@ -844,33 +860,33 @@ function handleFiles() {
     - current node
     - younger brother node
       - first child node
-      ...
+        ...
       - last child node
 
 ### change node element
 
 ```js
 // get directly
-document.getElementById('id');
+document.getElementById("id");
 // listなのでfor ofで要素取得. list.item(i)で個別取得可能
-document.getElementsByTagName('tagName');
-document.getElementsByClassName('className');
+document.getElementsByTagName("tagName");
+document.getElementsByClassName("className");
 
 // selectorによる統一記法
-document.querySelector('#id');
-document.querySelectorAll('.class');
-document.querySelectorAll('selector[attr]');
+document.querySelector("#id");
+document.querySelectorAll(".class");
+document.querySelectorAll("selector[attr]");
 
 // get and set attr
-element.getAttribute('attr');
-element.setAttribute('attr', 'value');
+element.getAttribute("attr");
+element.setAttribute("attr", "value");
 
 // change text in node element
-element.textContent = 'newText';
-element.innerHTML = 'newText';
+element.textContent = "newText";
+element.innerHTML = "newText";
 
 // create
-document.createElement('tag');
+document.createElement("tag");
 
 // set, update, delete like array object
 parentNode.appendChild(element);
@@ -882,9 +898,9 @@ parentNode.removeChild(element);
 
 ```js
 // change property
-element.style.property = 'value';
+element.style.property = "value";
 // change class
-element.className = 'className';
+element.className = "className";
 ```
 
 ### event listener
@@ -896,11 +912,7 @@ set multi event listener for one event in node element
 eventTarget("event", eventHandler, options);
 
 // example
-element.addEventListener('event', e => {
+element.addEventListener("event", (e) => {
   callbackFunc();
-})
+});
 ```
-
-
-
-
