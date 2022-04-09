@@ -1031,13 +1031,13 @@ yarn create next-app "app-name" --typescript
 
 - Head: metadata. you customize <title />, <meta /> every component
 - Link: this enables client-side navigation between two pages in Nuxt app. you can import it from 'next/link'. this requires <a /> as its child component. furthermore this pre-fetch Link components when they appear in the browser's viewpoint
-- Image: optimize and style image
+- Image: optimize and style image. it refers to public/ directory
 
-## directory
+## directory structure
 
 - public/: here is static resources. directly render this files
 - pages/: \_app.jsx が global な page となり、ディレクトリ内のファイルは全て自動でルーティングされる
-- styles/: globals.css が
+- styles/: src/ directory に対する CSS clone directory. globals.css(.scss) が共通の設定を表す
 
 ## import .css or .scss
 
@@ -1066,3 +1066,9 @@ export default function App({ Component, pageProps }) {
 
 - Static Generation: generates the HTML at build time. the pre-rendered HTML is then reused on each request. this is used when data in web pages isn't frequently changed
 - SSR: generates the HTML on each request. this is used when web pages frequently updated, and page content changes on every request
+
+## dynamic routing
+  
+pages/ directory 配下に[id].tsx のようなファイルを作ることで id を query parameter にした page component を作成することができる
+
+  
