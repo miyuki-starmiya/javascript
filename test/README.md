@@ -33,8 +33,21 @@ yarn global add jest
 ### using Babel
 
 ```shell
-yarn add --dev babel-jest babel-core regenerator-runtime
+yarn add --dev babel-jest babel-core
 ```
+
+### using TypeScript
+
+```shell
+yarn add -D @babel/preset-env @babel/preset-typescript @types/jest
+```
+
+### using React testing library
+
+```shell
+@testing-library/jest-dom @testing-library/react
+```
+
 
 ## init(optional)
 
@@ -44,7 +57,7 @@ generate jest.config.js
 jest --init
 ```
 
-## run
+## prepare config files
 
 we need writing in package.json then we can use "npm test" or "yarn test" on our terminal
 
@@ -55,6 +68,28 @@ we need writing in package.json then we can use "npm test" or "yarn test" on our
   }
 }
 ```
+
+create .babelrc
+```json
+{
+  // Next.js
+  "presets": ["next/babel"]
+}
+```
+
+jest.setup.ts
+```ts
+import '@testing-library/jest-dom';
+```
+
+jest.config.js in Next app
+```js
+module.exports = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
+};
+```
+
 
 ## create test file with Jest
 
