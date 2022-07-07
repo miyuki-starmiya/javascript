@@ -1,23 +1,32 @@
 
-type int = number;
-type intArray = Array<int>;
-interface Book {
-  id: int;
-  title: string;
+type HumanProps = {
+  name: string;
+  age: number;
 }
 
-let num: int;
-let numArray: intArray;
-let oregairu: Book;
+class Human {
+  name: string;
+  age: number;
 
-num = 3;
-numArray = [1,2,3];
-oregairu = {
-  id: 1,
-  title: 'yahari oreno seisyun love comedy ha machigatteiru.',
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hello, I'm ${this.name}`);
+  }
 }
 
-console.log(num);
-console.log(numArray);
-console.log(oregairu);
+const hitoe = new Human('hitoe', 22);
+hitoe.greet();
+
+try {
+  const a = [];
+  console.log(a[0]);
+} catch(e) {
+  console.log(e);
+} finally {
+  console.log('Anyway, have fun!');
+}
 

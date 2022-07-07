@@ -1,12 +1,22 @@
-var num;
-var numArray;
-var oregairu;
-num = 3;
-numArray = [1, 2, 3];
-oregairu = {
-    id: 1,
-    title: 'yahari oreno seisyun love comedy ha machigatteiru.'
-};
-console.log(num);
-console.log(numArray);
-console.log(oregairu);
+var Human = /** @class */ (function () {
+    function Human(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Human.prototype.greet = function () {
+        console.log("Hello, I'm ".concat(this.name));
+    };
+    return Human;
+}());
+var hitoe = new Human('hitoe', 22);
+hitoe.greet();
+try {
+    var a = [];
+    console.log(a[0]);
+}
+catch (e) {
+    console.log(e);
+}
+finally {
+    console.log('Anyway, have fun!');
+}
