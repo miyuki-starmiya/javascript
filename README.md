@@ -1,12 +1,11 @@
-# JavaScript
 
 JavaScript was released by the `Mosaic web browser`. ECMAScript6(2015)で非常に大きなアップデートが行われた.
 JavaScript は文(Statement)と式(Expression)から構成される(文 ⊂ 式)
 
-- ECMAScript: Ecma International という団体によって標準化されている仕様この技術委員会は Microsoft、Mozilla、Google、Apple といったブラウザベンダーや ECMAScript に関心のある企業などによって構成されている. `後方互換性`を重視しているので過去のコードが使えなくなることはあまり考えられない
-- Transpiler: Babel や TypeScript. ES の仕様として合意されてない構文を解析するトランスコンパイラ
+- ECMAScript: Ecma International という団体によって標準化されている仕様. この技術委員会は Microsoft、Mozilla、Google、Apple といったブラウザベンダーや ECMAScript に関心のある企業などによって構成されている. `後方互換性`を重視しているので過去のコードが使えなくなることはあまり考えられない
+- Transpiler: Babel や TypeScript Compiler. ES の仕様として合意されてない構文を解析するトランスコンパイラ
 
-### Features
+## Features
 
 - curly-bracket syntax {}
 - dynamic typing
@@ -14,7 +13,7 @@ JavaScript は文(Statement)と式(Expression)から構成される(文 ⊂ 式)
 - class-based OOP(ES6)
 - first-class functions
 
-### APIs
+## APIs
 
 - text
 - dates
@@ -22,37 +21,34 @@ JavaScript は文(Statement)と式(Expression)から構成される(文 ⊂ 式)
 - standard data structures
 - DOM(DocumentObjectModel)
 
-## Ecosystem
+# Ecosystem
 
-- front-end frameworks: React, Angular, Vue, jQuery
-- back-end runtime: Node
+- frontend frameworks: React, Vue, Angular, jQuery
+- backend runtime: Node.js
 - frameworks for mobile: React Native
 - package managers: npm, yarn
 - build automation tools: Webpack, Grunt
-- testing tools: Jest
+- testing tools: Jest, Story board
 - linter: ESLint
 - transpilers: Babel(ES6, React)
-- alt JS: TypeScript
+- alt JS: TypeScript, CoffeeScript, Vanilla JS
 
-## History
+# History
 
-### ECMAScript
+## ECMAScript
 
 ES3(1999)
-
 - regular expression
 - new control statements
 - exception handling
 
 ES5(2009)
-
 - iteration functions(map, reduce, filter, forEach)
 - JSON
 - accessor(getter and setter)
 - better reflection and object properties
 
 ES6(ES2015)
-
 - block scope(let, const)
 - arrow function
 - class
@@ -68,7 +64,7 @@ ES6(ES2015)
 
 以降は`Living Standard`という形で毎年更新されるようになった
 
-### Surroundings history
+## Surroundings history
 
 - 1993: The Mosaic web browser was released
 - 1995: first shipped called `LiveScript` as part of Navigator beta
@@ -86,7 +82,7 @@ ES6(ES2015)
 - 2009: `Node.js` and `npm` was released by Ryan Dahl
 - 2015: `ECMA Script6` was released
 
-### Browser history
+## Browser history
 
 - 1993: NCSA Mosaic
 - 1994: Netscape Navigator
@@ -119,7 +115,7 @@ Function: function() {}
 RegExp: /[a-z]/
 ```
 
-### escape character
+## escape character
 
 ```js
 \n: new line
@@ -131,7 +127,7 @@ RegExp: /[a-z]/
 \\: backslash
 ```
 
-### RegExp type
+## RegExp type
 
 ```js
 \d: digit(Arabic numeral)
@@ -139,7 +135,7 @@ RegExp: /[a-z]/
 \s:[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]
 ```
 
-### type cast
+## type cast
 
 ```js
 // check
@@ -165,7 +161,7 @@ Array(1, 2); // [1, 2]
 console.log(`${x}`);
 ```
 
-### reserved words
+## reserved words
 
 ```js
 break       case    catch   continue    default
@@ -176,7 +172,7 @@ typeof      var     void    while       with
 const       let
 ```
 
-### copy variables
+## copy variables
 
 ```js
 // 値渡し
@@ -194,7 +190,7 @@ a1[0] = "a";
 console.log(a2); // ["a",2,3]
 ```
 
-### Variable
+## Variable
 
 if you declare variables without var or let, variables are in global scope
 
@@ -289,6 +285,8 @@ switch (signal) {
 }
 ```
 
+## Loop
+
 ### for loop
 
 ```js
@@ -346,7 +344,7 @@ do {
 } while (i < 10);
 ```
 
-### exception handling
+## exception handling
 
 - tyy: start exception block
   - throw: raise Error
@@ -483,9 +481,9 @@ class Triangle {
 }
 ```
 
-## Object.method
+# Object.method
 
-### String
+## String
 
 ```js
 let s = "susi,zume,geki,dai";
@@ -498,7 +496,7 @@ s.length; // = len(s)
 s.toUpperCase();
 ```
 
-### Math
+## Math
 
 ```js
 Math.random(); // 0 <= x < 1
@@ -512,7 +510,7 @@ Math.PI; // 3.14...
 Math.E; // 2.7...
 ```
 
-### Array
+## Array
 
 ```js
 let arr = [1, 2, 3];
@@ -544,7 +542,7 @@ const [a, ...newArr] = [1, 2, 3, 4]; // a = 1, neWarr = [2,3,4]
 const arr2 = [...arr, 4]; // arr2 = [1,2,3,4]
 ```
 
-### Object
+## Object
 
 ```js
 obj = { a: 1, b: 2, c: 3 };
@@ -581,15 +579,15 @@ const newUser = {
 Object.keys(newUser); // ['name', 'age', 'works', 'job']
 ```
 
-### Date
+## Date
 
 ```js
 
 ```
 
-## modules
+# Modules
 
-### commonJS
+## commonJS
 
 how to export
 
@@ -603,7 +601,7 @@ how to import
 const package = require("someModule");
 ```
 
-### ES6 modules
+## ES6 Modules
 
 named export require surrounding modules by {} when you export and import
 
@@ -632,7 +630,7 @@ import { a, b } from "./someModule";
 import a from "./someModule";
 ```
 
-# asynchronous processing
+# Asynchronous processing
 
 順次実行の構造型プログラミングの法則を壊すサーバサイドメインの処理.`Promise`という後で実オブジェクトを渡すための仮のオブジェクトを発行することによって実現する. サーバの`メインスレッド`領域を中断させないように考案された仕組み
 
@@ -693,7 +691,7 @@ promise.then(
 );
 ```
 
-### Promise chain
+## Promise chain
 
 コールバックで返した値を次のコールバックへ引数として渡す
 
@@ -761,7 +759,7 @@ function asyncMain() {
 asyncMain(); // Promiseインスタンスを返す
 ```
 
-# browser object
+# Browser Object
 
 windowObject から以下のような階層構造を持つ
 
@@ -844,7 +842,7 @@ function handleFiles() {
 }
 ```
 
-## DOM(DocumentObjectModel)
+# DOM(DocumentObjectModel)
 
 クライアントサイド(ブラウザ)で利用する要素をツリー構造で表現した仕様. W3C(World Wide Web Consortium)によって標準化されている. 要素を node と表現する
 
@@ -863,7 +861,7 @@ function handleFiles() {
         ...
       - last child node
 
-### change node element
+## change node element
 
 ```js
 // get directly
@@ -894,7 +892,7 @@ parentNode.replaceChild(element);
 parentNode.removeChild(element);
 ```
 
-### change CSS
+## change CSS
 
 ```js
 // change property
@@ -903,7 +901,7 @@ element.style.property = "value";
 element.className = "className";
 ```
 
-### event listener
+## event listener
 
 set multi event listener for one event in node element
 
