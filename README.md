@@ -23,18 +23,39 @@ JavaScript は文(Statement)と式(Expression)から構成される(文 ⊂ 式)
 
 # Ecosystem
 
+[Exploring the JavaScript Ecosystem: Popular Tools, Frameworks, and Libraries](https://mirzaleka.medium.com/exploring-javascript-ecosystem-popular-tools-frameworks-libraries-7901703ec88f)
+
 - Frontend UI libraries: React, Vue, Angular
   - frameworks: Next.js, Nuxt.js
+  - State Management: Redux, Recoil
+  - SSG(Static Site Generators): Gatsby, Gridsome
 - Backend runtime: Node.js, Deno
   - frameworks: Express, Nest.js
+  - ORM: Sequelize, Prisma
+    - NoSQL: Mongoose, Typegoose
+  - API: GraphQL
+  - sessions: express-session, cookie-parser
 - Mobile: React Native
-- Package managers: npm, yarn
-- Build automation tools(task runner): Webpack, Grunt
+- Desktop: Electron
+- Package managers: Npm, Yarn
+- Module Bundlers: Webpack
   <script>で一々 *.js を読み込んでいると遅いので，依存関係順に統合. .js だけではなく .css 等 HTML で読み込むファイルは統合される
+- Task Runners: Grunt, Gulp
 - Testing tools: Jest, Storybook
+  - E2E: Cypress
 - Linter: ESLint
-- Transpilers: Babel(ES6, React)
+- Transpilers: Babel(ES6, React, TypeScript), tsc
 - Alt JS: TypeScript, CoffeeScript, Vanilla JS
+- API
+  - Data Visualization: Canvas, Chart.js
+
+
+## JavaScript Engines
+
+- V8: Google Chrome, Edge, Opera, Node.js, Deno
+- SpiderMonkey: Firefox
+- JavaScript Core: Safari, iOS
+
 
 # History
 
