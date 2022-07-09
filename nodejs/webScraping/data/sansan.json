@@ -1,0 +1,602 @@
+[
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/09/14/110000",
+        "title": "iOSDC Japan 2021 にゴールドスポンサーとして協賛します",
+        "date": "2021-09-14"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/09/13/110000",
+        "title": "「事業を成長させるQA体制のつくり方」について発表しました",
+        "date": "2021-09-13"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/09/09/090000",
+        "title": "Sansanのエンジニアリング情報サイト「Sansan Engineering」をローンチしました！",
+        "date": "2021-09-09"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/09/08/120000",
+        "title": "【Dive into the Economics of Networks】vol.5 Exponential Random Graph Model (ERGM) を R で推定・シミュレーションしてみる",
+        "date": "2021-09-08"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/08/30/110000",
+        "title": "【Techの道も一歩から】第41回「SageMakerでStep Functionsを使った学習パイプラインを構築するために概念を理解する」",
+        "date": "2021-08-30"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/08/25/110000",
+        "title": "書評：『施策デザインのための機械学習入門』",
+        "date": "2021-08-25"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/08/20/110000",
+        "title": "Engineering Team Presentation 第三弾「各社の事業を支えるインフラストラクチャ―」を開催しました",
+        "date": "2021-08-20"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/08/18/110000",
+        "title": "【ML Tech RPT.】第26回 Crowd Counting (群衆の数え上げ) を学ぶ",
+        "date": "2021-08-18"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/08/17/110000",
+        "title": "【Sansanエンジニア インタビューシリーズ】第1回 Bill One プロダクト開発責任者 大西編",
+        "date": "2021-08-17"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/08/12/110000",
+        "title": "歴史をたどってディープラーニングを学ぶ 第十九回 GPGPU入門 CUDAによる画像フィルタ編",
+        "date": "2021-08-12"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/07/29/110000",
+        "title": "MLOpsについてSansan×Unipos×M3の合同勉強会で発表しました",
+        "date": "2021-07-29"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/07/20/110000",
+        "title": "Microsoft Teams ビデオ会議アプリの作り方の紹介",
+        "date": "2021-07-20"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/07/15/110000",
+        "title": "【ネットワークの統計解析】第8回 事例紹介「Uber における GNN の活用」",
+        "date": "2021-07-15"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/07/12/110000",
+        "title": "【ML Tech RPT.】第25回 k-center クラスタリングを学ぶ",
+        "date": "2021-07-12"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/07/08/110000",
+        "title": "【Dive into the Economics of Networks】vol.4 ネットワーク形成ゲームが Exponential Random Graph Model (ERGM) に収束することを示す",
+        "date": "2021-07-08"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/07/06/110000",
+        "title": "SocSci Radio #2 社会ネットワークはデザインできるか",
+        "date": "2021-07-06"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/07/02/110000",
+        "title": "歴史をたどってディープラーニングを学ぶ 第十八回 GPGPUを学ぶCUDA入門編",
+        "date": "2021-07-02"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/29/110000",
+        "title": "【Techの道も一歩から】第40回「Texthero で日本語を解析する」",
+        "date": "2021-06-29"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/24/110000",
+        "title": "TypeScript を導入して 1 年が経って感じた良かったこと・困ったこと",
+        "date": "2021-06-24"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/23/110000",
+        "title": "オンラインで「自宅環境紹介」企画をしてみた",
+        "date": "2021-06-23"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/22/110000",
+        "title": "Jamf Connect の導入について（後編）",
+        "date": "2021-06-22"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/21/110000",
+        "title": "自分のTweetを使ってSentencepieceとMeCabの分かち書きの比較を行う",
+        "date": "2021-06-21"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/17/110000",
+        "title": "非エンジニアがAWS認定クラウドプラクティショナーに挑戦してみた！",
+        "date": "2021-06-17"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/16/110000",
+        "title": "Sansan Technical View に参加してきました",
+        "date": "2021-06-16"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/15/110000",
+        "title": "Jamf Connect の導入について（前編）",
+        "date": "2021-06-15"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/11/123000",
+        "title": "UXリサーチセンターを発足しました",
+        "date": "2021-06-11"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/10/110000",
+        "title": "人事異動のデータ化の取り組み 〜 CamelotによるPDFの表データ抽出",
+        "date": "2021-06-10"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/09/110000",
+        "title": "バーチャル背景プロジェクトを通して、オンラインでいかに「楽しい」体験を作るか考えてみた",
+        "date": "2021-06-09"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/07/110000",
+        "title": "歴史をたどってディープラーニングを学ぶ 第十七回 GPGPUを学ぶ準備編",
+        "date": "2021-06-07"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2021/06/02/110000",
+        "title": "【ML Tech RPT.】第24回 ソフトラベルを学ぶ",
+        "date": "2021-06-02"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/25/110000",
+        "title": "Economics Meets Data Science: Finite Mixture Models - A Christmas Story",
+        "date": "2020-12-25"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/24/110000",
+        "title": "Sansan iOS アプリに XcodeGen を導入しました",
+        "date": "2020-12-24"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/23/110000",
+        "title": "チームのレビュー負荷を見える化するために簡易な Web アプリを作った話",
+        "date": "2020-12-23"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/22/110000",
+        "title": "オンボーディングと向き合う秋2020",
+        "date": "2020-12-22"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/21/110000",
+        "title": "Sansan iOSアプリにおけるiOS14対応",
+        "date": "2020-12-21"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/18/150000",
+        "title": "オンラインイベントの配信方法（StreamYard・自動字幕活用編）",
+        "date": "2020-12-18"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/18/110000",
+        "title": "2020 2週間サマーインターン Eightで見つけたエンジニアとしての自分",
+        "date": "2020-12-18"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/17/110000",
+        "title": "eslint-loader の使用をやめることで、ビルド時間を短縮した話",
+        "date": "2020-12-17"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/16/110000",
+        "title": "Elasticsearch 導入による Eight Career Design の検索機能の改善",
+        "date": "2020-12-16"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/15/110000",
+        "title": "Android版SansanのtargetSdkVersionを30にしました",
+        "date": "2020-12-15"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/14/110000",
+        "title": "Sansanメンバーが2020年に読んだ本は？",
+        "date": "2020-12-14"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/11/110000",
+        "title": "【仕様を読み解く】第2回 Advanced Message Queuing Protocol (2) ~Transport~",
+        "date": "2020-12-11"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/10/150000",
+        "title": "「画像処理 勉強会」を開催しました",
+        "date": "2020-12-10"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/10/110000",
+        "title": "Discord を使って作る簡単バーチャルオフィス〜実例もあるよ〜",
+        "date": "2020-12-10"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/09/110000",
+        "title": "Hands-on guidance to DGL library _ (5) Training on large graphs",
+        "date": "2020-12-09"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/08/110000",
+        "title": "Eightのエンジニアで社内LTをした話",
+        "date": "2020-12-08"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/07/110000",
+        "title": "【ネットワークの統計解析】第3回 代表的なネットワークのモデルを俯瞰する (1)",
+        "date": "2020-12-07"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/04/110000",
+        "title": "iOS アプリで様々なファイルをプレビューできる QLPreviewController の紹介",
+        "date": "2020-12-04"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/03/110000",
+        "title": "EightでStripeの銀行振込機能(Pilot版)を活用してみた",
+        "date": "2020-12-03"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/02/110000",
+        "title": "名刺データ化システムをECSに移行した",
+        "date": "2020-12-02"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/12/01/110000",
+        "title": "【Techの道も一歩から】第34回「固有表現抽出のためのデータを作る」",
+        "date": "2020-12-01"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/30/110000",
+        "title": "Amazon Elasticsearch Service を用いた SIEM の構築事例",
+        "date": "2020-11-30"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/27/154500",
+        "title": "Sansanにまつわる「ある数式」について",
+        "date": "2020-11-27"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/26/110000",
+        "title": "【つながりに効く、ネットワーク研究小話】vol.18 マルチレベルネットワークについての簡単な解説",
+        "date": "2020-11-26"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/25/110000",
+        "title": "オンラインイベントにおけるクリエイティブ",
+        "date": "2020-11-25"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/24/111000",
+        "title": "【ML Tech RPT. 】第20回 構造に関連する機械学習を学ぶ (6)　~グラフ その２~",
+        "date": "2020-11-24"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/20/110000",
+        "title": "iOS14 勉強会参加レポート",
+        "date": "2020-11-20"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/17/110000",
+        "title": "【組織の道も一歩から】vol.3　お互いを讃え合う場を作ろう「超総決起集会」",
+        "date": "2020-11-17"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/12/111000",
+        "title": "歴史をたどってディープラーニングを学ぶ第十二回　Global Average Poolingでついにパーセプトロンの面影をすべて失ったディープラーニングを学ぶ",
+        "date": "2020-11-12"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2020/11/06/110000",
+        "title": "【仕様を読み解く】第1回 Advanced Message Queuing Protocol (1) ~Types~",
+        "date": "2020-11-06"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/27/120000",
+        "title": "Rubyコミュニティを企業の中の一人として盛り上げる",
+        "date": "2019-12-27"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/27/100000",
+        "title": " Google主催のPlaytime 2019に参加してきました",
+        "date": "2019-12-27"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/26/110000",
+        "title": "【つながりに効く、ネットワーク研究小話】vol.12 強いつながりの条件",
+        "date": "2019-12-26"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/25/070000",
+        "title": "DSOCでのDatadog活用について",
+        "date": "2019-12-25"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/25/000000",
+        "title": "ユーザとプロダクトを語るワークショップイベント \"Sansan User Lab vol.1\"",
+        "date": "2019-12-25"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/24/110000",
+        "title": "AWS re:Invent 2019 にいってみた。（出発準備〜Midnight Madness）",
+        "date": "2019-12-24"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/23/110000",
+        "title": "ナラティヴと向き合う",
+        "date": "2019-12-23"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/20/110000",
+        "title": "本当にあった京都のSansan",
+        "date": "2019-12-20"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/19/110000",
+        "title": "Economics Meets Data Science: ML and Economics Together at Last",
+        "date": "2019-12-19"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/18/110000",
+        "title": "元開発者の、プロダクトマネージャーへの第一歩",
+        "date": "2019-12-18"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/17/110000",
+        "title": "Developers Boost 2019に登壇しました",
+        "date": "2019-12-17"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/16/110000",
+        "title": " Eight の EC2 費用を Spotinst によって4割くらい減らした話",
+        "date": "2019-12-16"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/14/000000",
+        "title": "勉強会を行うときに知っていたら少し役立つこと",
+        "date": "2019-12-14"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/13/070000",
+        "title": "New Relic Alert でサービス全機能のエラー監視を実現させてみた",
+        "date": "2019-12-13"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/13/110000",
+        "title": "Sansan AndroidにおけるFlux移行",
+        "date": "2019-12-13"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/12/110000",
+        "title": "開発チームでデリゲーションポーカーをやってみた",
+        "date": "2019-12-12"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/11/110000",
+        "title": "【ML Tech RPT. 】第13回 機械学習のモデルの評価方法 (Evaluation Metrics) を学ぶ (4)",
+        "date": "2019-12-11"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/10/110000",
+        "title": "【Geek Seek Toolsで買われた、気になるモノ達】第10回「Google Pixel 4 (スマートフォン)」",
+        "date": "2019-12-10"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/09/110000",
+        "title": "【Techの道も一歩から】第23回「pybind11を使ってPythonで利用可能なC++ライブラリを実装する」",
+        "date": "2019-12-09"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/08/000000",
+        "title": "ボドゲで学ぶプロジェクト管理",
+        "date": "2019-12-08"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/07/110000",
+        "title": "GitHub Universe レポ(後日編)",
+        "date": "2019-12-07"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/06/110000",
+        "title": "インド学生新卒採用プロジェクトのその後",
+        "date": "2019-12-06"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/05/110000",
+        "title": "GitHub Universeレポ(Day2)",
+        "date": "2019-12-05"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/04/110000",
+        "title": "CPO室の業務について",
+        "date": "2019-12-04"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/03/110000",
+        "title": "IBIS2019にてSansanから2件のポスター発表を行いました",
+        "date": "2019-12-03"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/02/110000",
+        "title": "AWS と GCP のコストを減らせ！（Redash による可視化編）",
+        "date": "2019-12-02"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/12/01/000000",
+        "title": "書籍購入支援制度'Geek Seek Book'を活用して今年購入した本",
+        "date": "2019-12-01"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/11/29/110000",
+        "title": "Eightリニューアルのデザインについて少しだけ...",
+        "date": "2019-11-29"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/11/28/110000",
+        "title": "GitHub Universe  レポ (Day1)",
+        "date": "2019-11-28"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2019/11/27/110000",
+        "title": "▲The Prism of Creativity ▽ vol.6 競争とクリエイティビティ[計算社会科学編]",
+        "date": "2019-11-27"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/27/113000",
+        "title": "【R&Dアーキテクト】公立はこだて未来大学で講演してきました",
+        "date": "2018-12-27"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/26/113000",
+        "title": "「ビッグデータ時代における新しい社会科学のカタチ」: 行動経済学会第 12 回大会サテライト・ワークショップ",
+        "date": "2018-12-26"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/25/113000",
+        "title": "関西支店チームMAIDOのエンジニアの日常",
+        "date": "2018-12-25"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/24/113000",
+        "title": "「新規事業開発を支える技術」というテーマで Developers Boost に登壇しました",
+        "date": "2018-12-24"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/21/113000",
+        "title": "B2B Product Manager勉強会 -ユーザインタビュー編- @Sansan Hanare",
+        "date": "2018-12-21"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/20/113000",
+        "title": "画像処理の自動化と二値化の話",
+        "date": "2018-12-20"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/19/113000",
+        "title": "奈良先端科学技術大学院大学で企業説明会を開催しました",
+        "date": "2018-12-19"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/18/113000",
+        "title": "【ML Tech RPT. 】第2回 Zero Shot Learning を学ぶ (2)",
+        "date": "2018-12-18"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/17/000000",
+        "title": " 行ってきました re:Invent 2018 (Day 1 セッションだけが re:Invent じゃない編)",
+        "date": "2018-12-17"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/14/113000",
+        "title": "Android 4系のサポートを終了した話",
+        "date": "2018-12-14"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/13/113000",
+        "title": "【つながりに効く、ネットワーク研究小話】vol.6 友だちの数に限界はあるか？",
+        "date": "2018-12-13"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/12/103000",
+        "title": "行ってきました AWS re:Invent 2018 (Day0編)",
+        "date": "2018-12-12"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/11/110000",
+        "title": "レガシーシステムのおそうじ",
+        "date": "2018-12-11"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/10/173051",
+        "title": "翻訳してみた AWS re:Invent 2018: Building SRE from Scratch at Coinbase during Hypergrowth",
+        "date": "2018-12-10"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/12/04/113000",
+        "title": "DSOCブランドサイトのビジュアルコンセプト",
+        "date": "2018-12-04"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/tech15_regular_expression_by_python",
+        "title": "【Techの道も一歩から】第15回「Pythonによる正規表現のまとめ」",
+        "date": "2018-12-03"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/11/27/113000",
+        "title": "R&D 社会科学班の論文読み会 vol.5",
+        "date": "2018-11-27"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/sbb2018_takahashi",
+        "title": "Sansan Builders Box 2018 - Sansan における開発マネジメントの実態を大公開。",
+        "date": "2018-11-26"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/sbb2018_nishida",
+        "title": "「イノベーションはここから生まれる -Sansan Data Discoveryの挑戦」: Sansan Builders Box 2018",
+        "date": "2018-11-22"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/sbb2018_kanbara",
+        "title": "Sansan Builders Box 2018 で Microsoft Azure × Microservices な Sansan の新プロダクト「Customer Intelligence」について発表しました",
+        "date": "2018-11-21"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/sbb2018_osa",
+        "title": "プロダクトマネージャーは何と向き合っているのか - Sansan Builders Box 2018",
+        "date": "2018-11-20"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/sbb2018_ohsawa",
+        "title": "Sansan Builders Box 2018でAWSとGCPのマルチクラウドの活用について話してきました",
+        "date": "2018-11-19"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/11/16/113000",
+        "title": "【レポート】IBIS2018で発表してきました",
+        "date": "2018-11-16"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/sbb2018_obe",
+        "title": "問いを疑え -本当の課題と解にたどりつく問いとは- Sansan Builders Box 2018",
+        "date": "2018-11-15"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/11/14/113000",
+        "title": "【つながりに効く、ネットワーク研究小話】vol.5 社会ネットワークと転職",
+        "date": "2018-11-14"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/11/13/113000",
+        "title": "【速報】カンファレンス「Sansan Builders Box」を開催しました",
+        "date": "2018-11-13"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/suzuki_2",
+        "title": "【鈴木対談】チームビルディング 後編 <チームとして目指していくもの>",
+        "date": "2018-11-12"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/suzuki_1",
+        "title": "【鈴木対談】チームビルディング 前編 <プロダクトの成長と共に変化>",
+        "date": "2018-11-12"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/11/07/113000",
+        "title": " 【ML Tech RPT. 】第1回 Zero Shot Learning を学ぶ (1)",
+        "date": "2018-11-07"
+    },
+    {
+        "url": "https://buildersbox.corp-sansan.com/entry/2018/11/05/113000",
+        "title": "【Geek Seek Toolsで買われた、気になるモノ達】第1回「ErgoDox EZ (左右分離キーボード)」",
+        "date": "2018-11-05"
+    }
+]

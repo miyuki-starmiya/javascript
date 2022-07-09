@@ -1,0 +1,872 @@
+[
+    {
+        "url": "https://tech.uzabase.com/entry/2021/08/19/195850",
+        "title": "プロダクト開発組織のチームビジョンを作ったらすごいパワーが生まれた話",
+        "date": "2021-08-19"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/08/11/110956",
+        "title": "フロントの動作確認用の環境をGithub Actionsで自動構築してみた",
+        "date": "2021-08-11"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/08/10/093215",
+        "title": "iOSアプリにオファーコード機能を実装したときの話",
+        "date": "2021-08-10"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/08/04/161117",
+        "title": "ファイルダウンロードを行う E2E テストを Selenium Grid / Zalenium で実施するための拡張を作る",
+        "date": "2021-08-04"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/07/29/180943",
+        "title": "デザイナー×フロントエンジニアで追求する最高の開発者体験 の講演について",
+        "date": "2021-07-29"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/07/29/134042",
+        "title": "Amazon VPC内の独自サービスをPrivateLinkでプライベート接続する",
+        "date": "2021-07-29"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/07/20/155636",
+        "title": "JobPicks プロダクトにおける \"HTML\" との向き合い方について",
+        "date": "2021-07-20"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/06/04/140105",
+        "title": "NewsPicksにおけるレコメンドエンジニアのお仕事について",
+        "date": "2021-06-04"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/05/24/122516",
+        "title": "NewsPicksの姉妹メディアを立ち上げ。そのプロダクト開発の裏側。",
+        "date": "2021-05-24"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/05/21/094101",
+        "title": "iOSアプリのログが正しく送信されていることを担保する",
+        "date": "2021-05-21"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/05/20/141950",
+        "title": "システムの複雑さはどこから来るのか – Out of the tar pitを読む",
+        "date": "2021-05-20"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/05/11/133632",
+        "title": "Svelteでいきましょう！",
+        "date": "2021-05-11"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/04/09/143842",
+        "title": "新卒エンジニアが 『リーダブルコード』 を読んで感じたこと",
+        "date": "2021-04-09"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/04/07/130155",
+        "title": "WebComponentsを使ってみよう(その2)",
+        "date": "2021-04-07"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/03/25/125942",
+        "title": "Node.js の CPU プロファイリングでボトルネックを特定する",
+        "date": "2021-03-25"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/03/19/141248",
+        "title": "全員野球からPagerDutyまで。NewsPicksのオンコール体制はどう進化してきたか。",
+        "date": "2021-03-19"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/03/17/165008",
+        "title": "Jestでテスト駆動開発（TDD）を実践してみよう",
+        "date": "2021-03-17"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/03/12/132737",
+        "title": "NewsPicks AndroidアプリにPicture in Picture機能を実装した話",
+        "date": "2021-03-12"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/02/26/100627",
+        "title": "Spring におけるエンドポイントの列挙と IntelliJ IDEA の呼び出し階層による影響範囲調査",
+        "date": "2021-02-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/02/22/124454",
+        "title": "Amazon SQSのロングポーリング設定でコストを99%削減した話",
+        "date": "2021-02-22"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/02/18/100114",
+        "title": "Uzabase Tech ポータルへ リニューアルのお知らせ",
+        "date": "2021-02-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/02/17/090000",
+        "title": "Vagrant で IE11 の Selenium Grid Node を作る",
+        "date": "2021-02-17"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/02/12/170231",
+        "title": "GoでBigQueryに貯めたIstioのアクセスログを分析するツールをつくる",
+        "date": "2021-02-12"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/02/05/104030",
+        "title": "Elasticsearchの中国語Analyzer",
+        "date": "2021-02-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/02/02/112043",
+        "title": "億件オーダーのデータ移行ツールの検証の際に、確率計算とサンプリングを用いて効率的にテストをした話",
+        "date": "2021-02-02"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/01/28/190209",
+        "title": "NewsPicksにCTOとして入社して1年でDX Criteriaを大幅改善した話",
+        "date": "2021-01-28"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/01/26/145021",
+        "title": "Grafana の Backend plugin を利用して BigQuery と連携した監視をする",
+        "date": "2021-01-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/01/13/150022",
+        "title": "Spring Data R2DBCでリアクティブにDBアクセスを行なう",
+        "date": "2021-01-13"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2021/01/04/103208",
+        "title": "Smalltalk かつ TDD で『オブジェクト指向設計実践ガイド』の「第5章 ダックタイピングでコストを削減する」をハンズオンしたら 9章も確認せざる得なかった",
+        "date": "2021-01-04"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/12/25/144712",
+        "title": "Rustでモックオブジェクトを自作してみる",
+        "date": "2020-12-25"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/12/23/182612",
+        "title": "開発チームに来て感じたこと",
+        "date": "2020-12-23"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/12/14/121455",
+        "title": "ペアプログラミングはXPの5つの価値をエクストリームにする",
+        "date": "2020-12-14"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/12/01/075604",
+        "title": "Smalltalkで『オブジェクト指向設計実践ガイド』の「第4章 柔軟なインタフェースをつくる」を考える",
+        "date": "2020-12-01"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/11/25/190000",
+        "title": "Vue.jsでComposition APIを使ってクリーンアーキテクチャ",
+        "date": "2020-11-25"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/11/18/090000",
+        "title": "WebComponentsを使ってみよう(その1)",
+        "date": "2020-11-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/11/12/180000",
+        "title": "ペアプログラミングではいつコードレビューするのか？",
+        "date": "2020-11-12"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/09/28/140046",
+        "title": "EnvoyをFront Proxyとして利用する",
+        "date": "2020-09-28"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/08/18/090000",
+        "title": "Kubernetes で運用する JVM アプリケーションの OutOfMemoryError に備える",
+        "date": "2020-08-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/04/01/194807",
+        "title": "Android Studioに入門しよう ～UI・レイアウト編～",
+        "date": "2020-04-01"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/03/31/133305",
+        "title": "Smalltalkで『オブジェクト指向設計実践ガイド』の「第3章 依存関係を管理する」をハンズオンしたら快適で楽しかった",
+        "date": "2020-03-31"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/03/31/081351",
+        "title": "フロントエンドのコンポーネント設計で気をつけているn個のこと",
+        "date": "2020-03-31"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/03/24/182505",
+        "title": "Mockitoを使ってDartでのTDDを加速させよう",
+        "date": "2020-03-24"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/03/18/134350",
+        "title": "方法より原理 〜正規化ルールとリレーショナルモデルについて〜 【実践編】",
+        "date": "2020-03-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/03/17/090000",
+        "title": "Ktor で小さな API を作る",
+        "date": "2020-03-17"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/03/10/171733",
+        "title": "Sealed Secretsを利用したKubernetes Secretリソースのセキュアな管理",
+        "date": "2020-03-10"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/03/03/170941",
+        "title": "方法より原理 〜正規化ルールとリレーショナルモデルについて〜 【理屈編】",
+        "date": "2020-03-03"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2020/01/27/090000",
+        "title": "GraalVMに入門する",
+        "date": "2020-01-27"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/12/31/000000",
+        "title": "Smalltalkで『オブジェクト指向設計実践ガイド』の「第2章 単一責任のクラスを設計する」をハンズオンしたら快適で楽しかった",
+        "date": "2019-12-31"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/12/16/185149",
+        "title": "ElixirライブラリのFlowを使ってAPIを優しく呼び出す",
+        "date": "2019-12-16"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/12/09/120000",
+        "title": "Smalltalkで『テスト駆動開発』の「第I部 多国通貨」をハンズオンしたら快適で楽しかった",
+        "date": "2019-12-09"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/12/02/190000",
+        "title": "Go言語でオブジェクト指向プログラミングの基本(型編)",
+        "date": "2019-12-02"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/11/18/060000",
+        "title": "Kotlinを3ヶ月書いて感じたJavaとの違い",
+        "date": "2019-11-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/11/12/120539",
+        "title": "Gaugeのsetupとteardownステップを用いて効率的に読みやすいテストを書く",
+        "date": "2019-11-12"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/11/05/190000",
+        "title": "KotlinのCoroutineを用いた，外部API呼び出しの並列数を指定できるライブラリを作成した話",
+        "date": "2019-11-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/11/01/090050",
+        "title": "ReactとReactHooksを使って、Flux的なアーキテクチャを実現する",
+        "date": "2019-11-01"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/10/30/085342",
+        "title": "ニューヨークタイムズ、InVisionなど、ニューヨーク12社のリードデザイナーの実践ノウハウ",
+        "date": "2019-10-30"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/10/21/185414",
+        "title": "pytest-mock使ってハマったこと",
+        "date": "2019-10-21"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/10/15/190000",
+        "title": "ペアプロと育休の取得しやすさの関係について",
+        "date": "2019-10-15"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/10/07/190000",
+        "title": "Ringアプリケーションで例外をいい感じにハンドリングする方法(Ductでの解説も含む)",
+        "date": "2019-10-07"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/10/04/200000",
+        "title": "【kubernetes / Helm】大量のCronJobに悩む貴方に送るプラクティス",
+        "date": "2019-10-04"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/10/03/161001",
+        "title": "Airbnb、InVision、ゴールドマンサックスなど12社のリードデザイナーの実践ノウハウ",
+        "date": "2019-10-03"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/09/30/180000",
+        "title": "XP祭りの裏側 〜大規模イベントの運営ってどんなことやるの？〜",
+        "date": "2019-09-30"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/09/29/122228",
+        "title": "世界最先端のデザイナーが集結、AWWWARDSカンファレンスに参加しました",
+        "date": "2019-09-29"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/09/24/175551",
+        "title": "【Clojure】Ductで始めるWebAPI開発",
+        "date": "2019-09-24"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/09/17/193206",
+        "title": "Rustで非同期リクエストでハマったこと",
+        "date": "2019-09-17"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/09/09/121200",
+        "title": "SPEEDA開発チームをブーストするふりかえりのカルチャー",
+        "date": "2019-09-09"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/09/02/190000",
+        "title": "appiumを使ってモバイルアプリのテストを自動化する ",
+        "date": "2019-09-02"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/08/29/100841",
+        "title": "【技術書典7】 NewsPicks Tech が目指す、自由な技術書とは",
+        "date": "2019-08-29"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/08/26/191207",
+        "title": "appiumを使ってモバイルアプリのテストを自動化する ~環境構築まで~",
+        "date": "2019-08-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/08/19/154623",
+        "title": "「ここではすべてが流れている！」SPEEDA の開発チームに入って驚いた 3 つのこと",
+        "date": "2019-08-19"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/qcon-ny-2019-day-2",
+        "title": "Uber、Datadog、LinkedIn、最新テックカンパニーが登場 —— QCon NY 2019レポート（Day 2）",
+        "date": "2019-08-19"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/qcon-ny-2019-uber",
+        "title": "Uber Eats が取り組む機械学習の難題：料理完成まであと何分？",
+        "date": "2019-08-13"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/08/08/170154",
+        "title": "時価総額 5 兆円以上。WeWork のグローバル展開を支えるテクノロジー",
+        "date": "2019-08-08"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/08/05/183629",
+        "title": "Istioでマイクロサービスのテスタビリティを向上させる",
+        "date": "2019-08-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/learning-index",
+        "title": "Google はどうやって Deep Learning でメモリ使用量を 99% 削減したか。",
+        "date": "2019-08-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/07/25/192543",
+        "title": "Slack のインフラはどのように進化してきたか？",
+        "date": "2019-07-25"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/07/03/190320",
+        "title": "Clojure 1.10.x時代の新しいデバッグツール",
+        "date": "2019-07-03"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/28/083725",
+        "title": "GitHub・Slack・Google、世界のトップエンジニアが集結 —— QCon NY 2019レポート（Day 1）",
+        "date": "2019-06-28"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/08/204217",
+        "title": "音声認識以外でも使われ始めた、Alexa における機械学習利用(1)",
+        "date": "2019-06-08"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/08/133443",
+        "title": "iOSエンジニアの祭典、Apple WWDCを最大限楽しむ5つの方法",
+        "date": "2019-06-08"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/07/124609",
+        "title": "もう逃げられない！誰もが機械学習を使いこなす時代に ｜Amazon re:MARS 基調講演",
+        "date": "2019-06-07"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/07/113335",
+        "title": "ここまで簡単になるのか、SwiftUIチュートリアル2 〜Listの作成〜",
+        "date": "2019-06-07"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/06/154355",
+        "title": " 【解説】Sign In with Apple、Facebook/Googleログインは無くなるのか？",
+        "date": "2019-06-06"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/06/131542",
+        "title": "Amazon re:MARS には、日本からはどんな人たちが参加しているの？",
+        "date": "2019-06-06"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/05/141605",
+        "title": "iOS開発に大改革、SwiftUIチュートリアル1 〜Viewの作成〜",
+        "date": "2019-06-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/05/141504",
+        "title": "初開催 re:MARS の記念すべき Keynote をレポート！",
+        "date": "2019-06-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/04/134237",
+        "title": "今世紀最大の盛り上がり！！WWDC2019で発表された、すぐにでも使いたい3つの新技術",
+        "date": "2019-06-04"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2019/06/04/134317",
+        "title": "Amazon 初の AI カンファレンス「Amazon re:MARS」に参加します",
+        "date": "2019-06-04"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/11/26/110407",
+        "title": "Kubernetes + Istioでblue-green deploymentを実現する",
+        "date": "2018-11-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/11/26/110329",
+        "title": "Istioを使いこなすために知っておくこと",
+        "date": "2018-11-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/11/20/221733",
+        "title": "Vue.jsとFirebaseとGASとiPadで会議室表示板を作った",
+        "date": "2018-11-20"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/10/24/145044",
+        "title": "お試し就職制度を導入した話と、導入するに至るまでの話",
+        "date": "2018-10-24"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/10/15/172359",
+        "title": "【超新卒！イベントレポート】新卒入社した会社でモヤモヤしている君へ",
+        "date": "2018-10-15"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/06/26/104842",
+        "title": "GaugeのParameterを使いこなす",
+        "date": "2018-06-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/06/07/120432",
+        "title": "GaugeのConceptを用いてテストシナリオをより仕様書のように記述する",
+        "date": "2018-06-07"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/05/23/173105",
+        "title": "モンスト、スマニュー、Wi2の運用秘話多数！ 「SRE Lounge #3」レポート",
+        "date": "2018-05-23"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/04/13/165451",
+        "title": "JaSST'18 Tokyoに参加してきました！！",
+        "date": "2018-04-13"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/04/06/170959",
+        "title": "JaSST'18 Tokyoゴールドスポンサーとして協賛しました！",
+        "date": "2018-04-06"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/04/03/115236",
+        "title": "はじめてのDuct",
+        "date": "2018-04-03"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/03/20/154939",
+        "title": "hbstudy#82 の「SRE大全：ユーザベース編」で話をしてきました。",
+        "date": "2018-03-20"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/03/19/153911",
+        "title": "Chatwork、CrowdWorks、スタディスト、ユーザベースでSRE Lounge #2 を開催しました",
+        "date": "2018-03-19"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/03/14/200512",
+        "title": "【k8s合宿】   Kubernetesのメトリクスを取得する 〜PrometheusにGrafanaを添えて〜",
+        "date": "2018-03-14"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/02/22/141810",
+        "title": "ユーザベースで社内ハッカソンを初開催しました",
+        "date": "2018-02-22"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/02/01/161447",
+        "title": "【k8s合宿】   Kubernetesのログ分析環境を作る",
+        "date": "2018-02-01"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/01/26/200021",
+        "title": "クローズドな勉強会 SRE Lounge始動！",
+        "date": "2018-01-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2018/01/25/192144",
+        "title": "SREチームの2018年度を占う",
+        "date": "2018-01-25"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2017/10/11/130352",
+        "title": "Chrome hackingと称しブラウザのレイアウトバグをみんなで調べてみました",
+        "date": "2017-10-11"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2017/09/26/191009",
+        "title": "Gauge Test Automation Toolとアジャイル開発",
+        "date": "2017-09-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2017/09/20/174010",
+        "title": "TCP Fast Open",
+        "date": "2017-09-20"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2017/09/12/164756",
+        "title": "マルチホストでのDocker Container間通信 第3回: Kubernetesのネットワーク(CNI, kube-proxy, kube-dns)",
+        "date": "2017-09-12"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2017/08/23/175813",
+        "title": "マルチホストでのDocker Container間通信 第2回 Port Forwarding と Overlay Network",
+        "date": "2017-08-23"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2017/08/07/172411",
+        "title": "マルチホストでのDocker Container間通信 第1回: Dockerネットワークの基礎",
+        "date": "2017-08-07"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/12/05/101546",
+        "title": "CI環境 に関する Tips を共有する勉強会「Web Tech Tokyo #2」を開催しました",
+        "date": "2016-12-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/10/28/133638",
+        "title": "Docker に関する Tips を共有する勉強会「Web Tech Tokyo #1」を開催しました",
+        "date": "2016-10-28"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/07/21/102954",
+        "title": "エンジニア向けMeetupイベントレポート　第4回：『大規模サービスを支えるインフラ』",
+        "date": "2016-07-21"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/07/19/121312",
+        "title": "子育てと仕事を両立できる、ユーザベースでの働き方とは",
+        "date": "2016-07-19"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/07/01/131328",
+        "title": "エンジニア向けMeetupイベントレポート　第3回：『チームの生産性を向上させる』",
+        "date": "2016-07-01"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/06/30/100159",
+        "title": "エンジニア向けMeetupイベントレポート　第2回：『Java開発最前線』",
+        "date": "2016-06-30"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/06/29/024236",
+        "title": "エンジニア向けMeetupイベントレポート　第1回：『NewsPicks/SPEEDA「高速」成長の秘密』",
+        "date": "2016-06-29"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/04/28/121633",
+        "title": " Hinemos5.0.1移行記（その2：保守サービスとエンタープライズオプションを契約） ",
+        "date": "2016-04-28"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/04/15/140513",
+        "title": "NewsPicks：記事をオススメするLINE BOTをつくってみた",
+        "date": "2016-04-15"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/03/17/145415",
+        "title": "Slackを全社導入したので、社内向け利用マニュアルを公開してみた",
+        "date": "2016-03-17"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/03/11/155758",
+        "title": "Hinemos5.0.1移行記（その１：理想と現実の葛藤）",
+        "date": "2016-03-11"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/03/08/140142",
+        "title": "RxJava + Vert.x + jOOλ で Microservice 的な何かを作ってみた",
+        "date": "2016-03-08"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2016/02/18/165541",
+        "title": "Hinemos3.1.2→Hinemos5.0.1に移行しました",
+        "date": "2016-02-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/08/07/123741",
+        "title": "えびスタ！#3 特別編「NewsPicksウェブ版リニューアルの裏側」を開催します",
+        "date": "2015-08-07"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/08/05/185131",
+        "title": "「日本の夏は高温化しているか？」について可視化して確かめてみた。",
+        "date": "2015-08-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/07/02/200356",
+        "title": "ウェブサービスの品質保証をお弁当作りに例えたら",
+        "date": "2015-07-02"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/06/11/164718",
+        "title": "たのしいフォントえらび 〜 GoogleやDEAN & DELUCA、SPEEDAの事例から 〜",
+        "date": "2015-06-11"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/06/02/183335",
+        "title": "ユーザベースの自由な社風を支える「みんなの会」のつくり方（動画環境編）",
+        "date": "2015-06-02"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/06/01/143202",
+        "title": "ニコニコメソッドプレゼンを全社会議に取り入れてみたら会議が面白くなった",
+        "date": "2015-06-01"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/05/15/170206",
+        "title": "恵比寿のスタートアップエンジニアが集まる「えびスタ！」#2 を開催しました（ユーザベース、クックパッド、VASILY、エウレカ、はてな）",
+        "date": "2015-05-15"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/04/10/194732",
+        "title": "「えびスタ！#2 ~大規模データの調理法~ ユーザベースxクックパッドxVASILYxエウレカxはてな」開催のお知らせ",
+        "date": "2015-04-10"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/03/30/175726",
+        "title": "IntelliJ IDEA + JRebel セミナーを開催しました",
+        "date": "2015-03-30"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/03/20/174914",
+        "title": "Preserving Code Quality and Save Everyone’s Time with SonarQube",
+        "date": "2015-03-20"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/03/12/190251",
+        "title": "NewsPicks を支えるインフラのこれから― Autoscaling を導入してみよう―",
+        "date": "2015-03-12"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/03/06/180232",
+        "title": "AWS Cloudwatch LogsをNewsPicksで試してみた話",
+        "date": "2015-03-06"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/03/02/180612",
+        "title": "情報技術との向き合い方：SPEEDA/NewsPicksを支える価値を生み出す技術の選定手法",
+        "date": "2015-03-02"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/02/18/180705",
+        "title": "Apache Wicketのイベントシステム徹底活用（実用サンプルもあるよ）",
+        "date": "2015-02-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/02/13/180743",
+        "title": "Dockerコンテナを管理するならKubernetes",
+        "date": "2015-02-13"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/02/09/113059",
+        "title": "Quick prototyping data visualization in SPEEDA",
+        "date": "2015-02-09"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/02/05/120046",
+        "title": "NewsPicks クラッシュしないアプリ制作の鉄則",
+        "date": "2015-02-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/02/04/170408",
+        "title": "簡単シンプルなSQLライブラリ『JDBI』",
+        "date": "2015-02-04"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/01/29/102935",
+        "title": "Cool Hinemos!　Hinemos5.0にとっても期待している運用エンジニア",
+        "date": "2015-01-29"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/01/22/102741",
+        "title": "はじめてのビジュアライゼーション ～Tableau, Highchart.js触ってみた～",
+        "date": "2015-01-22"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2015/01/15/102658",
+        "title": "世界一ハッピーでワクワクする会社を目指して ～SPEEDA, NewsPicksを生んだ企業文化～",
+        "date": "2015-01-15"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014_10_01_archive.html_1",
+        "title": "SPEEDAに導入して分かった、CDNの劇的な効果",
+        "date": "2014-12-26"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/12/1.html",
+        "title": "第1回 えびスタ！ ~ 恵比寿スタートアップ勉強会 ~  レポート",
+        "date": "2014-12-24"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/12/framgia-vietnam.html",
+        "title": "オフショア開発 @ Framgia Vietnam",
+        "date": "2014-12-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/12/newspicksios.html",
+        "title": "NewsPicks(iOS)の設計思想",
+        "date": "2014-12-16"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/12/docker.html",
+        "title": "俺の Docker イメージ",
+        "date": "2014-12-12"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/12/phantomjs.html",
+        "title": "PhantomJSを使ってみる",
+        "date": "2014-12-11"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/12/newspicks-chrome.html",
+        "title": "NewsPicks の Chrome 拡張を作った話",
+        "date": "2014-12-08"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/12/scala.html",
+        "title": "Scalaのパーサコンビネータにふれる",
+        "date": "2014-12-04"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/12/01/121200",
+        "title": "【えびスタ！】12/18(木)勉強会を開催します【クックパッド × Retty × VASILY × UZABASE】",
+        "date": "2014-12-01"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/11/d3js_17.html",
+        "title": "NewsPicks × D3.js",
+        "date": "2014-11-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/11/centos7lampwordpress.html",
+        "title": "CentOS7にLAMP環境を構築してWordpressをインストールする",
+        "date": "2014-11-18"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/11/redisnewspicks.html",
+        "title": "荒ぶるRedisとNewsPicks",
+        "date": "2014-11-05"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014_10_01_archive.html",
+        "title": "ドメイン名について",
+        "date": "2014-10-31"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/10/uzabase.html",
+        "title": "Uzabaseの技術者になりたい方へ",
+        "date": "2014-10-15"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/08/5-uzabase-talk.html",
+        "title": "第5回 UZABASE TALK",
+        "date": "2014-08-27"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2014/08/newspicksui.html",
+        "title": "NewsPicksのUIデザイン",
+        "date": "2014-08-21"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/10/blog-post.html",
+        "title": "ボイジャー太陽圏ででたよ",
+        "date": "2013-10-08"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/08/blog-post.html",
+        "title": "第３回、合同勉強会を開催しました",
+        "date": "2013-08-12"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/05/blog-post.html",
+        "title": "「0がn個続いたあと1がn個続く」を正規表現にできるか?",
+        "date": "2013-05-23"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/05/blog-post.html_1",
+        "title": "世界最大の素数とその見つけられた方法",
+        "date": "2013-05-23"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/013/03/blog-post.html",
+        "title": "第二回、合同勉強会を開催しました",
+        "date": "2013-03-29"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/02/blog-post_15.html",
+        "title": "コマンド実行結果のログ取得について",
+        "date": "2013-02-15"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/02/ractive-programming.html",
+        "title": "Reactive Programming",
+        "date": "2013-02-15"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/02/blog-post.html",
+        "title": "ネットワークについて",
+        "date": "2013-02-06"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/01/web-rtc.html",
+        "title": "Web RTC",
+        "date": "2013-01-11"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2013/01/web-rtc.html_1",
+        "title": "アルゴリズムって何だ",
+        "date": "2013-01-07"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2012/12/13/181200",
+        "title": "Lua",
+        "date": "2012-12-13"
+    },
+    {
+        "url": "https://tech.uzabase.com/entry/2012/12/13/121200",
+        "title": "第一回、合同技術勉強会を開催しました",
+        "date": "2012-12-13"
+    }
+]

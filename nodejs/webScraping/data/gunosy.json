@@ -1,0 +1,527 @@
+[
+    {
+        "url": "https://data.gunosy.io/entry/initial_development_of_au_service_today_01",
+        "title": "新プロダクトの記事配信ロジックを1から作った話（実装編）",
+        "date": "2021-09-02"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/quality_article_list",
+        "title": "グノシーの記事リスト品質向上ロジック紹介",
+        "date": "2021-08-20"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/bi_marketing",
+        "title": "データ分析配属のはずが、マーケティングチームに配属された話 [新卒エンジニアブログvol.2]",
+        "date": "2021-08-18"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2021/08/05/164825",
+        "title": "Gunosy Tech Lab 新卒エンジニアブログvol1 入社からの4ヶ月を振り返って ",
+        "date": "2021-08-05"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/spark-on-k8s-on-eks",
+        "title": "Spark on k8s を EKS 上で動かす",
+        "date": "2021-04-28"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/deim2021",
+        "title": "DEIM2021で一般発表/技術報告とスポンサーを行いました",
+        "date": "2021-04-02"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2021/03/24/140024",
+        "title": "言語処理学会第27回年次大会(NLP2021)にポスター発表・ワークショップ登壇で参加しました",
+        "date": "2021-03-24"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/news-recommendation-arch",
+        "title": "グノシーのパーソナライズアルゴリズムを刷新した話 (アーキテクチャ編)",
+        "date": "2021-02-09"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/news-recommendation-model",
+        "title": "グノシーのパーソナライズアルゴリズムを刷新した話 (モデル編)",
+        "date": "2021-02-08"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/user-test",
+        "title": "作る前に試そう 〜ユーザーインタビューとユーザーテスト〜",
+        "date": "2020-12-22"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/causal_inference",
+        "title": "A/Bテストが出来ない場面での因果推論による効果検証",
+        "date": "2020-12-20"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/research-development-2020",
+        "title": "2020年の研究開発チームの振り返り",
+        "date": "2020-12-17"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/data_analysis_for_uncertainties",
+        "title": "不確実性と向き合うデータ分析",
+        "date": "2020-12-12"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/can-you-reproduce-the-experiment-pyenv-poetry",
+        "title": "その実験、再現できますか？pyenvとpoetryによる “そんなに頑張らない” 再現可能な実験環境構築",
+        "date": "2020-12-06"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2020/12/04/132538",
+        "title": "新卒入社して半年が経ちました vol.4 〜クーポン改善〜",
+        "date": "2020-12-04"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/new_graduate_2020_vol3",
+        "title": "新卒入社して半年が経ちました vol.3 〜アプリ健全化〜",
+        "date": "2020-11-18"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/new_graduate_2020_vol2_yarakashi",
+        "title": "新卒入社して半年が経ちましたvol.2 〜本番環境でやらかしちゃった話〜",
+        "date": "2020-11-11"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/new_graduate_blog_2020_vol.1",
+        "title": "新卒入社して半年が経ちました vol.1〜新卒研修編〜",
+        "date": "2020-11-04"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/article_vector_eval_method",
+        "title": "記事ベクトルの定量評価手法の紹介",
+        "date": "2020-07-08"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/mlops",
+        "title": "MLOps 海外テック企業の事例とフレームワークの紹介",
+        "date": "2020-04-07"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/rekognition",
+        "title": "ニュース配信におけるAWS Rekognition活用事例の紹介",
+        "date": "2019-12-27"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/research-development-2019",
+        "title": "2019年のGunosy研究開発チームの振り返りとこれから",
+        "date": "2019-12-26"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/kaggle-days-tokyo",
+        "title": "Kaggle Days Tokyo 参加レポート",
+        "date": "2019-12-12"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/user-engagement-researcher",
+        "title": "ウェブにおけるユーザエンゲージメントを計測・予測する研究について。",
+        "date": "2019-12-10"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/ab-test-bayes",
+        "title": "A/Bテストの時間短縮に向けて 〜ベイズ統計によるA/Bテスト入門〜",
+        "date": "2019-12-04"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/wi2019",
+        "title": "Web Intelligence 2019にFull Paperが採択され、発表をしてきました",
+        "date": "2019-11-18"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/advertisement-system-enhancement",
+        "title": "Gunosy Ads の CTR予測のシステムの話",
+        "date": "2019-11-11"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/coupon-analysis",
+        "title": "クーポンを最適に届ける技術〜分析編〜",
+        "date": "2019-10-28"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/recsys2019",
+        "title": "RecSys 2019 参加レポート",
+        "date": "2019-10-11"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/newspass-adhoc-push-enhancement",
+        "title": "ニュースパスのターゲティングプッシュシステム",
+        "date": "2019-10-07"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/webdb2019",
+        "title": "WebDB Forum 2019 運営＆参加レポート",
+        "date": "2019-10-04"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/kdd2019-online-experiment",
+        "title": "A/Bテストのベストプラクティスと落とし穴 ~KDD2019 レポート~",
+        "date": "2019-10-03"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/bert",
+        "title": "BERTによるテキスト分類",
+        "date": "2019-10-02"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/summer-internship-2019",
+        "title": "サマーインターンシップ2019開催報告",
+        "date": "2019-09-26"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/kdd2019-fairness-and-explainable-ai",
+        "title": "公平性および説明性を考慮した機械学習 in KDD2019",
+        "date": "2019-09-25"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/ab-test-sample-size",
+        "title": "より正しい意思決定のための統計的仮説検定とサンプルサイズ計算",
+        "date": "2019-09-12"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2019/09/06/090000",
+        "title": "NLP若手の会第14回シンポジウム(YANS2019) と第241回自然言語処理研究会に参加してきました!",
+        "date": "2019-09-06"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/adkdd2019-tencent-ads-invited-talk",
+        "title": "テンセントの広告技術が未来すぎる！AdKDD2019のテンセントAds招待講演まとめ",
+        "date": "2019-09-04"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/ml-ab-management",
+        "title": "Gunosy MLチームでのABテストの設計と運用",
+        "date": "2019-08-29"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/miru2019",
+        "title": "画像の認識・理解シンポジウム (MIRU2019)に参加して来ました！",
+        "date": "2019-08-16"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/research-intern-kdd19",
+        "title": "リサーチインターンの成果がトップカンファレンスであるKDD2019に論文として採択されるまで",
+        "date": "2019-07-26"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/poincare_embedding_for_recommendations",
+        "title": "双曲空間ではじめるレコメンデーション",
+        "date": "2019-07-10"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/gann_related_method",
+        "title": "近似近傍探索ライブラリgannによる関連記事推薦方法",
+        "date": "2019-07-01"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/jsai2019",
+        "title": "人工知能学会(JSAI2019) in 新潟 に参加し、研究発表してきました！",
+        "date": "2019-06-21"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/analysis-in-gunosy-new-grads",
+        "title": "Gunosyでのデータ分析　新卒編",
+        "date": "2019-06-17"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/a-year-since-joining",
+        "title": "データ分析部で一年仕事をしての学び",
+        "date": "2019-05-31"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/what-new-grads-enginners-do",
+        "title": "データ分析部に配属された新卒エンジニアは何をするの？その紹介",
+        "date": "2019-05-14"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/nlp2019",
+        "title": "言語処理学会第25回年次大会(NLP2019)に一般発表とスポンサーで参加しました",
+        "date": "2019-04-05"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/deim2019",
+        "title": "DEIM2019で一般発表とスポンサーを行いました",
+        "date": "2019-03-26"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/wi-and-ieeebigdata-2018",
+        "title": "Web IntelligenceとIEEE Bigdataで発表してきました",
+        "date": "2019-01-15"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/deep-factorization-machines-2018",
+        "title": "DeepなFactorization Machinesの最新動向 (2018)",
+        "date": "2018-12-22"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/story-of-our-blog",
+        "title": "社内技術ブログのはじめかた",
+        "date": "2018-12-12"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/prod2vec_genetic_algorithm",
+        "title": "Prod2Vecの推薦/予測システムのパラメータチューニング提案 [論文紹介]",
+        "date": "2018-12-05"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2018/10/15/080000",
+        "title": "A/Bテストよりすごい？はじめてのインターリービング",
+        "date": "2018-10-15"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/summer-internship-2018",
+        "title": "サマーインターンシップ2018開催報告",
+        "date": "2018-10-10"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/yans2018",
+        "title": "NLP若手の会 (YANS 2018) で発表 & スポンサーしました",
+        "date": "2018-09-27"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/related-article-neighbor-search",
+        "title": "ニュースパスを支える関連記事推薦と近似近傍探索",
+        "date": "2018-09-27"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/jsai-2018-report",
+        "title": "第32回人工知能学会全国大会(jsai2018)に参加し、研究発表を行いました",
+        "date": "2018-06-18"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/summer-internship2018",
+        "title": "今年は2つのコース！Gunosyサマーインターンシップ募集開始のお知らせ",
+        "date": "2018-06-12"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/editors-lab-2018",
+        "title": "Tokyo Editors Labに参加してきました",
+        "date": "2018-05-15"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/ocr-tesseract-deeplearning",
+        "title": "サムネイル画像に対するテキスト認識の性能比較について (Pytesseract / Google Cloud Vision API / Amazon Rekognition)",
+        "date": "2018-05-09"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/nlp2018",
+        "title": "言語処理学会第24回年次大会(NLP2018)に参加 & 論文賞受賞しました",
+        "date": "2018-03-27"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/sql_with_redshift_and_bigquery",
+        "title": "RedshiftとBigQueryでよく使うSQLの違いTips",
+        "date": "2018-02-28"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/change-point-detection-prophet",
+        "title": "Facebookの予測ライブラリProphetを用いたトレンド抽出と変化点検知",
+        "date": "2018-02-16"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/anomaly-detection",
+        "title": "アプリログの自動異常検知を試してみた~密度比による異常検知入門~",
+        "date": "2018-01-11"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/nlp-for-journalism-17",
+        "title": "自然言語処理×ジャーナリズムな研究まとめ ~ EMNLP2017 Workshopより ~",
+        "date": "2017-12-19"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/active-user-predictior",
+        "title": "SQL: 継続率と獲得数で将来のDAUをさくっと予測してみる",
+        "date": "2017-12-08"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/gunosy-kpi-management",
+        "title": "Gunosyを支えるKPI管理",
+        "date": "2017-12-08"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/slack-zapier-google-product-calendar",
+        "title": "プロダクトの変更ログを記録することと、Slack+Zapier+Google Calendarを利用した記録の自動化について",
+        "date": "2017-12-06"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/bigquery-query-pricing-slack-notify",
+        "title": "BigQueryのクエリ課金額をslack通知する",
+        "date": "2017-11-21"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/gunosy-develop-batch",
+        "title": "データ分析部が開発・運用するバッチ アプリケーション事情",
+        "date": "2017-10-11"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/summer-internship-2017",
+        "title": "エンジニア向けデータ分析サマーインターンシップに参加して",
+        "date": "2017-10-03"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/text-analytics-symposium-2017-report",
+        "title": "テキストアナリティクスシンポジウムにて招待講演／研究発表を行いました",
+        "date": "2017-09-21"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/slack-redash-spreadsheet",
+        "title": "【Slack×Re:dash×SpreadSheet】らくらくリアルタイムKPI通知",
+        "date": "2017-08-30"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/hakone-gourmet",
+        "title": "箱根でデータ分析部開発合宿をしました（小田原・箱根おすすめグルメ情報付き）",
+        "date": "2017-07-25"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/aws-dev-day-2017",
+        "title": "Gunosy における AWS 上での自然言語処理・機械学習の活用事例: AWS Summit dev day 2017",
+        "date": "2017-07-05"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/kpi-for-product-improvement",
+        "title": "プロダクト改善のためにウォッチしておくべき7つの指標",
+        "date": "2017-07-04"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/reinforcement-learning-tictactoe",
+        "title": "「これからの強化学習」1章の内容で三目並べ",
+        "date": "2017-06-14"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/summer-intern2017",
+        "title": "Gunosyデータ分析サマーインターン募集のお知らせ",
+        "date": "2017-06-01"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/gunosy-dm-119-120",
+        "title": "Gunosyデータマイニング研究会 119回, 120回を開催しました",
+        "date": "2017-05-16"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/pandas-pratical-analysis",
+        "title": "Pandasによる実践データ分析入門",
+        "date": "2017-05-11"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/gunosy-data-mining-20170412",
+        "title": "【これからの強化学習】 Gunosy データマイニング研究会 #118 を実施しました",
+        "date": "2017-04-18"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/gunosy-data-mining",
+        "title": "【これからの強化学習】 Gunosy データマイニング研究会を実施しました",
+        "date": "2017-04-10"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/mcmc-sgld-edward",
+        "title": "【Edward】MCMCの数学的基礎からStochastic Gradient Langevin Dynamicsの実装まで",
+        "date": "2017-03-12"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/ml-top-researcher-2017-early",
+        "title": "世界を代表する8人の旬なトップ機械学習研究者たち (2017年上半期版)",
+        "date": "2017-03-02"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/spark-kinesis-analytics",
+        "title": "Spark StreamingからAmazon Kinesis Analyticsへ移行する話",
+        "date": "2017-02-15"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/ab_testing_assignment",
+        "title": "ABテストの対象をいい感じに割り振る方法",
+        "date": "2017-02-08"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/statsmodel_trend",
+        "title": "さくっとトレンド抽出: Pythonのstatsmodelsで時系列分析入門",
+        "date": "2017-02-02"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/jupyter-tutorial",
+        "title": "【初心者向け】Jupyter+Pandas+matplotlibを使ったデータ分析入門",
+        "date": "2016-12-27"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/aws-athena-vs-bigquery",
+        "title": "Amazon AthenaをBigQueryと比較してみた",
+        "date": "2016-12-01"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/dashboard-with-kinesis-analytics",
+        "title": "Amazon Kinesis AnalyticsとES/Kibana4でリアルタイムダッシュボード構築",
+        "date": "2016-11-11"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/redash-query-results",
+        "title": "Re:dashで異なるData Sourceのクエリ結果をJOINできるようになったので試してみた - Query Results (Alpha)",
+        "date": "2016-11-04"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/summer-internship-2016",
+        "title": "データ分析について学んだこと by サマーインターンシップ",
+        "date": "2016-10-20"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2016/10/06/092502",
+        "title": "５分でわかる！BigQuery Tips集",
+        "date": "2016-10-06"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/spark-deep-learning",
+        "title": "Sparkで利用できるDeep Learningフレームワークまとめ",
+        "date": "2016-09-27"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/webdbf2016",
+        "title": "Deep Learningを応用したデモグラフィックの推定について WebDB Forum 2016 で技術報告 & スポンサーしました ",
+        "date": "2016-09-15"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/yans2016",
+        "title": "NLP若手の会 (YANS 2016) に参加 & スポンサーしました",
+        "date": "2016-09-13"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2016/09/06/090000",
+        "title": "データ分析部ロジック共有会を実施しました - Deep Learning を用いた年齢推定の精度改善について",
+        "date": "2016-09-06"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/airbnb-development-camp",
+        "title": "Airbnbを利用した開発合宿のススメ",
+        "date": "2016-09-01"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/slack-redash-kpi-notify",
+        "title": "【Slack×Re:dash】リアルタイムKPI通知をコード0行で実現する",
+        "date": "2016-08-25"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/python-scrapy-scraping",
+        "title": "Scrapy + Scrapy Cloudで快適Pythonクロール+スクレイピングライフを送る",
+        "date": "2016-08-18"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2016/08/09/100000",
+        "title": "海外の有名IT企業のABテストブログまとめ",
+        "date": "2016-08-09"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2016/08/05/115345",
+        "title": "いまさら聞けない機械学習の評価関数",
+        "date": "2016-08-05"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2016/07/28/180943",
+        "title": "Chainer 1.11.0 で畳み込みニューラルネットワークを試してみる",
+        "date": "2016-07-28"
+    },
+    {
+        "url": "https://data.gunosy.io/entry/2016/07/28/180915",
+        "title": "データ分析部ブログ，はじめました",
+        "date": "2016-07-28"
+    }
+]
