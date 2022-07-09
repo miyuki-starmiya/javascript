@@ -23,15 +23,18 @@ JavaScript は文(Statement)と式(Expression)から構成される(文 ⊂ 式)
 
 # Ecosystem
 
-- frontend frameworks: React, Vue, Angular, jQuery
-- backend runtime: Node.js
-- frameworks for mobile: React Native
-- package managers: npm, yarn
-- build automation tools: Webpack, Grunt
-- testing tools: Jest, Story board
-- linter: ESLint
-- transpilers: Babel(ES6, React)
-- alt JS: TypeScript, CoffeeScript, Vanilla JS
+- Frontend UI libraries: React, Vue, Angular
+  - frameworks: Next.js, Nuxt.js
+- Backend runtime: Node.js, Deno
+  - frameworks: Express, Nest.js
+- Mobile: React Native
+- Package managers: npm, yarn
+- Build automation tools(task runner): Webpack, Grunt
+  <script>で一々 *.js を読み込んでいると遅いので，依存関係順に統合. .js だけではなく .css 等 HTML で読み込むファイルは統合される
+- Testing tools: Jest, Storybook
+- Linter: ESLint
+- Transpilers: Babel(ES6, React)
+- Alt JS: TypeScript, CoffeeScript, Vanilla JS
 
 # History
 
@@ -52,7 +55,6 @@ ES6(ES2015)
 - block scope(let, const)
 - arrow function
 - class
-- promise, async/await(ES2017)
 - module(CommonJS => ES modules)
 - template literal
 - spread operator
@@ -62,7 +64,26 @@ ES6(ES2015)
 - symbol
 - generator function
 
+ES2017
+- promise, async/await
+
 以降は`Living Standard`という形で毎年更新されるようになった
+
+## Frontend history
+
+- Module Bundler
+  - Necessary: *.js ファイルの読み込み負荷増大
+  - Solution: Webpack で .js, .css を依存関係順に統合
+- UI Library
+  - Necessary: jQuery の DOM 操作の負荷増大．状態を管理できない
+  - Solution: Virtual DOM を有する React等の登場
+- SPA(Single Page App): HTML が一つだけのアプリケーション
+  - Necessary: HTML のレンダリング負荷増大
+  - Solution: SPA Router でページ遷移を管理．ブラウザからサーバへの HTML Request が一回で済むから高速．負荷軽減
+    1. 宣言的 UI: DOM Tree 構造を Object 形式で宣言して可読性を上げる
+    2. Virtual DOM: Dom Tree を Object で疑似的に表現して JavaScript のランタイム上で管理
+    3. 差分検知: Virtual DOM の差分を比較
+
 
 ## Surroundings history
 
@@ -91,6 +112,7 @@ ES6(ES2015)
 - 2003: Safari
 - 2004: Firefox
 - 2008: Google Chrome
+
 
 # Syntax
 
