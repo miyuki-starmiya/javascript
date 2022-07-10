@@ -15,10 +15,10 @@ JavaScript は文(Statement)と式(Expression)から構成される(文 ⊂ 式)
 
 ## APIs
 
-- text
-- dates
-- regular expressions
-- standard data structures
+- Text
+- Dates
+- Regular expressions
+- Standard data structures
 - DOM(DocumentObjectModel)
 
 # Ecosystem
@@ -37,7 +37,7 @@ JavaScript は文(Statement)と式(Expression)から構成される(文 ⊂ 式)
   - sessions: express-session, cookie-parser
 - Mobile: React Native
 - Desktop: Electron
-- Package managers: Npm, Yarn
+- Package managers: npm, Yarn
 - Module Bundlers: Webpack
   <script>で一々 *.js を読み込んでいると遅いので，依存関係順に統合. .js だけではなく .css 等 HTML で読み込むファイルは統合される
 - Task Runners: Grunt, Gulp
