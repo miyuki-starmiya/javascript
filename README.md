@@ -887,7 +887,7 @@ function handleFiles() {
 
 # DOM(DocumentObjectModel)
 
-クライアントサイド(ブラウザ)で利用する要素をツリー構造で表現した仕様. W3C(World Wide Web Consortium)によって標準化されている. 要素を node と表現する
+HTML を Parse して木構造で表現した仕様. W3C(World Wide Web Consortium)によって標準化されている. 要素を node と表現する．JavaScript で直接操作できる．document は Global Object なのでここからHTML を操作可能
 
 - node: variation of node
 
@@ -944,7 +944,7 @@ element.style.property = "value";
 element.className = "className";
 ```
 
-## event listener
+## Event listener
 
 set multi event listener for one event in node element
 
@@ -957,3 +957,9 @@ element.addEventListener("event", (e) => {
   callbackFunc();
 });
 ```
+
+# Web API
+
+[Mozilla Web API](https://developer.mozilla.org/ja/docs/Web/API)
+
+- XMLHttpRequest(XHR): Ajax で頻繁に利用されるページ全体をロードせずにデータをフェッチできるオブジェクト
