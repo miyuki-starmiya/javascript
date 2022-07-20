@@ -1,16 +1,16 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
+        "target": "es2020",
+        "module": "esnext",
         "sourceMap": true,
-        "strict": false,
-        "noImplicitAny": false,
+        "strict": true,
+        "noImplicitAny": true,
         "strictPropertyInitialization": false,
         "esModuleInterop": true,
         "skipLibCheck": true
     },
     "files": [
-        "main.ts"
+        "*.ts"
     ],
     "include": [
         "*"
